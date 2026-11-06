@@ -266,6 +266,21 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
 .promo-body p{color:var(--muted)}
 .promo-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .promo-x{position:absolute;top:12px;right:12px;z-index:2;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;font-size:1rem}
+
+/* nav dropdown */
+.dd{position:relative}
+.dd-btn{display:inline-flex;line-height:1.6;align-items:center;gap:6px;background:transparent;border:0;color:var(--ink);font:600 .93rem var(--body);padding:8px 12px;border-radius:8px;cursor:pointer}
+.dd-btn:hover,.dd.open .dd-btn{background:var(--raise);color:var(--green)}
+.dd-btn svg{width:12px;height:12px;transition:transform .2s}
+.dd.open .dd-btn svg{transform:rotate(180deg)}
+.dd-menu{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:250px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:6px;z-index:30}
+.dd.open .dd-menu{display:grid}
+@media (hover:hover){.dd:hover .dd-menu{display:grid}.dd:hover .dd-btn svg{transform:rotate(180deg)}.dd::after{content:"";position:absolute;left:0;right:0;top:100%;height:8px}}
+.dd-menu a{display:grid;gap:2px;padding:10px 12px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:700;font-size:.93rem}
+.dd-menu a small{font-weight:500;color:var(--muted);font-size:.8rem}
+.dd-menu a:hover{background:var(--raise);color:var(--green)}
+.mobile-nav .sub{padding-left:18px;font-weight:600;color:var(--muted)}
+.mobile-nav .grp{padding:12px 4px 4px;font-weight:700;color:var(--ink);border-bottom:0}
 </style>
 </head>
 <body>
@@ -276,14 +291,14 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
   <div class="wrap nav">
     <a class="brand" href="#top"><span class="mark">NE</span><span><b>Northeast PSC</b><small>Itanagar · Arunachal Pradesh</small></span></a>
     <nav class="links" aria-label="Main">
-      <a href="#exams">Exams</a><a href="#batches">Batches</a><a href="#centres">Centres</a><a href="#material">Study material</a><a href="#about">About</a><a href="#faq">FAQ</a>
+      <a href="#exams">Exams</a><a href="#batches">Batches</a><a href="#centres">Centres</a><div class="dd" id="ddStudy"><button class="dd-btn" type="button" aria-expanded="false" aria-controls="ddStudyMenu">Study material <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></button><div class="dd-menu" id="ddStudyMenu"><a href="maths-by-amarjeet-sir.html">Maths by Amarjeet Sir<small>Maths for APPSC &amp; APSSB</small></a><a href="#material">Books &amp; practice sets<small>PYQ sets, current affairs, economy</small></a></div></div><a href="#about">About</a><a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-solid btn-sm" href="#contact">Talk to a counsellor</a>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu">☰</button>
   </div>
   <div class="mobile-nav" id="mnav" hidden>
     <div class="wrap">
-      <a href="#exams">Exams</a><a href="#batches">Batches</a><a href="#centres">Centres</a><a href="#material">Study material</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Talk to a counsellor</a>
+      <a href="#exams">Exams</a><a href="#batches">Batches</a><a href="#centres">Centres</a><span class="grp">Study material</span><a class="sub" href="maths-by-amarjeet-sir.html">Maths by Amarjeet Sir</a><a class="sub" href="#material">Books &amp; practice sets</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Talk to a counsellor</a>
     </div>
   </div>
 </header>
@@ -458,7 +473,7 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
 <footer>
   <div class="wrap cols">
     <div class="fbrand"><b>Northeast PSC</b><p>Coaching for APPSC and APSSB exams in Arunachal Pradesh. 1000+ selections and counting.</p></div>
-    <div><h4>Exams</h4><ul><li><a href="#exams">APPSC CCE Prelims</a></li><li><a href="#exams">APPSC CCE Mains</a></li><li><a href="#exams">APSSB CSL</a></li><li><a href="#exams">Foundation</a></li></ul></div>
+    <div><h4>Exams</h4><ul><li><a href="#exams">APPSC CCE Prelims</a></li><li><a href="#exams">APPSC CCE Mains</a></li><li><a href="#exams">APSSB CSL</a></li><li><a href="#exams">Foundation</a></li><li><a href="maths-by-amarjeet-sir.html">Maths by Amarjeet Sir</a></li></ul></div>
     <div><h4>Centres</h4><ul id="footCentres"></ul></div>
     <div><h4>Connect</h4><ul><li><a href="tel:+916009607689">60096 07689</a></li><li><a href="tel:+918415096728">84150 96728</a></li><li><a href="#contact">Enquiry form</a></li><li><a href="#faq">FAQ</a></li></ul></div>
   </div>
@@ -623,6 +638,13 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
   ['f-name','f-phone','f-exam','f-centre','f-mode'].forEach(function(id){var el=document.getElementById(id);el.addEventListener('input',build);el.addEventListener('change',build)});
   document.getElementById('enq').addEventListener('submit',function(e){e.preventDefault()});
   build();
+  // study material dropdown
+  var dd=document.getElementById('ddStudy'),ddb=dd.querySelector('.dd-btn');
+  function setDD(o){dd.classList.toggle('open',o);ddb.setAttribute('aria-expanded',String(o))}
+  ddb.addEventListener('click',function(e){e.stopPropagation();setDD(!dd.classList.contains('open'))});
+  document.addEventListener('click',function(e){if(!dd.contains(e.target))setDD(false)});
+  dd.querySelector('.dd-menu').addEventListener('click',function(){setDD(false)});
+  document.addEventListener('keydown',function(e){if(e.key==="Escape")setDD(false)});
   // selections popup: once per visit
   var promo=document.getElementById('promo'),seen=false;
   try{seen=sessionStorage.getItem('nepsc-promo')==='1'}catch(e){}
