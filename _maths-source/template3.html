@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d2439" media="(prefers-color-scheme: dark)">
+<title>APSSB Maths Practice by Amarjeet Sir</title>
+<link rel="icon" href="__LOGO__">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@500;700&family=Atkinson+Hyperlegible+Next:wght@400;600;800&display=swap">
+<style>
+:root {
+  --page: #eef0f5; --sheet: #ffffff; --ink: #1b1d2b; --ink-soft: #565a70;
+  --drop: #c0336b; --drop-line: #efcddb; --drop-wash: #fbf0f5;
+  --pen: #2340a6; --pen-ink: #ffffff; --pen-wash: #e9eefb;
+  --good: #1d7a45; --good-wash: #e6f4ec; --bad: #c22a2a; --bad-wash: #fbeaea;
+  --on-mark: #ffffff; --redpen: #d42a2a; --scrim: rgba(20, 24, 45, 0.5); --figbg: #ffffff;
+  --sans: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  --mono: "Atkinson Hyperlegible Mono", ui-monospace, "SFMono-Regular", "Roboto Mono", "Noto Sans Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #141a2c; --sheet: #1d2439; --ink: #edf0f8; --ink-soft: #aab0c6;
+    --drop: #ff86b3; --drop-line: #3e3653; --drop-wash: #272640;
+    --pen: #9cb6ff; --pen-ink: #121831; --pen-wash: #253058;
+    --good: #6fd69b; --good-wash: #1b3836; --bad: #ff8a8a; --bad-wash: #41283c;
+    --on-mark: #121831; --redpen: #ff6b6b; --scrim: rgba(5, 8, 20, 0.65); --figbg: #f4f5f8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --page: #141a2c; --sheet: #1d2439; --ink: #edf0f8; --ink-soft: #aab0c6;
+  --drop: #ff86b3; --drop-line: #3e3653; --drop-wash: #272640;
+  --pen: #9cb6ff; --pen-ink: #121831; --pen-wash: #253058;
+  --good: #6fd69b; --good-wash: #1b3836; --bad: #ff8a8a; --bad-wash: #41283c;
+  --on-mark: #121831; --redpen: #ff6b6b; --scrim: rgba(5, 8, 20, 0.65); --figbg: #f4f5f8;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.5; -webkit-tap-highlight-color: transparent; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--sheet); }
+button { font: inherit; color: inherit; }
+a { color: var(--pen); }
+:focus-visible { outline: 3px solid var(--pen); outline-offset: 2px; }
+.qtext:focus, h1:focus { outline: none; }
+.sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+sup, sub { font-size: 0.68em; line-height: 0; }
+
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--sheet); border-bottom: 2px solid var(--drop); }
+.topbar-in { max-width: 40rem; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { margin: 0; font-weight: 800; font-size: 16px; line-height: 1.2; color: var(--drop); text-decoration: none; }
+.brand span { display: block; margin-top: 2px; font-weight: 600; font-size: 13px; color: var(--ink-soft); }
+.timer { font-weight: 700; font-size: 17px; font-variant-numeric: tabular-nums; color: var(--ink); min-width: 5ch; text-align: right; }
+
+main { max-width: 40rem; margin: 0 auto; padding: 16px 16px 40px; }
+body[data-screen="quiz"] main { padding-bottom: 112px; }
+.sheet { background: var(--sheet); border: 1.5px solid var(--drop-line); border-radius: 14px; padding: 22px 18px; }
+.sheet + .sheet { margin-top: 16px; }
+h1, h2, h3 { line-height: 1.2; }
+.crumb { margin: 0 0 12px; font-size: 15px; color: var(--ink-soft); }
+.crumb a { font-weight: 700; text-decoration: none; }
+
+/* Home */
+.hero h1 { font-size: clamp(32px, 9vw, 44px); font-weight: 800; letter-spacing: -0.015em; margin: 0; }
+.sub { margin: 10px 0 0; color: var(--ink-soft); font-size: 17px; max-width: 36ch; }
+.booklet { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 20px 0 0; border: 1.5px solid var(--drop); border-radius: 10px; }
+.booklet > div { padding: 10px 12px; }
+.booklet > div + div { border-left: 1.5px solid var(--drop); }
+.booklet dt { font-size: 13px; line-height: 1.25; font-weight: 600; color: var(--drop); }
+.booklet dd { margin: 4px 0 0; font-size: 24px; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.overall { margin: 16px 0 0; font-weight: 700; }
+.sh { font-size: 20px; margin: 0 0 4px; }
+.topics { list-style: none; margin: 0; padding: 0; }
+.topics li + li { border-top: 1.5px solid var(--drop-line); }
+.topic { display: flex; align-items: center; gap: 14px; padding: 14px 2px; color: var(--ink); text-decoration: none; }
+.tnum { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--drop); color: var(--drop); font-weight: 800; font-size: 15px; font-variant-numeric: tabular-nums; }
+.tbody { min-width: 0; flex: 1; }
+.tname { display: block; font-weight: 700; font-size: 18px; line-height: 1.25; }
+.tmeta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin-top: 6px; color: var(--ink-soft); font-size: 14px; }
+.minis { display: inline-flex; gap: 3px; }
+.mini { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid var(--drop); }
+.mini.done { background: var(--pen); border-color: var(--pen); }
+.mini.live { border-color: var(--pen); }
+.mini.ok { background: var(--good); border-color: var(--good); }
+.mini.no { background: var(--bad); border-color: var(--bad); }
+.mini.skip { border-color: var(--ink-soft); }
+.cta { margin: 20px 4px 0; text-align: center; color: var(--ink-soft); }
+.cta strong { color: var(--ink); }
+.reset { margin: 14px 0 0; text-align: center; }
+.linkbtn { background: none; border: 0; padding: 6px; color: var(--ink-soft); text-decoration: underline; cursor: pointer; font-size: 15px; }
+
+/* Topic */
+.tt { font-size: clamp(28px, 8vw, 38px); font-weight: 800; letter-spacing: -0.01em; margin: 0; }
+.quizzes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+.qcard { display: flex; flex-direction: column; gap: 4px; padding: 14px; border: 1.5px solid var(--drop-line); border-radius: 12px; background: var(--sheet); color: var(--ink); text-decoration: none; }
+.qcard:hover { border-color: var(--drop); }
+.qt { font-weight: 800; font-size: 18px; }
+.qr { color: var(--ink-soft); font-size: 14px; }
+.qcard .minis { margin-top: 6px; }
+.qs { margin-top: 4px; font-weight: 700; font-size: 15px; color: var(--ink-soft); }
+.qs.best { color: var(--good); }
+.qs.live { color: var(--pen); }
+
+/* OMR bubbles */
+.bubble { flex: none; display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--drop); color: var(--drop); background: transparent; font-weight: 700; font-size: 15px; line-height: 1; transition: background-color .15s ease, border-color .15s ease, color .15s ease; }
+.bubble.sm { width: 24px; height: 24px; font-size: 12px; border-width: 1.5px; }
+.bubble.pop { animation: pop .2s ease-out; }
+@keyframes pop { from { transform: scale(.7); } to { transform: scale(1); } }
+.palette { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 6px; margin: 0 0 14px; }
+.cell { aspect-ratio: 1 / 1; min-width: 0; padding: 0; display: grid; place-items: center; border-radius: 50%; border: 1.5px solid var(--drop); background: var(--sheet); color: var(--drop); font-weight: 700; font-size: 13px; font-variant-numeric: tabular-nums; cursor: pointer; }
+.cell.answered { background: var(--pen); border-color: var(--pen); color: var(--pen-ink); }
+.cell.current { box-shadow: 0 0 0 2px var(--page), 0 0 0 4px var(--ink); }
+@media (max-width: 330px) { .palette { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+
+/* Question */
+.pre { margin: 0 0 12px; padding: 10px 12px; border-left: 3px solid var(--drop); background: var(--drop-wash); border-radius: 0 10px 10px 0; font-size: 16px; }
+.qtext { margin: 0; font-size: 19px; font-weight: 600; line-height: 1.45; }
+.qno { color: var(--drop); font-weight: 800; }
+.fig { margin: 14px 0; padding: 10px; background: var(--figbg); border: 1.5px solid var(--drop-line); border-radius: 10px; text-align: center; }
+.fig img { display: block; max-width: 100%; height: auto; margin: 0 auto; }
+.options { display: grid; gap: 10px; margin-top: 18px; }
+.opt { display: flex; align-items: center; gap: 14px; width: 100%; padding: 11px 14px; text-align: left; background: var(--sheet); border: 1.5px solid var(--drop-line); border-radius: 12px; cursor: pointer; }
+.opt:hover { border-color: var(--drop); }
+.opt[aria-checked="true"] { border-color: var(--pen); background: var(--pen-wash); }
+.opt[aria-checked="true"] .bubble { background: var(--pen); border-color: var(--pen); color: var(--pen-ink); }
+.otext { font-size: 18px; line-height: 1.35; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.hint { margin: 12px 0 0; min-height: 1.5em; font-size: 14px; color: var(--ink-soft); }
+.bottombar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; background: var(--sheet); border-top: 2px solid var(--drop); padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px)); }
+.bottombar-in { max-width: 40rem; margin: 0 auto; display: flex; gap: 10px; }
+.bottombar .btn { flex: 1; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 12px 18px; border-radius: 12px; border: 2px solid var(--pen); background: transparent; color: var(--pen); font-weight: 700; font-size: 17px; cursor: pointer; text-decoration: none; text-align: center; }
+.btn.primary { background: var(--pen); color: var(--pen-ink); }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn.block { width: 100%; }
+.btnrow { display: grid; gap: 10px; margin-top: 4px; }
+.backlink { display: inline-block; margin-top: 12px; font-weight: 700; text-decoration: none; }
+
+/* Result */
+.result { text-align: center; }
+.result h1 { font-size: 26px; margin: 0; }
+.result .cand { margin: 4px 0 0; color: var(--ink-soft); }
+.score { position: relative; width: 230px; max-width: 100%; aspect-ratio: 23 / 13; margin: 10px auto 4px; display: grid; place-items: center; }
+.score svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.score path { fill: none; stroke: var(--redpen); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw .9s .2s ease-out forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.score-text { position: relative; font-weight: 800; font-size: 58px; line-height: 1; color: var(--redpen); font-variant-numeric: tabular-nums; }
+.score-text small { font-size: 28px; font-weight: 700; }
+.verdict { margin: 10px auto 4px; font-size: 19px; font-weight: 700; max-width: 30ch; }
+.tally { margin: 0 auto 18px; color: var(--ink-soft); max-width: 36ch; }
+
+/* Review */
+.review h2 { font-size: 20px; margin: 0 0 6px; }
+.ritem { padding: 18px 0; border-top: 1.5px solid var(--drop-line); }
+.ritem:first-of-type { border-top: 0; }
+.rhead { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.rtopic { margin: 0; font-size: 17px; font-weight: 700; }
+.bookq { font-weight: 600; font-size: 14px; color: var(--ink-soft); }
+.status { flex: none; font-size: 14px; font-weight: 700; }
+.status.ok { color: var(--good); }
+.status.no { color: var(--bad); }
+.status.skip { color: var(--ink-soft); }
+.rq { margin: 6px 0 10px; }
+.ropts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.ropts.long { grid-template-columns: minmax(0, 1fr); }
+.ropt { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 7px 10px; border: 1.5px solid var(--drop-line); border-radius: 10px; }
+.ropt .rtext { font-size: 16px; line-height: 1.35; overflow-wrap: anywhere; }
+.ropt .tag { margin-left: auto; font-weight: 800; padding-left: 4px; }
+.ropt.correct { border-color: var(--good); background: var(--good-wash); }
+.ropt.correct .bubble { background: var(--good); border-color: var(--good); color: var(--on-mark); }
+.ropt.correct .tag { color: var(--good); }
+.ropt.wrong { border-color: var(--bad); background: var(--bad-wash); }
+.ropt.wrong .bubble { background: var(--bad); border-color: var(--bad); color: var(--on-mark); }
+.ropt.wrong .tag { color: var(--bad); }
+.rline { margin: 10px 0 0; font-size: 15px; color: var(--ink-soft); }
+.solution { margin-top: 12px; padding: 12px 14px 12px 12px; border-left: 3px solid var(--drop); border-radius: 0 10px 10px 0; background: var(--drop-wash); font-size: 16px; line-height: 1.6; }
+.solution h4 { margin: 0 0 4px; font-size: 15px; color: var(--drop); }
+.steps { margin: 0; padding-left: 1.4em; }
+.steps li + li { margin-top: 4px; }
+.key { margin-top: 10px; font-size: 15px; }
+.key summary { cursor: pointer; font-weight: 700; color: var(--drop); }
+.key p { margin: 6px 0 0; }
+
+/* Dialog */
+.overlay { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: var(--scrim); }
+.dialog { width: 100%; max-width: 24rem; padding: 22px 20px; border-radius: 16px; background: var(--sheet); color: var(--ink); border: 1.5px solid var(--drop); }
+.dialog h2 { margin: 0 0 8px; font-size: 21px; }
+.dialog p { margin: 0; color: var(--ink-soft); }
+.dialog .row { display: flex; gap: 10px; margin-top: 18px; }
+.dialog .row .btn { flex: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .score path { stroke-dashoffset: 0; }
+}
+</style>
+</head>
+<body data-screen="home">
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#"><img class="brandlogo" src="__LOGO__" alt="" width="40" height="40"><span class="brandtext">APSSB Maths Practice by Amarjeet Sir<span>Northeast PSC</span></span></a>
+    <span class="timer" id="timer" role="timer" aria-label="Time elapsed" hidden></span>
+  </div>
+  <nav class="nav" aria-label="Site sections"><a href="#" data-nav="home">Home</a><a href="#practice" data-nav="practice">Practice</a><a href="#mock" data-nav="mock">Mock test</a><a href="#report" data-nav="report">My report</a><a href="#selections" data-nav="selections">Selections</a><a href="#free-class" data-nav="free-class">Free classes</a><a href="#marathons" data-nav="marathons">Marathons</a><a href="#guidance" data-nav="guidance">Guidance</a><a href="#batches" data-nav="batches">Batches</a><a href="#reviews" data-nav="reviews">Reviews</a><a href="#about" data-nav="about">About Sir</a><a href="#contact" data-nav="contact">Contact</a></nav>
+</header>
+<main id="app"></main>
+<script type="application/json" id="quiz-data">__DATA__</script>
+<script>
+(function () {
+  "use strict";
+  const DATA = JSON.parse(document.getElementById("quiz-data").textContent);
+  const TOPICS = DATA.topics, IMAGES = DATA.images;
+  const BY_SLUG = {};
+  TOPICS.forEach(function (t, i) { t.index = i; BY_SLUG[t.slug] = t; });
+  const LETTERS = ["A", "B", "C", "D"];
+  const KEY = "apssb-basic-maths-v1";
+  const QPER = 10, NQUIZ = 10;
+  const app = document.getElementById("app");
+  const timerEl = document.getElementById("timer");
+  let view = { screen: "home" };
+  let popIndex = null, lastFocus = null, runningId = null;
+
+  function validActive(a) {
+    return a && Array.isArray(a.answers) && a.answers.length === QPER &&
+      a.answers.every(function (x) { return x === null || (Number.isInteger(x) && x >= 0 && x < 4); }) &&
+      Number.isInteger(a.index) && a.index >= 0 && a.index < QPER && typeof a.elapsed === "number";
+  }
+  function validProgress(p) {
+    return p && Number.isInteger(p.best) && Number.isInteger(p.last) && Array.isArray(p.lastAnswers) && p.lastAnswers.length === QPER;
+  }
+  function loadStore() {
+    const s = { progress: {}, active: {} };
+    try {
+      const raw = JSON.parse(localStorage.getItem(KEY));
+      if (raw && typeof raw === "object") {
+        Object.keys(raw.progress || {}).forEach(function (k) { if (validProgress(raw.progress[k])) s.progress[k] = raw.progress[k]; });
+        Object.keys(raw.active || {}).forEach(function (k) { if (validActive(raw.active[k])) { raw.active[k].resumedAt = null; s.active[k] = raw.active[k]; } });
+      }
+    } catch (e) { /* start fresh */ }
+    return s;
+  }
+  let store = loadStore();
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) { /* storage unavailable */ } }
+
+  function qid(slug, k) { return slug + "-quiz-" + k; }
+  function quizQs(t, k) { return t.qs.slice((k - 1) * QPER, k * QPER); }
+  function strip(html) { return html.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">"); }
+  function attr(s) { return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;"); }
+  function clock(ms) { const t = Math.max(0, Math.floor(ms / 1000)); const m = Math.floor(t / 60), s = t % 60; return (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s; }
+  function duration(ms) { const t = Math.max(0, Math.round(ms / 1000)); const m = Math.floor(t / 60), s = t % 60; return m ? m + " min " + s + " s" : s + " s"; }
+  function verdict(c, t) {
+    if (c === t) return "Full marks. You know this set well.";
+    if (c >= t - 2) return "Excellent. Read the solutions for the ones you missed.";
+    if (c >= Math.ceil(t / 2)) return "Good effort. Go through the solutions and try again.";
+    return "Read the solutions below carefully, then retake this quiz.";
+  }
+  function elapsedOf(a) { return a.elapsed + (a.resumedAt ? Date.now() - a.resumedAt : 0); }
+  function pauseRunning() {
+    if (runningId && store.active[runningId] && store.active[runningId].resumedAt) {
+      const a = store.active[runningId]; a.elapsed = elapsedOf(a); a.resumedAt = null; save();
+    }
+    runningId = null;
+  }
+  function fig(name) {
+    const im = IMAGES[name];
+    return im ? '<figure class="fig"><img src="' + im.src + '" alt="' + attr(im.alt) + '" width="' + im.w + '" height="' + im.h + '"></figure>' : "";
+  }
+
+  function homeView() {
+    let total = 0;
+    const rows = TOPICS.map(function (t, i) {
+      let done = 0, minis = "";
+      for (let k = 1; k <= NQUIZ; k++) {
+        const id = qid(t.slug, k), p = store.progress[id], a = store.active[id];
+        if (p) done++;
+        minis += '<span class="mini' + (p ? " done" : a ? " live" : "") + '"></span>';
+      }
+      total += done;
+      return '<li><a class="topic" href="#' + t.slug + '"><span class="tnum" aria-hidden="true">' + (i + 1) + '</span><span class="tbody"><span class="tname">' + t.name +
+        '</span><span class="tmeta"><span class="minis" aria-hidden="true">' + minis + '</span><span>' + done + ' of 10 quizzes done</span></span></span></a></li>';
+    }).join("");
+    return '<section class="sheet hero" aria-labelledby="pagetitle">' +
+      '<h1 id="pagetitle" tabindex="-1">Basic Mathematics Practice</h1>' +
+      '<p class="sub">Every question of the Basic Mathematics Practice Book, as quizzes of 10 with step-by-step solutions.</p>' +
+      '<dl class="booklet"><div><dt>Topics</dt><dd>' + TOPICS.length + '</dd></div><div><dt>Quizzes</dt><dd>' + (TOPICS.length * NQUIZ) + '</dd></div><div><dt>Questions</dt><dd>' + (TOPICS.length * NQUIZ * QPER) + '</dd></div></dl>' +
+      '<p class="overall">' + (total ? "You have attempted " + total + " of " + (TOPICS.length * NQUIZ) + " quizzes." : "Pick a topic to start. Your progress is saved on this phone.") + '</p>' +
+      '</section><section class="sheet" aria-labelledby="topicshead"><h2 id="topicshead" class="sh">Topics</h2><ol class="topics">' + rows + '</ol></section>' +
+      '<p class="cta">More practice tests are part of the <strong>APSSB Test Series at Northeast PSC</strong>.</p>' +
+      (total || Object.keys(store.active).length ? '<p class="reset"><button type="button" class="linkbtn" data-action="reset">Clear my progress</button></p>' : "");
+  }
+
+  function topicView(t) {
+    let cards = "";
+    for (let k = 1; k <= NQUIZ; k++) {
+      const id = qid(t.slug, k), p = store.progress[id], a = store.active[id];
+      const from = (k - 1) * QPER + 1, to = k * QPER;
+      let minis = "";
+      for (let j = 0; j < QPER; j++) {
+        let cls = "mini";
+        if (a) { if (a.answers[j] !== null) cls += " done"; }
+        else if (p) { const x = p.lastAnswers[j]; cls += x === null ? " skip" : (x === t.qs[from - 1 + j].k ? " ok" : " no"); }
+        minis += '<span class="' + cls + '"></span>';
+      }
+      const label = a ? "In progress" : p ? "Best " + p.best + "/10" : "Not attempted";
+      cards += '<a class="qcard" href="#' + qid(t.slug, k) + '" aria-label="Quiz ' + k + ', questions ' + from + ' to ' + to + '. ' + (a ? "In progress" : p ? "Best score " + p.best + " out of 10" : "Not attempted") + '">' +
+        '<span class="qt">Quiz ' + k + '</span><span class="qr">Questions ' + from + '–' + to + '</span><span class="minis" aria-hidden="true">' + minis + '</span>' +
+        '<span class="qs' + (a ? " live" : p ? " best" : "") + '" aria-hidden="true">' + label + '</span></a>';
+    }
+    return '<p class="crumb"><a href="#">All topics</a></p><section class="sheet" aria-labelledby="pagetitle">' +
+      '<h1 id="pagetitle" class="tt" tabindex="-1">' + t.name + '</h1><p class="sub">' + t.chapter + ' of the book. 10 quizzes of 10 questions each.</p>' +
+      '<div class="quizzes">' + cards + '</div></section>';
+  }
+
+  function quizView(t, k) {
+    const a = store.active[qid(t.slug, k)], qs = quizQs(t, k);
+    const i = a.index, q = qs[i], chosen = a.answers[i], last = i === qs.length - 1;
+    let cells = "";
+    for (let j = 0; j < qs.length; j++) {
+      const done = a.answers[j] !== null;
+      cells += '<button type="button" class="cell' + (done ? " answered" : "") + (j === i ? " current" : "") + '" data-action="goto" data-i="' + j + '" aria-label="Question ' + (j + 1) + ', ' + (done ? "answered" : "not answered") + '"' + (j === i ? ' aria-current="step"' : "") + '>' + (j + 1) + '</button>';
+    }
+    const opts = q.o.map(function (o, j) {
+      const on = chosen === j;
+      return '<button type="button" class="opt" role="radio" aria-checked="' + on + '" data-action="pick" data-i="' + j + '" aria-label="Option ' + LETTERS[j] + ': ' + attr(strip(o)) + '"><span class="bubble' + (on && popIndex === j ? " pop" : "") + '" aria-hidden="true">' + LETTERS[j] + '</span><span class="otext" aria-hidden="true">' + o + '</span></button>';
+    }).join("");
+    return '<p class="crumb"><a href="#' + t.slug + '">' + t.name + '</a> <span aria-hidden="true">/</span> Quiz ' + k + '</p>' +
+      '<nav class="palette" aria-label="Jump to a question">' + cells + '</nav>' +
+      '<section class="sheet q" aria-label="Question ' + (i + 1) + ' of ' + qs.length + '">' +
+      (q.pre ? '<p class="pre">' + q.pre + '</p>' : "") + (q.img && q.ip === "before" ? fig(q.img) : "") +
+      '<h2 class="qtext" id="qhead" tabindex="-1"><span class="qno">Q' + (i + 1) + '.</span> ' + q.t + '</h2>' +
+      (q.img && q.ip !== "before" ? fig(q.img) : "") +
+      '<div class="options" role="radiogroup" aria-labelledby="qhead">' + opts + '</div>' +
+      '<p class="hint" aria-live="polite">' + (chosen === null ? "" : "Marked " + LETTERS[chosen] + ". Tap it again to clear.") + '</p></section>' +
+      '<div class="bottombar"><div class="bottombar-in"><button type="button" class="btn" data-action="prev"' + (i === 0 ? " disabled" : "") + '>Previous</button>' +
+      '<button type="button" class="btn primary" data-action="' + (last ? "submit" : "next") + '">' + (last ? "Submit quiz" : "Next question") + '</button></div></div>';
+  }
+
+  function reviewItem(t, q, j, x) {
+    const skip = x === null, ok = x === q.k;
+    const status = skip ? '<span class="status skip">Not attempted</span>' : ok ? '<span class="status ok">✓ Correct</span>' : '<span class="status no">✗ Wrong</span>';
+    const long = q.o.some(function (o) { return strip(o).length > 22; });
+    const opts = q.o.map(function (o, m) {
+      let cls = "ropt", tag = "", note = "";
+      if (m === q.k) { cls += " correct"; tag = '<span class="tag" aria-hidden="true">✓</span>'; note = m === x ? " (your answer, correct)" : " (correct answer)"; }
+      else if (m === x) { cls += " wrong"; tag = '<span class="tag" aria-hidden="true">✗</span>'; note = " (your answer)"; }
+      return '<div class="' + cls + '"><span class="bubble sm" aria-hidden="true">' + LETTERS[m] + '</span><span class="rtext"><span class="sr">Option ' + LETTERS[m] + ': </span>' + o + '<span class="sr">' + note + '</span></span>' + tag + '</div>';
+    }).join("");
+    const line = skip ? "You did not attempt this. Correct answer: " + LETTERS[q.k] + "." : ok ? "You marked " + LETTERS[q.k] + "." : "You marked " + LETTERS[x] + ". Correct answer: " + LETTERS[q.k] + ".";
+    const sec = t.sections[q.c];
+    return '<article class="ritem"><div class="rhead"><h3 class="rtopic"><span class="qno">Q' + (j + 1) + '.</span> <span class="bookq">Book Q. ' + q.b + '</span></h3>' + status + '</div>' +
+      (q.pre ? '<p class="pre">' + q.pre + '</p>' : "") + (q.img && q.ip === "before" ? fig(q.img) : "") +
+      '<p class="rq">' + q.t + '</p>' + (q.img && q.ip !== "before" ? fig(q.img) : "") +
+      '<div class="ropts' + (long ? " long" : "") + '">' + opts + '</div><p class="rline">' + line + '</p>' +
+      '<div class="solution"><h4>Solution</h4><ol class="steps">' + q.s.map(function (s) { return "<li>" + s + "</li>"; }).join("") + '</ol>' +
+      (sec && sec.k ? '<details class="key"><summary>Key idea</summary><p>' + sec.k + '</p></details>' : "") + '</div></article>';
+  }
+
+  function resultView(t, k) {
+    const p = store.progress[qid(t.slug, k)], qs = quizQs(t, k);
+    let c = 0, w = 0, s = 0;
+    qs.forEach(function (q, j) { const x = p.lastAnswers[j]; if (x === null) s++; else if (x === q.k) c++; else w++; });
+    const nt = TOPICS[t.index + 1];
+    const nextHref = k < NQUIZ ? "#" + qid(t.slug, k + 1) : nt ? "#" + nt.slug : "#";
+    const nextLabel = k < NQUIZ ? "Next quiz" : nt ? "Next topic: " + nt.name : "All topics";
+    return '<p class="crumb"><a href="#' + t.slug + '">' + t.name + '</a> <span aria-hidden="true">/</span> Quiz ' + k + '</p>' +
+      '<section class="sheet result" aria-labelledby="pagetitle"><h1 id="pagetitle" tabindex="-1">Your result</h1>' +
+      '<p class="cand">' + t.name + ', Quiz ' + k + ' (book questions ' + ((k - 1) * QPER + 1) + '–' + (k * QPER) + ')</p>' +
+      '<div class="score" role="img" aria-label="Score ' + c + ' out of ' + qs.length + '"><svg viewBox="0 0 230 130" aria-hidden="true"><path pathLength="1" d="M158 22 C106 8 34 22 26 62 C19 101 86 121 148 113 C205 105 220 70 206 42 C195 21 158 11 110 16"/></svg>' +
+      '<span class="score-text" aria-hidden="true">' + c + '<small>/' + qs.length + '</small></span></div>' +
+      '<p class="verdict">' + verdict(c, qs.length) + '</p>' +
+      '<p class="tally">' + c + ' correct, ' + w + ' wrong, ' + s + ' not attempted. Time taken: ' + duration(p.lastTime) + '. Best score: ' + p.best + '/10.</p>' +
+      '<div class="btnrow"><a class="btn primary block" href="' + nextHref + '">' + nextLabel + '</a><button type="button" class="btn block" data-action="retake">Retake this quiz</button></div>' +
+      '<a class="backlink" href="#' + t.slug + '">Back to ' + t.name + '</a></section>' +
+      '<section class="sheet review" aria-labelledby="ktitle"><h2 id="ktitle">Answer key with solutions</h2>' +
+      qs.map(function (q, j) { return reviewItem(t, q, j, p.lastAnswers[j]); }).join("") + '</section>';
+  }
+
+  function tick() {
+    const a = runningId ? store.active[runningId] : null;
+    if (a) { timerEl.hidden = false; timerEl.textContent = clock(elapsedOf(a)); }
+    else timerEl.hidden = true;
+  }
+
+  function render() {
+    let html;
+    if (view.screen === "topic") html = topicView(view.topic);
+    else if (view.screen === "quiz") html = view.mode === "result" ? resultView(view.topic, view.quiz) : quizView(view.topic, view.quiz);
+    else html = homeView();
+    document.body.setAttribute("data-screen", view.screen === "quiz" && view.mode !== "result" ? "quiz" : view.screen);
+    app.innerHTML = html;
+    tick();
+  }
+
+  function parseHash() {
+    let h = location.hash.replace(/^#/, "");
+    try { h = decodeURIComponent(h); } catch (e) { h = ""; }
+    const m = h.match(/^([a-z-]+)-quiz-(\d{1,2})$/);
+    if (m && BY_SLUG[m[1]]) { const k = Number(m[2]); if (k >= 1 && k <= NQUIZ) return { screen: "quiz", topic: BY_SLUG[m[1]], quiz: k }; }
+    if (BY_SLUG[h]) return { screen: "topic", topic: BY_SLUG[h] };
+    return { screen: "home" };
+  }
+
+  function startAttempt(id) {
+    store.active[id] = { answers: new Array(QPER).fill(null), index: 0, elapsed: 0, resumedAt: Date.now() };
+    runningId = id; save();
+  }
+
+  function route() {
+    closeDialog(true);
+    pauseRunning();
+    view = parseHash();
+    if (view.screen === "quiz") {
+      const id = qid(view.topic.slug, view.quiz);
+      if (store.active[id]) { store.active[id].resumedAt = Date.now(); runningId = id; view.mode = "quiz"; save(); }
+      else if (store.progress[id]) view.mode = "result";
+      else { startAttempt(id); view.mode = "quiz"; }
+    }
+    render();
+    window.scrollTo(0, 0);
+    const h = document.getElementById("qhead") || document.getElementById("pagetitle");
+    if (h) h.focus({ preventScroll: true });
+  }
+
+  function goQuestion(j) {
+    const a = store.active[runningId];
+    if (!a || j < 0 || j >= QPER) return;
+    a.index = j; save(); render();
+    window.scrollTo(0, 0);
+    const h = document.getElementById("qhead");
+    if (h) h.focus({ preventScroll: true });
+  }
+
+  function finish() {
+    const id = runningId, a = store.active[id];
+    if (!a) return;
+    const qs = quizQs(view.topic, view.quiz);
+    let c = 0;
+    qs.forEach(function (q, j) { if (a.answers[j] === q.k) c++; });
+    const prev = store.progress[id];
+    store.progress[id] = { best: prev ? Math.max(prev.best, c) : c, last: c, attempts: (prev ? prev.attempts || 1 : 0) + 1, lastAnswers: a.answers.slice(), lastTime: elapsedOf(a), lastAt: Date.now() };
+    delete store.active[id];
+    runningId = null; save();
+    view.mode = "result"; render();
+    window.scrollTo(0, 0);
+    const h = document.getElementById("pagetitle");
+    if (h) h.focus({ preventScroll: true });
+  }
+
+  function openDialog(title, body, confirmLabel, cancelLabel, action) {
+    if (document.querySelector(".overlay")) return;
+    lastFocus = document.activeElement;
+    document.body.insertAdjacentHTML("beforeend", '<div class="overlay"><div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dtitle" aria-describedby="ddesc">' +
+      '<h2 id="dtitle">' + title + '</h2><p id="ddesc">' + body + '</p><div class="row"><button type="button" class="btn" data-action="cancel">' + cancelLabel + '</button>' +
+      '<button type="button" class="btn primary" data-action="' + action + '">' + confirmLabel + '</button></div></div></div>');
+    const b = document.querySelector('.dialog [data-action="' + action + '"]');
+    if (b) b.focus();
+  }
+  function closeDialog(silent) {
+    const o = document.querySelector(".overlay");
+    if (o) o.remove();
+    if (!silent && lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+    lastFocus = null;
+  }
+
+  document.addEventListener("click", function (e) {
+    if (e.target.classList && e.target.classList.contains("overlay")) { closeDialog(); return; }
+    const el = e.target.closest ? e.target.closest("[data-action]") : null;
+    if (!el || el.disabled) return;
+    const act = el.getAttribute("data-action");
+    const j = Number(el.getAttribute("data-i"));
+    const a = runningId ? store.active[runningId] : null;
+    switch (act) {
+      case "pick": {
+        if (!a) return;
+        const cur = a.answers[a.index];
+        a.answers[a.index] = cur === j ? null : j;
+        popIndex = cur === j ? null : j;
+        save(); render(); popIndex = null;
+        const btn = app.querySelector('.opt[data-i="' + j + '"]');
+        if (btn) btn.focus({ preventScroll: true });
+        break;
+      }
+      case "goto": goQuestion(j); break;
+      case "prev": if (a) goQuestion(a.index - 1); break;
+      case "next": if (a) goQuestion(a.index + 1); break;
+      case "submit": {
+        if (!a) return;
+        const answered = a.answers.filter(function (x) { return x !== null; }).length;
+        openDialog("Submit this quiz?", "You have answered " + answered + " of " + QPER + " questions." + (answered < QPER ? " Unanswered questions get 0 marks." : "") + " You cannot change answers after submitting.", "Submit quiz", "Keep answering", "confirm-submit");
+        break;
+      }
+      case "confirm-submit": closeDialog(true); finish(); break;
+      case "retake": {
+        const id = qid(view.topic.slug, view.quiz);
+        startAttempt(id); view.mode = "quiz"; render();
+        window.scrollTo(0, 0);
+        const h = document.getElementById("qhead");
+        if (h) h.focus({ preventScroll: true });
+        break;
+      }
+      case "reset":
+        openDialog("Clear your progress?", "This removes all your scores and unfinished quizzes from this phone.", "Clear progress", "Keep progress", "confirm-reset");
+        break;
+      case "confirm-reset":
+        closeDialog(true); store = { progress: {}, active: {} }; runningId = null; save(); render();
+        break;
+      case "cancel": closeDialog(); break;
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    const overlay = document.querySelector(".overlay");
+    if (!overlay) return;
+    if (e.key === "Escape") { closeDialog(); return; }
+    if (e.key === "Tab") {
+      const f = overlay.querySelectorAll("button");
+      const first = f[0], lastBtn = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); lastBtn.focus(); }
+      else if (!e.shiftKey && document.activeElement === lastBtn) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  window.addEventListener("hashchange", route);
+  window.addEventListener("pagehide", pauseRunningKeep);
+  document.addEventListener("visibilitychange", tick);
+  function pauseRunningKeep() {
+    if (runningId && store.active[runningId] && store.active[runningId].resumedAt) {
+      const x = store.active[runningId]; x.elapsed = elapsedOf(x); x.resumedAt = Date.now(); save();
+    }
+  }
+  route();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
