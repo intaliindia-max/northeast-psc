@@ -149,10 +149,14 @@ SITE["app"] = {"url": "https://web.classplusapp.com", "code": "yjkfbc"}
 IMG["team"] = "team-photo.jpg"
 SITE["teamAlt"] = "Amarjeet Sir with the Northeast PSC team and students at a felicitation event."
 SITE["teamCaption"] = "Amarjeet Sir with the Northeast PSC team."
+IMG["team-2"] = "team-photo-2.jpg"
+# Team photos in display order (newest first): [image key, alt text]
+SITE["teamPhotos"] = [["team-2", "Northeast PSC faculty team speaking to students in the classroom."],
+                      ["team", SITE["teamAlt"]]]
 IMG.update({k: k + ".jpg" for k in ["g-tsd", "g-column", "g-fullhall", "g-discount", "g-squares", "g-simplify", "g-exponents", "g-lcm", "g-writing", "g-sqrt", "g-average", "g-packed"]})
 IMG.update({"rank-jumram": "rank-jumram.jpg", "rank-jumyir": "rank-jumyir.jpg", "rank-bujum": "rank-bujum.jpg"})
 IMG.update({"poster-maths": "batch-online-maths.jpg", "poster-csat": "batch-appscce-csat.jpg"})
-USED_IMG = ["poster-maths", "poster-csat", "rank-bujum", "rank-jumram", "rank-jumyir", "g-tsd", "g-column", "g-fullhall", "g-discount", "g-squares", "g-simplify", "g-exponents", "g-lcm", "g-writing", "g-sqrt", "g-average", "g-packed", "face", "team", "hero", "portrait", "avatar", "practice", "poster1", "poster2", "poster3", "sel-banner", "res-cgl24", "res-hc24",
+USED_IMG = ["poster-maths", "poster-csat", "rank-bujum", "rank-jumram", "rank-jumyir", "g-tsd", "g-column", "g-fullhall", "g-discount", "g-squares", "g-simplify", "g-exponents", "g-lcm", "g-writing", "g-sqrt", "g-average", "g-packed", "face", "team", "team-2", "hero", "portrait", "avatar", "practice", "poster1", "poster2", "poster3", "sel-banner", "res-cgl24", "res-hc24",
             "res-steno24", "res-csl23", "res-chsl23", "book-basic", "book-advanced", "logo", "logo-icon"]
 _unused = [k for k in IMG if k not in USED_IMG]
 for k in _unused: del IMG[k]

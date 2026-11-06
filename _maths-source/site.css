@@ -112,6 +112,7 @@ img.selbanner { display: block; width: 100%; height: auto; border-radius: 10px; 
 
 .team { clear: both; margin: 16px 0 0; }
 .team img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.team img + img { margin-top: 10px; }
 .team figcaption { margin-top: 6px; font-size: 14px; color: var(--ink-soft); }
 
 .tools { display: grid; gap: 10px; }
