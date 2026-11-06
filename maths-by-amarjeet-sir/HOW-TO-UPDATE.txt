@@ -1,0 +1,13 @@
+APSSB Maths Practice by Amarjeet Sir - website files
+
+PUT IT ON NORTHEASTPSC.CO.IN (for the person who manages the website)
+1. Open the hosting control panel (for example cPanel) and go to File Manager > public_html.
+2. Open the folder maths-by-amarjeet-sir (create it if it is not there) and delete the old placeholder index.html.
+3. Upload this zip into that folder, then right-click it and choose Extract.
+4. index.html, images, sw.js and manifest.webmanifest must sit directly inside maths-by-amarjeet-sir, not inside another folder.
+5. Open https://northeastpsc.co.in/maths-by-amarjeet-sir/ to check.
+For an update, extract the new zip the same way and replace the old files. Students' phones pick up the new version on their own.
+
+OR PUT IT ONLINE FREE (on a laptop or computer)
+Netlify: open app.netlify.com/drop, sign up free, drag this zip into the box, then change the site name.
+Cloudflare Pages: dash.cloudflare.com > Workers & Pages > Create application > Drag and drop your files. Name the project, drop this zip and choose Deploy site.
