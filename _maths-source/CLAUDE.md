@@ -29,6 +29,29 @@ The owner is Amarjeet Sir, Maths faculty at Northeast PSC, Arunachal Pradesh. He
 ## Optional
 - `python3 brochure.py` makes the 2-page student brochure PDF in `dist/` (needs the DejaVu Sans fonts).
 
+## History (from the owner's earlier claude.ai project chat)
+This repository is now the master copy. Older copies made in that chat are out of date.
+
+What is built:
+- APSSB Maths Practice: 2,236 questions (1,700 from the book + 536 PYQ), 231 quizzes, mock test (25 questions, 50 marks, 30 minutes, CHSL pattern), My report, score sharing, installable app with offline practice.
+- Website: selections and toppers, free classes, marathons, guidance, batches (Rs 1,500 Maths at the top, Rs 5,000 CSAT at the bottom), reviews, about, class photos, books, contact. Phone design is fixed; tablet/laptop styles are added.
+- Made outside this repo: 2-page brochure (QR points to the new address) and a prompt for a separate CSAT platform.
+
+Decisions:
+- Live address: https://northeastpsc.co.in/maths-by-amarjeet-sir/ (repo northeast-psc). Flow for changes: owner writes in Claude Code, Claude pushes, owner merges, site goes live.
+- Confirmed facts: WhatsApp 60095 26445, Pasighat 92337 89170, 1,000+ selections.
+- The CSAT platform will be built later as a separate project (prompt + this website + CSAT file).
+- Share the brochure only after the platform shows at the live link.
+
 ## Open items from the owner
-- Google Form for students' name and WhatsApp number: not connected yet. It needs the form's pre-filled link.
-- Nirjuli address spelling "Chart & Chess" is still to be confirmed.
+1. Check the live link no longer shows "being prepared" (PR 1 was merged into main).
+2. Google Form for students' name and WhatsApp number: not connected yet. It needs the form's pre-filled link.
+3. Numbers to confirm: Itanagar (81189 84013 or 92337 89183), Naharlagun (70054 79070 or 98637 86864), and 60096 07689 / 84150 96728 from the old placeholder page.
+4. Nirjuli address spelling "Chart & Chess" is still to be confirmed.
+5. Basic book cover (before print): "2000+ Questions" should be 1,700; "Questioned Oriented" should be "Question Oriented".
+6. Maths batch poster says "Offer valid today only". Replace the poster when the offer changes.
+7. Marathon start times for Ratio, Time & Work, TSD, Statistics; topic times for the Percentage–TSD class.
+8. Missing titles/links: title of Demo lecture 1, title of guidance video HJ-5xDyzhmk, link for CGL marathon Day 1 Reasoning.
+9. 8 skipped PYQs (Q58, 211, 395, 479, 481, 497, 502, 529): correct versions, if they are to be added.
+10. Optional: Google rating, student videos/feedback, Reasoning questions, Simplification PYQs, and fixing old info in YouTube descriptions (600+, org code jewus, 89749 41736).
+11. Build check reports options with the same value in PYQ 358, 445 and 496. Ask the owner before changing.
