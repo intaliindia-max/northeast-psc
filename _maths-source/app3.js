@@ -167,7 +167,7 @@
       '<p class="revcount"><span>' + S.reviews.count + '</span>reviews on Google</p>' +
       '<p class="lead">Students who have already joined Northeast PSC have written about the classes, the teachers and their selections. Read their reviews on Google before you decide.</p>' +
       '<a class="btn primary block" ' + ext(S.reviews.url) + '>Read reviews on Google</a></section>' +
-      '<section class="sheet sec" id="about" aria-labelledby="h-about"><h2 id="h-about">About Amarjeet Sir</h2>' + pic("portrait", "Amarjeet Sir", "portrait", true) + para(S.about) + '<figure class="team">' + pic("team", S.teamAlt, "", true) + '<figcaption>' + S.teamCaption + '</figcaption></figure></section>' +
+      '<section class="sheet sec" id="about" aria-labelledby="h-about"><h2 id="h-about">About Amarjeet Sir</h2>' + pic("portrait", "Amarjeet Sir", "portrait", true) + para(S.about) + '<figure class="team">' + S.teamPhotos.map(function (t) { return pic(t[0], t[1], "", true); }).join("") + '<figcaption>' + S.teamCaption + '</figcaption></figure></section>' +
       '<section class="sheet sec" id="classroom" aria-labelledby="h-class"><h2 id="h-class">In the classroom</h2><p class="tapnote">Tap a photo to see it full size.</p><div class="gallery">' + gallery + '</div>' +
       (galleryMore ? '<details class="more"><summary>More class photos</summary><div class="gallery">' + galleryMore + '</div></details>' : "") + '</section>' +
       '<section class="sheet sec" id="message" aria-labelledby="h-msg"><div class="msghead">' + pic("avatar", "Illustration of Amarjeet Sir", "", true) + '<h2 id="h-msg">Message from Amarjeet Sir</h2></div>' +
