@@ -407,6 +407,77 @@ p.sday + .days { margin-top: 8px; }
 .finfo .btn + .btn { margin-top: 8px; }
 .batchsub { margin: 18px 0 8px; font-size: 17px; }
 .posters + .feat { margin-top: 18px; }
+
+/* ===== Tablet & laptop layout (added for northeastpsc.co.in) ===== */
+@media (min-width: 768px) {
+  .topbar-in, .nav, main, .bottombar-in { max-width: 48rem; }
+  .posters { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; scroll-snap-type: none; }
+  .rgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .quizzes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1024px) {
+  .topbar-in, .nav { max-width: 1200px; padding-left: 24px; padding-right: 24px; }
+  .nav { flex-wrap: wrap; overflow: visible; }
+  main { max-width: 52rem; padding: 24px 24px 56px; }
+  body[data-screen="home"] main, body[data-screen="practice"] main, body[data-screen="topic"] main { max-width: 1200px; }
+  body[data-screen="quiz"] main, .bottombar-in { max-width: 46rem; }
+  body[data-screen="quiz"] .palette { max-width: 34rem; }
+
+  /* Home: two-column board of sections */
+  body[data-screen="home"] main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+  body[data-screen="home"] main > .sheet + .sheet { margin-top: 0; }
+  body[data-screen="home"] main > * { grid-column: span 1; min-width: 0; }
+  body[data-screen="home"] .hero2, body[data-screen="home"] #selections, body[data-screen="home"] #batches,
+  body[data-screen="home"] #classroom, body[data-screen="home"] .foot { grid-column: 1 / -1; }
+  body[data-screen="home"] .hero2 { order: 1; } body[data-screen="home"] #selections { order: 2; }
+  body[data-screen="home"] #free-class { order: 3; } body[data-screen="home"] #marathons { order: 4; }
+  body[data-screen="home"] #batches { order: 5; }
+  body[data-screen="home"] #guidance { order: 6; } body[data-screen="home"] #about { order: 7; }
+  body[data-screen="home"] #classroom { order: 8; }
+  body[data-screen="home"] #message { order: 9; } body[data-screen="home"] #books { order: 10; }
+  body[data-screen="home"] #reviews { order: 11; } body[data-screen="home"] #contact { order: 12; }
+  body[data-screen="home"] .foot { order: 13; }
+
+  .hero2 { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: stretch; }
+  .hero2 .heroimg { height: 100%; min-height: 420px; aspect-ratio: auto; }
+  .hero2 .herobody { padding: 36px 36px 32px; align-self: center; }
+  .hero2 h1 { font-size: 56px; }
+
+  #selections .rgrid { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; }
+  #selections .rgrid figure.wide { grid-column: span 2; }
+  #selections .years { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+  #selections .selbanner, #selections img.selbanner { max-width: 900px; margin-left: auto; margin-right: auto; }
+  .posters { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .hero2 .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero2 .stats > div + div { border-left: 0; }
+  .hero2 .stats > div:nth-child(even) { border-left: 1.5px solid var(--drop); }
+  .hero2 .stats > div:nth-child(n+3) { border-top: 1.5px solid var(--drop); }
+  #batches .feat { padding: 16px; }
+  #batches .fgrid { grid-template-columns: 320px minmax(0, 1fr); }
+  #reviews { display: flex; flex-direction: column; justify-content: center; }
+
+  .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  #classroom > .gallery { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  #classroom .gallery > .zoom:first-child { grid-column: span 2; grid-row: span 2; }
+  #classroom .gallery > .zoom:first-child img { height: 100%; aspect-ratio: auto; }
+  .more .gallery > .zoom:first-child { grid-column: auto; grid-row: auto; }
+  .foot { padding-top: 8px; }
+
+  /* Practice: intro and tools side by side, topics in three columns */
+  body[data-screen="practice"] main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+  body[data-screen="practice"] main > .sheet + .sheet { margin-top: 0; }
+  body[data-screen="practice"] main > * { min-width: 0; }
+  body[data-screen="practice"] main > :nth-child(n+3) { grid-column: 1 / -1; }
+  body[data-screen="practice"] .tools { align-content: center; }
+  .topics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 28px; }
+  .topics li + li { border-top: 0; }
+  .topics li { border-top: 1.5px solid var(--drop-line); }
+  .topics li:nth-child(-n+3) { border-top: 0; }
+
+  /* Topic: quiz cards in a wide grid */
+  .quizzes { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 12px; }
+}
 </style>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="images/icon-192.png">
