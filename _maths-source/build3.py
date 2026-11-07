@@ -168,7 +168,7 @@ PWA_HEAD = """<link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="images/icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="description" content="Free APSSB Maths practice by Amarjeet Sir: 2,236 questions with step-by-step solutions, mock tests and topic-wise reports.">
-<meta property="og:title" content="APSSB Maths Practice by Amarjeet Sir">
+<meta property="og:title" content="APSSB Maths &amp; Reasoning Practice by Amarjeet Sir">
 <meta property="og:description" content="2,236 questions with step-by-step solutions, mock tests and topic-wise reports. Free.">
 <meta property="og:image" content="https://northeastpsc.co.in/maths-by-amarjeet-sir/images/og-image.jpg">
 <meta property="og:url" content="https://northeastpsc.co.in/maths-by-amarjeet-sir/">
@@ -210,7 +210,7 @@ for f in ["icon-192.png", "icon-512.png", "icon-maskable-512.png", "og-image.jpg
     shutil.copy("site_img/" + f, "site_pkg/images/" + f)
 import json as _json
 open("site_pkg/manifest.webmanifest", "w").write(_json.dumps({
-    "name": "APSSB Maths Practice by Amarjeet Sir", "short_name": "APSSB Maths", "start_url": "./", "scope": "./", "display": "standalone",
+    "name": "APSSB Maths & Reasoning Practice by Amarjeet Sir", "short_name": "APSSB Maths", "start_url": "./", "scope": "./", "display": "standalone",
     "background_color": "#eef0f5", "theme_color": "#ffffff",
     "icons": [{"src": "images/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "images/icon-512.png", "sizes": "512x512", "type": "image/png"},
               {"src": "images/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}, indent=1))
@@ -234,7 +234,7 @@ self.addEventListener("fetch", function (e) {
   }
 });
 """)
-open("site_pkg/HOW-TO-UPDATE.txt", "w").write("APSSB Maths Practice by Amarjeet Sir - website files\n\nPUT IT ON NORTHEASTPSC.CO.IN (for the person who manages the website)\n1. Open the hosting control panel (for example cPanel) and go to File Manager > public_html.\n2. Open the folder maths-by-amarjeet-sir (create it if it is not there) and delete the old placeholder index.html.\n3. Upload this zip into that folder, then right-click it and choose Extract.\n4. index.html, images, sw.js and manifest.webmanifest must sit directly inside maths-by-amarjeet-sir, not inside another folder.\n5. Open https://northeastpsc.co.in/maths-by-amarjeet-sir/ to check.\nFor an update, extract the new zip the same way and replace the old files. Students' phones pick up the new version on their own.\n\nOR PUT IT ONLINE FREE (on a laptop or computer)\nNetlify: open app.netlify.com/drop, sign up free, drag this zip into the box, then change the site name.\nCloudflare Pages: dash.cloudflare.com > Workers & Pages > Create application > Drag and drop your files. Name the project, drop this zip and choose Deploy site.\n")
+open("site_pkg/HOW-TO-UPDATE.txt", "w").write("APSSB Maths & Reasoning Practice by Amarjeet Sir - website files\n\nPUT IT ON NORTHEASTPSC.CO.IN (for the person who manages the website)\n1. Open the hosting control panel (for example cPanel) and go to File Manager > public_html.\n2. Open the folder maths-by-amarjeet-sir (create it if it is not there) and delete the old placeholder index.html.\n3. Upload this zip into that folder, then right-click it and choose Extract.\n4. index.html, images, sw.js and manifest.webmanifest must sit directly inside maths-by-amarjeet-sir, not inside another folder.\n5. Open https://northeastpsc.co.in/maths-by-amarjeet-sir/ to check.\nFor an update, extract the new zip the same way and replace the old files. Students' phones pick up the new version on their own.\n\nOR PUT IT ONLINE FREE (on a laptop or computer)\nNetlify: open app.netlify.com/drop, sign up free, drag this zip into the box, then change the site name.\nCloudflare Pages: dash.cloudflare.com > Workers & Pages > Create application > Drag and drop your files. Name the project, drop this zip and choose Deploy site.\n")
 zp = "dist/APSSB Maths Practice by Amarjeet Sir - website.zip"
 with zipfile.ZipFile(zp, "w", zipfile.ZIP_DEFLATED) as z:
     for root, _, fs in os.walk("site_pkg"):

@@ -1,4 +1,4 @@
-APSSB Maths Practice by Amarjeet Sir - website files
+APSSB Maths & Reasoning Practice by Amarjeet Sir - website files
 
 PUT IT ON NORTHEASTPSC.CO.IN (for the person who manages the website)
 1. Open the hosting control panel (for example cPanel) and go to File Manager > public_html.

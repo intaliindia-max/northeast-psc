@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1d2439" media="(prefers-color-scheme: dark)">
-<title>APSSB Maths Practice by Amarjeet Sir</title>
+<title>APSSB Maths &amp; Reasoning Practice by Amarjeet Sir</title>
 <link rel="icon" href="images/logo-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -487,7 +487,7 @@ p.sday + .days { margin-top: 8px; }
 <link rel="apple-touch-icon" href="images/icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="description" content="Free APSSB Maths practice by Amarjeet Sir: 2,236 questions with step-by-step solutions, mock tests and topic-wise reports.">
-<meta property="og:title" content="APSSB Maths Practice by Amarjeet Sir">
+<meta property="og:title" content="APSSB Maths &amp; Reasoning Practice by Amarjeet Sir">
 <meta property="og:description" content="2,236 questions with step-by-step solutions, mock tests and topic-wise reports. Free.">
 <meta property="og:image" content="https://northeastpsc.co.in/maths-by-amarjeet-sir/images/og-image.jpg">
 <meta property="og:url" content="https://northeastpsc.co.in/maths-by-amarjeet-sir/">
@@ -496,7 +496,7 @@ p.sday + .days { margin-top: 8px; }
 <body data-screen="home">
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="#"><img class="brandlogo" src="images/logo-icon.png" alt="" width="40" height="40"><span class="brandtext">APSSB Maths Practice by Amarjeet Sir<span>Northeast PSC</span></span></a>
+    <a class="brand" href="#"><img class="brandlogo" src="images/logo-icon.png" alt="" width="40" height="40"><span class="brandtext">APSSB Maths &amp; Reasoning Practice by Amarjeet Sir<span>Northeast PSC</span></span></a>
     <span class="timer" id="timer" role="timer" aria-label="Time elapsed" hidden></span>
   </div>
   <nav class="nav" aria-label="Site sections"><a href="#" data-nav="home">Home</a><a href="#practice" data-nav="practice">Practice</a><a href="#mock" data-nav="mock">Mock test</a><a href="#report" data-nav="report">My report</a><a href="#selections" data-nav="selections">Selections</a><a href="#free-class" data-nav="free-class">Free classes</a><a href="#marathons" data-nav="marathons">Marathons</a><a href="#guidance" data-nav="guidance">Guidance</a><a href="#batches" data-nav="batches">Batches</a><a href="#reviews" data-nav="reviews">Reviews</a><a href="#about" data-nav="about">About Sir</a><a href="#contact" data-nav="contact">Contact</a></nav>
@@ -647,7 +647,7 @@ p.sday + .days { margin-top: 8px; }
     const more = (S.moreClasses || []).map(function (m) { return '<a class="vcard vsmall" ' + ext(m.url) + '><span class="play" aria-hidden="true">▶</span><span>' + m.title + '<small>' + m.topicsText + '</small></span></a>'; }).join("");
     const demos = S.demos.map(function (d) { return '<a class="vcard vsmall" ' + ext(d.url) + '><span class="play" aria-hidden="true">▶</span><span>' + d.label + '<small>' + d.title + '</small></span></a>'; }).join("");
     return '<section class="sheet hero2" aria-labelledby="pagetitle">' + pic("hero", S.heroAlt, "heroimg", false) +
-      '<div class="herobody"><h1 id="pagetitle" tabindex="-1">APSSB Maths Practice</h1>' +
+      '<div class="herobody"><h1 id="pagetitle" tabindex="-1">APSSB Maths &amp; Reasoning Practice</h1>' +
       '<p class="byline">' + pic("face", "Amarjeet Sir", "", false) + '<span>by Amarjeet Sir<small>Northeast PSC, Arunachal Pradesh</small></span></p>' +
       '<p class="sub">' + fmt(nq) + ' questions in ' + fmt(nz) + ' quizzes, each with a step-by-step solution: every question of the Basic Mathematics Practice Book and ' + fmt(npyq) + ' APSSB previous year questions.</p>' +
       '<div class="ctarow"><a class="btn primary" href="#practice">Start practice</a><a class="btn" ' + ext(waLink(S.joinMsg)) + '>Join a batch</a></div>' +
@@ -819,7 +819,7 @@ p.sday + .days { margin-top: 8px; }
     const score = q.kind === "mock" ? (c * MOCK.marks) + "/" + (q.qs.length * MOCK.marks) + " marks" : c + "/" + q.qs.length;
     const where = q.kind === "mock" ? "an APSSB-style Maths mock test" : q.t.name + ", " + q.label;
     const url = SITE.siteUrl || location.href.split("#")[0];
-    const text = "I scored " + score + " in " + where + " on APSSB Maths Practice by Amarjeet Sir. Practise free with step-by-step solutions: " + url;
+    const text = "I scored " + score + " in " + where + " on APSSB Maths & Reasoning Practice by Amarjeet Sir. Practise free with step-by-step solutions: " + url;
     if (typeof navigator !== "undefined" && navigator.share) navigator.share({ text: text }).catch(function () {});
     else window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener");
   }
