@@ -141,7 +141,7 @@
     const more = (S.moreClasses || []).map(function (m) { return '<a class="vcard vsmall" ' + ext(m.url) + '><span class="play" aria-hidden="true">▶</span><span>' + m.title + '<small>' + m.topicsText + '</small></span></a>'; }).join("");
     const demos = S.demos.map(function (d) { return '<a class="vcard vsmall" ' + ext(d.url) + '><span class="play" aria-hidden="true">▶</span><span>' + d.label + '<small>' + d.title + '</small></span></a>'; }).join("");
     return '<section class="sheet hero2" aria-labelledby="pagetitle">' + pic("hero", S.heroAlt, "heroimg", false) +
-      '<div class="herobody"><h1 id="pagetitle" tabindex="-1">APSSB Maths Practice</h1>' +
+      '<div class="herobody"><h1 id="pagetitle" tabindex="-1">APSSB Maths &amp; Reasoning Practice</h1>' +
       '<p class="byline">' + pic("face", "Amarjeet Sir", "", false) + '<span>by Amarjeet Sir<small>Northeast PSC, Arunachal Pradesh</small></span></p>' +
       '<p class="sub">' + fmt(nq) + ' questions in ' + fmt(nz) + ' quizzes, each with a step-by-step solution: every question of the Basic Mathematics Practice Book and ' + fmt(npyq) + ' APSSB previous year questions.</p>' +
       '<div class="ctarow"><a class="btn primary" href="#practice">Start practice</a><a class="btn" ' + ext(waLink(S.joinMsg)) + '>Join a batch</a></div>' +
@@ -313,7 +313,7 @@
     const score = q.kind === "mock" ? (c * MOCK.marks) + "/" + (q.qs.length * MOCK.marks) + " marks" : c + "/" + q.qs.length;
     const where = q.kind === "mock" ? "an APSSB-style Maths mock test" : q.t.name + ", " + q.label;
     const url = SITE.siteUrl || location.href.split("#")[0];
-    const text = "I scored " + score + " in " + where + " on APSSB Maths Practice by Amarjeet Sir. Practise free with step-by-step solutions: " + url;
+    const text = "I scored " + score + " in " + where + " on APSSB Maths & Reasoning Practice by Amarjeet Sir. Practise free with step-by-step solutions: " + url;
     if (typeof navigator !== "undefined" && navigator.share) navigator.share({ text: text }).catch(function () {});
     else window.open("https://wa.me/?text=" + encodeURIComponent(text), "_blank", "noopener");
   }
