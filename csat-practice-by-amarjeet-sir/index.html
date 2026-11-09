@@ -454,6 +454,88 @@ table.qt th { background: var(--pen-wash); }
 .adalso { margin: 12px 0 0; font-size: 15px; color: var(--ink-soft); }
 .centres a { white-space: nowrap; }
 .savenote { margin: 14px 0 0; padding: 10px 12px; border-radius: 10px; background: var(--bad-wash); color: var(--bad); font-weight: 700; font-size: 15px; }
+
+/* ===== Tablet & laptop layout (same as the Maths site) ===== */
+@media (min-width: 768px) {
+  main, .topbar-in, .nav { max-width: 60rem; }
+  main { padding: 20px 24px 48px; }
+  .topbar-in { padding: 10px 24px; }
+  .nav { padding: 0 24px 10px; }
+  body[data-screen="quiz"] main, body[data-screen="quiz"] .topbar-in, body[data-screen="quiz"] .bottombar-in { max-width: 46rem; }
+  body[data-screen="mock"] main, body[data-screen="report"] main { max-width: 52rem; }
+  .sheet { padding: 26px 26px; }
+  .heroimg { aspect-ratio: 16 / 7; }
+  .topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .topics li, .topics li + li { border: 1.5px solid var(--drop-line); border-radius: 12px; }
+  .topic { height: 100%; box-sizing: border-box; padding: 14px; }
+  .tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tools .btn { grid-column: 1 / -1; }
+  .posters { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; scroll-snap-type: none; padding-bottom: 0; }
+  .years { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .demos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .books { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
+  .books li:nth-child(2) { border-top: 0; }
+  .centres { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+  .centres li:nth-child(2) { border-top: 0; }
+  #contact > .btn { display: flex; max-width: 26rem; margin-left: auto; margin-right: auto; }
+  .posters { align-items: stretch; }
+  .poster { height: 100%; }
+  .poster figcaption { margin-top: auto; }
+  .vframe, .vcard:not(.vsmall) { max-width: 54rem; }
+  #free-class .btnrow { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 54rem; }
+  #reviews { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 32px; align-items: center; }
+  #reviews > h2 { grid-column: 1 / -1; }
+  #reviews .revcount { grid-row: 2 / span 2; margin: 0; }
+  #reviews .btn { max-width: 24rem; justify-self: start; }
+}
+
+/* ---------- Laptop and desktop (1024px and wider): full width up to 1280px ---------- */
+@media (min-width: 1024px) {
+  main, .topbar-in { max-width: 80rem; }
+  main { padding: 24px 24px 56px; }
+  .nav { max-width: 80rem; padding: 0 12px 10px; flex-wrap: nowrap; justify-content: center; overflow: visible; gap: 3px; }
+  .nav a { flex: 0 1 auto; white-space: nowrap; font-size: clamp(12px, 1.15vw, 15px); padding: 6px clamp(7px, 0.75vw, 12px); }
+  body[data-screen="quiz"] .nav { display: none; }
+  .sheet { padding: 30px 34px; }
+
+  .sheet.hero2 { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); padding: 0; }
+  .hero2 .heroimg { height: 100%; min-height: 440px; aspect-ratio: auto; }
+  .hero2 .herobody { align-self: center; padding: 34px 38px; }
+  .hero2 .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero2 .stats > div + div { border-left: 0; }
+  .hero2 .stats > div:nth-child(even) { border-left: 1.5px solid var(--drop); }
+  .hero2 .stats > div:nth-child(n+3) { border-top: 1.5px solid var(--drop); }
+
+  .topics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .quizzes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .posters { grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 16px; }
+  .rgrid { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 14px; align-items: start; }
+  .rgrid figure.wide { grid-column: auto; }
+  .years { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .years .hl { grid-template-columns: 1fr; }
+  .years .hl li { border-left: 0; border-top: 1.5px solid var(--drop); }
+  .years .hl li:first-child { border-top: 0; }
+  .years .hl li:last-child:nth-child(odd) { grid-column: auto; }
+  .demos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #marathons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 28px; align-items: start; }
+  #marathons > h2, #marathons > .lead { grid-column: 1 / -1; }
+  .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .gallery > .zoom { height: 100%; }
+  .gallery > .zoom:first-child { grid-column: span 2; grid-row: span 2; }
+  .gallery > .zoom:first-child img { height: 100%; aspect-ratio: auto; }
+  .more .gallery > .zoom:first-child { grid-column: auto; grid-row: auto; }
+  .more .gallery > .zoom:first-child img { height: auto; aspect-ratio: 4 / 3; }
+  .feat .fgrid { grid-template-columns: 22rem minmax(0, 1fr); gap: 26px; }
+  .sec .portrait { max-width: 260px; }
+}
+
+
+/* CSAT-specific laptop tweaks */
+@media (min-width: 1024px) {
+  .posters { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
+  .demos { grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); }
+  .tools { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
 </style>
 </head>
 <body data-screen="home">
