@@ -1,0 +1,9480 @@
+{
+"maths_mixed": [
+{
+"slug": "percentage",
+"t": "What is 18% of 250?",
+"o": [
+"70",
+"57.5",
+"32.5",
+"45"
+],
+"k": 3,
+"s": [
+"18% of 250 = (18/100) × 250.",
+"= 45."
+]
+},
+{
+"slug": "profit-loss",
+"t": "A shopkeeper buys an article for Rs. 2,400 and sells it at a profit of 12%. What is the selling price?",
+"o": [
+"Rs. 2,688",
+"Rs. 2,412",
+"Rs. 2,112",
+"Rs. 2,928"
+],
+"k": 0,
+"s": [
+"SP = CP × (100 + 12)/100 = 2,400 × 112/100.",
+"= Rs. 2,688."
+]
+},
+{
+"slug": "simple-interest",
+"t": "Find the simple interest on Rs. 25,500 at 12% per annum for 5 years.",
+"o": [
+"Rs. 15,300",
+"Rs. 18,360",
+"Rs. 40,800",
+"Rs. 12,240"
+],
+"k": 0,
+"s": [
+"SI = P × R × T/100 = 25,500 × 12 × 5/100.",
+"= Rs. 15,300."
+]
+},
+{
+"slug": "compound-interest",
+"t": "Find the compound interest on Rs. 5,900 for 2 years at 10% per annum, compounded annually.",
+"o": [
+"Rs. 1,239",
+"Rs. 7,139",
+"Rs. 1,180",
+"Rs. 1,339"
+],
+"k": 0,
+"s": [
+"Amount = 5,900 × (1 + 10/100)² = 7,139.",
+"CI = 7,139 − 5,900 = Rs. 1,239."
+]
+},
+{
+"slug": "ratio-proportion",
+"t": "Rs. 1,430 is divided between Rina and Kago in the ratio 5:8. What is Rina's share?",
+"o": [
+"Rs. 550",
+"Rs. 715",
+"Rs. 880",
+"Rs. 660"
+],
+"k": 0,
+"s": [
+"Total parts = 5 + 8 = 13.",
+"Rina's share = 1,430 × 5/13 = Rs. 550."
+]
+},
+{
+"slug": "series-average",
+"t": "The average of 9 numbers is 52. If the number 62 is added, what is the new average?",
+"o": [
+"53",
+"54",
+"52",
+"57"
+],
+"k": 0,
+"s": [
+"Sum of 9 numbers = 9 × 52 = 468.",
+"New average = (468 + 62)/10 = 53."
+]
+},
+{
+"slug": "lcm-hcf",
+"t": "What is the HCF of 135 and 72?",
+"o": [
+"18",
+"9",
+"10",
+"135"
+],
+"k": 1,
+"s": [
+"135 = 9 × 15 and 72 = 9 × 8.",
+"15 and 8 have no common factor, so HCF = 9."
+]
+},
+{
+"slug": "number-system",
+"t": "What is the unit digit of 17¹⁰⁹?",
+"o": [
+"9",
+"8",
+"0",
+"7"
+],
+"k": 3,
+"s": [
+"Unit digits of powers of 7 repeat in the cycle 7, 9, 3, 1 (length 4).",
+"109 ÷ 4 leaves remainder 1, so take position 1: the unit digit is 7."
+]
+},
+{
+"slug": "time-work",
+"t": "Ravi can finish a work in 6 days and Sonam can finish it in 12 days. In how many days can they finish it together?",
+"o": [
+"3 days",
+"4 days",
+"9 days",
+"6 days"
+],
+"k": 1,
+"s": [
+"One day's work together = 1/6 + 1/12 = 1/4.",
+"So they finish the work in 4 days."
+]
+},
+{
+"slug": "time-speed-distance",
+"t": "Convert 30 m/s into km/h.",
+"o": [
+"54 km/h",
+"108 km/h",
+"99 km/h",
+"126 km/h"
+],
+"k": 1,
+"s": [
+"1 m/s = 18/5 km/h.",
+"30 × 18/5 = 108 km/h."
+]
+},
+{
+"slug": "mensuration",
+"t": "Find the total surface area of a cube of edge 14 cm.",
+"o": [
+"784 cm²",
+"1,176 cm²",
+"1,190 cm²",
+"2,744 cm²"
+],
+"k": 1,
+"s": [
+"Total surface area = 6a² = 6 × 14².",
+"= 1,176 cm²."
+]
+},
+{
+"slug": "geometry",
+"t": "What is the measure of each exterior angle of a regular polygon with 12 sides?",
+"o": [
+"40°",
+"150°",
+"30°",
+"15°"
+],
+"k": 2,
+"s": [
+"Each exterior angle = 360°/n.",
+"= 360/12 = 30°."
+]
+},
+{
+"slug": "statistics",
+"t": "Find the range of 71, 24, 6, 84, 20, 22, 23.",
+"o": [
+"35",
+"78",
+"83",
+"84"
+],
+"k": 1,
+"s": [
+"Range = largest − smallest = 84 − 6.",
+"= 78."
+]
+},
+{
+"slug": "simplification",
+"t": "Simplify: 16 + 3 × 9 − 20 ÷ 5",
+"o": [
+"44",
+"23",
+"167",
+"39"
+],
+"k": 3,
+"s": [
+"Do ÷ and × first: 3 × 9 = 27, 20 ÷ 5 = 4.",
+"16 + 27 − 4 = 39."
+]
+},
+{
+"slug": "fractions",
+"t": "Find 5/7 of 3/5 of 560.",
+"o": [
+"243",
+"400",
+"480",
+"240"
+],
+"k": 3,
+"s": [
+"5/7 × 3/5 × 560.",
+"= 240."
+]
+},
+{
+"slug": "power-exponents",
+"t": "Simplify: (2⁸ × 2³) ÷ 2⁴",
+"o": [
+"2¹⁵",
+"2⁷",
+"2²⁰",
+"2⁸"
+],
+"k": 1,
+"s": [
+"aᵐ × aⁿ = aᵐ⁺ⁿ and aᵐ ÷ aⁿ = aᵐ⁻ⁿ.",
+"Power = 8 + 3 − 4 = 7, so the answer is 2⁷."
+]
+},
+{
+"slug": "decimal",
+"t": "Find the value of 4.23 + 4.9 − 0.2.",
+"o": [
+"8.83",
+"9.93",
+"9.33",
+"8.93"
+],
+"k": 3,
+"s": [
+"4.23 + 4.9 = 9.13.",
+"9.13 − 0.2 = 8.93."
+]
+},
+{
+"slug": "percentage",
+"t": "If 45% of a number is 468, what is the number?",
+"o": [
+"2,080",
+"1,040",
+"1,144",
+"936"
+],
+"k": 1,
+"s": [
+"Let the number be N. Then (45/100) × N = 468.",
+"N = 468 × 100/45 = 1,040."
+]
+},
+{
+"slug": "profit-loss",
+"t": "An article bought for Rs. 3,900 is sold for Rs. 4,875. Find the profit or loss per cent.",
+"o": [
+"30% profit",
+"25% loss",
+"23% profit",
+"25% profit"
+],
+"k": 3,
+"s": [
+"Profit = 975.",
+"Profit% = 975/3,900 × 100 = 25%."
+]
+},
+{
+"slug": "simple-interest",
+"t": "A sum of Rs. 2,500 amounts to Rs. 2,800 in 2 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"6%",
+"7%",
+"8%",
+"5%"
+],
+"k": 0,
+"s": [
+"SI = 2,800 − 2,500 = 300.",
+"R = SI × 100/(P × T) = 300 × 100/(2,500 × 2) = 6%."
+]
+},
+{
+"slug": "compound-interest",
+"t": "What is the difference between compound interest and simple interest on Rs. 35,200 for 2 years at 5% per annum?",
+"o": [
+"Rs. 176",
+"Rs. 93",
+"Rs. 264",
+"Rs. 88"
+],
+"k": 3,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 35,200 × (5/100)² = Rs. 88."
+]
+},
+{
+"slug": "ratio-proportion",
+"t": "If A:B = 2:1 and B:C = 7:3, find A:C.",
+"o": [
+"9:4",
+"14:3",
+"3:14",
+"6:7"
+],
+"k": 1,
+"s": [
+"A/C = (A/B) × (B/C) = (2/1) × (7/3) = 14/3.",
+"A:C = 14:3."
+]
+},
+{
+"slug": "series-average",
+"t": "What is the 13th term of the series 27, 34, 41, 48, …?",
+"o": [
+"111",
+"104",
+"112",
+"118"
+],
+"k": 0,
+"s": [
+"First term a = 27, common difference d = 7.",
+"Tₙ = a + (n − 1)d = 27 + 12 × 7 = 111."
+]
+},
+{
+"slug": "lcm-hcf",
+"t": "The product of two numbers is 648 and their HCF is 6. What is their LCM?",
+"o": [
+"648",
+"114",
+"324",
+"108"
+],
+"k": 3,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 648/6 = 108."
+]
+},
+{
+"slug": "number-system",
+"t": "How many factors does 288 have?",
+"o": [
+"20",
+"16",
+"7",
+"18"
+],
+"k": 3,
+"s": [
+"288 = 2⁵ × 3².",
+"Number of factors = (5 + 1) × (2 + 1) = 18."
+]
+},
+{
+"slug": "time-work",
+"t": "A pipe can fill a tank in 6 hours and another pipe can empty it in 8 hours. If both are opened together, in how much time will the empty tank be filled?",
+"o": [
+"24 hours",
+"2 hours",
+"14 hours",
+"26 hours"
+],
+"k": 0,
+"s": [
+"Net filling in 1 hour = 1/6 − 1/8 = 1/24.",
+"So the tank is filled in 24 hours."
+]
+},
+{
+"slug": "time-speed-distance",
+"t": "A train 280 m long is running at 63 km/h. In how much time will it cross a pole?",
+"o": [
+"18 seconds",
+"16 seconds",
+"14 seconds",
+"32 seconds"
+],
+"k": 1,
+"s": [
+"Speed = 63 × 5/18 = 17.5 m/s.",
+"Time = 280/17.5 = 16 seconds."
+]
+},
+{
+"slug": "mensuration",
+"t": "The side of a square is 30 cm. What is its area?",
+"o": [
+"1800 cm²",
+"930 cm²",
+"900 cm²",
+"120 cm²"
+],
+"k": 2,
+"s": [
+"Area = side² = 30².",
+"= 900 cm²."
+]
+},
+{
+"slug": "geometry",
+"t": "The angles of a triangle are in the ratio 1:2:3. What is the largest angle?",
+"o": [
+"30°",
+"100°",
+"60°",
+"90°"
+],
+"k": 3,
+"s": [
+"Sum of parts = 6; one part = 180/6 = 30°.",
+"Largest angle = 3 × 30 = 90°."
+]
+},
+{
+"slug": "statistics",
+"t": "Find the median of 40, 46, 74, 61, 56, 71, 32, 43, 57.",
+"o": [
+"56",
+"46",
+"57",
+"53"
+],
+"k": 0,
+"s": [
+"Arranged in order: 32, 40, 43, 46, 56, 57, 61, 71, 74.",
+"The middle (5th) value = 56."
+]
+},
+{
+"slug": "simplification",
+"t": "Simplify: 16 + 9 × 6 − 80 ÷ 8",
+"o": [
+"60",
+"68",
+"-10",
+"140"
+],
+"k": 0,
+"s": [
+"Do ÷ and × first: 9 × 6 = 54, 80 ÷ 8 = 10.",
+"16 + 54 − 10 = 60."
+]
+},
+{
+"slug": "fractions",
+"t": "Find 2/4 of 4/5 of 360.",
+"o": [
+"144",
+"288",
+"148",
+"180"
+],
+"k": 0,
+"s": [
+"2/4 × 4/5 × 360.",
+"= 144."
+]
+},
+{
+"slug": "power-exponents",
+"t": "Simplify: (10⁷ × 10⁷) ÷ 10²",
+"o": [
+"10¹³",
+"10⁴⁷",
+"10¹⁶",
+"10¹²"
+],
+"k": 3,
+"s": [
+"aᵐ × aⁿ = aᵐ⁺ⁿ and aᵐ ÷ aⁿ = aᵐ⁻ⁿ.",
+"Power = 7 + 7 − 2 = 12, so the answer is 10¹²."
+]
+},
+{
+"slug": "decimal",
+"t": "Find the value of 6.83 + 6.1 − 1.09.",
+"o": [
+"14.02",
+"12.84",
+"11.84",
+"11.74"
+],
+"k": 2,
+"s": [
+"6.83 + 6.1 = 12.93.",
+"12.93 − 1.09 = 11.84."
+]
+},
+{
+"slug": "percentage",
+"t": "The price of a shirt is first increased by 10% and then decreased by 20%. What is the net percentage change in its price?",
+"o": [
+"30% increase",
+"2% decrease",
+"10% decrease",
+"12% decrease"
+],
+"k": 3,
+"s": [
+"Net change = a − b − ab/100 = 10 − 20 − (10×20)/100.",
+"= -12%, so the answer is: 12% decrease."
+]
+},
+{
+"slug": "profit-loss",
+"t": "The marked price of a jacket is Rs. 2,800. A discount of 20% is given. What is the selling price?",
+"o": [
+"Rs. 2,240",
+"Rs. 2,780",
+"Rs. 3,360",
+"Rs. 2,100"
+],
+"k": 0,
+"s": [
+"Discount = 20% of 2,800 = 560.",
+"SP = 2,800 − 560 = Rs. 2,240."
+]
+},
+{
+"slug": "simple-interest",
+"t": "What amount will Rs. 6,000 become in 3 years at 8% per annum simple interest?",
+"o": [
+"Rs. 7,920",
+"Rs. 6,960",
+"Rs. 7,440",
+"Rs. 1,440"
+],
+"k": 2,
+"s": [
+"SI = 6,000 × 8 × 3/100 = 1,440.",
+"Amount = 6,000 + 1,440 = Rs. 7,440."
+]
+},
+{
+"slug": "compound-interest",
+"t": "Find the compound interest on Rs. 5,600 for 2 years at 5% per annum, compounded annually.",
+"o": [
+"Rs. 560",
+"Rs. 624",
+"Rs. 574",
+"Rs. 6,174"
+],
+"k": 2,
+"s": [
+"Amount = 5,600 × (1 + 5/100)² = 6,174.",
+"CI = 6,174 − 5,600 = Rs. 574."
+]
+},
+{
+"slug": "ratio-proportion",
+"t": "Find the mean proportional between 25 and 36.",
+"o": [
+"60",
+"30",
+"32",
+"28"
+],
+"k": 1,
+"s": [
+"Mean proportional = √(25 × 36) = √900.",
+"= 30."
+]
+},
+{
+"slug": "series-average",
+"t": "What is the sum of the first 25 odd numbers?",
+"o": [
+"625",
+"600",
+"650",
+"1250"
+],
+"k": 0,
+"s": [
+"Sum of the first n odd numbers = n².",
+"= 25² = 625."
+]
+},
+{
+"slug": "lcm-hcf",
+"t": "What is the least number exactly divisible by 10, 12 and 15?",
+"o": [
+"30",
+"70",
+"120",
+"60"
+],
+"k": 3,
+"s": [
+"Required number = LCM of 10, 12 and 15.",
+"= 60."
+]
+},
+{
+"slug": "number-system",
+"t": "Which of the following numbers is divisible by 11?",
+"o": [
+"92680",
+"71743",
+"48016",
+"74965"
+],
+"k": 3,
+"s": [
+"A number is divisible by 11 if the difference between the sums of alternate digits is 0 or divisible by 11.",
+"Only 74965 satisfies this test."
+]
+},
+{
+"slug": "time-work",
+"t": "Ravi can finish a work in 24 days and Sonam can finish it in 12 days. In how many days can they finish it together?",
+"o": [
+"8 days",
+"7 days",
+"10 days",
+"18 days"
+],
+"k": 0,
+"s": [
+"One day's work together = 1/24 + 1/12 = 1/8.",
+"So they finish the work in 8 days."
+]
+},
+{
+"slug": "time-speed-distance",
+"t": "A person goes to a place at 20 km/h and comes back by the same road at 30 km/h. What is his average speed for the whole journey?",
+"o": [
+"24 km/h",
+"25 km/h",
+"21 km/h",
+"26 km/h"
+],
+"k": 0,
+"s": [
+"For equal distances, average speed = 2xy/(x + y).",
+"= 2 × 20 × 30/(20 + 30) = 24 km/h."
+]
+},
+{
+"slug": "mensuration",
+"t": "Find the volume of a cylinder of radius 14 cm and height 20 cm. (Use π = 22/7)",
+"o": [
+"12,628 cm³",
+"24,640 cm³",
+"12,320 cm³",
+"1,760 cm³"
+],
+"k": 2,
+"s": [
+"Volume = πr²h = (22/7) × 14 × 14 × 20.",
+"= 12,320 cm³."
+]
+},
+{
+"slug": "geometry",
+"t": "What is the sum of the interior angles of a polygon with 13 sides?",
+"o": [
+"2,340°",
+"1,980°",
+"1,800°",
+"2,160°"
+],
+"k": 1,
+"s": [
+"Sum of interior angles = (n − 2) × 180°.",
+"= 11 × 180 = 1,980°."
+]
+},
+{
+"slug": "statistics",
+"t": "Find the mode of 4, 10, 29, 29, 8, 29, 10, 26.",
+"o": [
+"29",
+"10",
+"8",
+"26"
+],
+"k": 0,
+"s": [
+"29 appears 3 times, more than any other value.",
+"Mode = 29."
+]
+},
+{
+"slug": "simplification",
+"t": "Simplify: 57 + 2 × 2 − 54 ÷ 6",
+"o": [
+"58",
+"7",
+"109",
+"52"
+],
+"k": 3,
+"s": [
+"Do ÷ and × first: 2 × 2 = 4, 54 ÷ 6 = 9.",
+"57 + 4 − 9 = 52."
+]
+},
+{
+"slug": "fractions",
+"t": "Find 2/3 of 2/5 of 240.",
+"o": [
+"64",
+"128",
+"66",
+"160"
+],
+"k": 0,
+"s": [
+"2/3 × 2/5 × 240.",
+"= 64."
+]
+},
+{
+"slug": "power-exponents",
+"t": "What is the value of 2² + 2⁰?",
+"o": [
+"6",
+"3",
+"5",
+"4"
+],
+"k": 2,
+"s": [
+"2² = 4 and any non-zero number to the power 0 is 1.",
+"4 + 1 = 5."
+]
+},
+{
+"slug": "decimal",
+"t": "Express 3/40 as a decimal.",
+"o": [
+"0.175",
+"13.333333",
+"0.075",
+"0.0075"
+],
+"k": 2,
+"s": [
+"Divide 3 by 40.",
+"3/40 = 0.075."
+]
+},
+{
+"slug": "percentage",
+"t": "What is 24% of 2,700?",
+"o": [
+"918",
+"783",
+"513",
+"648"
+],
+"k": 3,
+"s": [
+"24% of 2,700 = (24/100) × 2,700.",
+"= 648."
+]
+},
+{
+"slug": "profit-loss",
+"t": "Two successive discounts of 20% and 20% are equal to a single discount of:",
+"o": [
+"40%",
+"36%",
+"38%",
+"33%"
+],
+"k": 1,
+"s": [
+"Single discount = a + b − ab/100 = 20 + 20 − 400/100.",
+"= 36%."
+]
+},
+{
+"slug": "simple-interest",
+"t": "A sum of Rs. 17,000 amounts to Rs. 23,120 in 3 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"11%",
+"12%",
+"13%",
+"14%"
+],
+"k": 1,
+"s": [
+"SI = 23,120 − 17,000 = 6,120.",
+"R = SI × 100/(P × T) = 6,120 × 100/(17,000 × 3) = 12%."
+]
+},
+{
+"slug": "compound-interest",
+"t": "What is the difference between compound interest and simple interest on Rs. 5,900 for 2 years at 10% per annum?",
+"o": [
+"Rs. 118",
+"Rs. 69",
+"Rs. 59",
+"Rs. 177"
+],
+"k": 2,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 5,900 × (10/100)² = Rs. 59."
+]
+},
+{
+"slug": "ratio-proportion",
+"t": "Rs. 6,930 is divided between Nima and Yarin in the ratio 3:4. What is Nima's share?",
+"o": [
+"Rs. 1,980",
+"Rs. 2,970",
+"Rs. 3,465",
+"Rs. 3,960"
+],
+"k": 1,
+"s": [
+"Total parts = 3 + 4 = 7.",
+"Nima's share = 6,930 × 3/7 = Rs. 2,970."
+]
+},
+{
+"slug": "series-average",
+"t": "The average of 7 numbers is 73. If the number 57 is added, what is the new average?",
+"o": [
+"70",
+"72",
+"65",
+"71"
+],
+"k": 3,
+"s": [
+"Sum of 7 numbers = 7 × 73 = 511.",
+"New average = (511 + 57)/8 = 71."
+]
+},
+{
+"slug": "lcm-hcf",
+"t": "What is the HCF of 40 and 25?",
+"o": [
+"40",
+"10",
+"5",
+"6"
+],
+"k": 2,
+"s": [
+"40 = 5 × 8 and 25 = 5 × 5.",
+"8 and 5 have no common factor, so HCF = 5."
+]
+},
+{
+"slug": "number-system",
+"t": "What is the unit digit of 4⁷¹?",
+"o": [
+"7",
+"5",
+"6",
+"4"
+],
+"k": 3,
+"s": [
+"Unit digits of powers of 4 repeat in the cycle 4, 6 (length 2).",
+"71 ÷ 2 leaves remainder 1, so take position 1: the unit digit is 4."
+]
+},
+{
+"slug": "time-work",
+"t": "A pipe can fill a tank in 6 hours and another pipe can empty it in 10 hours. If both are opened together, in how much time will the empty tank be filled?",
+"o": [
+"4 hours",
+"16 hours",
+"17 hours",
+"15 hours"
+],
+"k": 3,
+"s": [
+"Net filling in 1 hour = 1/6 − 1/10 = 1/15.",
+"So the tank is filled in 15 hours."
+]
+},
+{
+"slug": "time-speed-distance",
+"t": "Convert 40 m/s into km/h.",
+"o": [
+"144 km/h",
+"162 km/h",
+"135 km/h",
+"72 km/h"
+],
+"k": 0,
+"s": [
+"1 m/s = 18/5 km/h.",
+"40 × 18/5 = 144 km/h."
+]
+},
+{
+"slug": "mensuration",
+"t": "Find the volume of a cube of edge 14 cm.",
+"o": [
+"2,744 cm³",
+"1,176 cm³",
+"196 cm³",
+"2,758 cm³"
+],
+"k": 0,
+"s": [
+"Volume = a³ = 14³.",
+"= 2,744 cm³."
+]
+},
+{
+"slug": "geometry",
+"t": "The angles of a triangle are in the ratio 3:6:9. What is the largest angle?",
+"o": [
+"100°",
+"60°",
+"30°",
+"90°"
+],
+"k": 3,
+"s": [
+"Sum of parts = 18; one part = 180/18 = 10°.",
+"Largest angle = 9 × 10 = 90°."
+]
+},
+{
+"slug": "statistics",
+"t": "Find the mean of 30, 11, 16, 5, 54, 57, 16.",
+"o": [
+"27",
+"16",
+"26",
+"29"
+],
+"k": 0,
+"s": [
+"Sum = 189, number of values = 7.",
+"Mean = 189/7 = 27."
+]
+},
+{
+"slug": "simplification",
+"t": "Simplify: 47 + 4 × 8 − 12 ÷ 6",
+"o": [
+"83",
+"67",
+"77",
+"406"
+],
+"k": 2,
+"s": [
+"Do ÷ and × first: 4 × 8 = 32, 12 ÷ 6 = 2.",
+"47 + 32 − 2 = 77."
+]
+},
+{
+"slug": "fractions",
+"t": "Find 1/5 of 4/7 of 140.",
+"o": [
+"16",
+"28",
+"20",
+"32"
+],
+"k": 0,
+"s": [
+"1/5 × 4/7 × 140.",
+"= 16."
+]
+},
+{
+"slug": "power-exponents",
+"t": "Simplify: (3⁹ × 3⁵) ÷ 3³",
+"o": [
+"3¹¹",
+"3¹⁷",
+"3⁴²",
+"3¹²"
+],
+"k": 0,
+"s": [
+"aᵐ × aⁿ = aᵐ⁺ⁿ and aᵐ ÷ aⁿ = aᵐ⁻ⁿ.",
+"Power = 9 + 5 − 3 = 11, so the answer is 3¹¹."
+]
+},
+{
+"slug": "decimal",
+"t": "Find the value of 16.8 + 4.3 − 1.96.",
+"o": [
+"19.04",
+"23.06",
+"19.14",
+"20.14"
+],
+"k": 2,
+"s": [
+"16.8 + 4.3 = 21.1.",
+"21.1 − 1.96 = 19.14."
+]
+},
+{
+"slug": "percentage",
+"t": "If 45% of a number is 720, what is the number?",
+"o": [
+"1,760",
+"1,440",
+"3,200",
+"1,600"
+],
+"k": 3,
+"s": [
+"Let the number be N. Then (45/100) × N = 720.",
+"N = 720 × 100/45 = 1,600."
+]
+},
+{
+"slug": "profit-loss",
+"t": "A shopkeeper buys an article for Rs. 2,100 and sells it at a profit of 25%. What is the selling price?",
+"o": [
+"Rs. 2,625",
+"Rs. 1,575",
+"Rs. 2,835",
+"Rs. 2,125"
+],
+"k": 0,
+"s": [
+"SP = CP × (100 + 25)/100 = 2,100 × 125/100.",
+"= Rs. 2,625."
+]
+},
+{
+"slug": "simple-interest",
+"t": "What amount will Rs. 4,000 become in 6 years at 4% per annum simple interest?",
+"o": [
+"Rs. 4,800",
+"Rs. 5,120",
+"Rs. 960",
+"Rs. 4,960"
+],
+"k": 3,
+"s": [
+"SI = 4,000 × 4 × 6/100 = 960.",
+"Amount = 4,000 + 960 = Rs. 4,960."
+]
+},
+{
+"slug": "compound-interest",
+"t": "Find the compound interest on Rs. 2,750 for 2 years at 20% per annum, compounded annually.",
+"o": [
+"Rs. 1,100",
+"Rs. 3,960",
+"Rs. 1,210",
+"Rs. 1,410"
+],
+"k": 2,
+"s": [
+"Amount = 2,750 × (1 + 20/100)² = 3,960.",
+"CI = 3,960 − 2,750 = Rs. 1,210."
+]
+},
+{
+"slug": "ratio-proportion",
+"t": "If A:B = 4:5 and B:C = 4:1, find A:C.",
+"o": [
+"1:5",
+"16:5",
+"5:16",
+"8:6"
+],
+"k": 1,
+"s": [
+"A/C = (A/B) × (B/C) = (4/5) × (4/1) = 16/5.",
+"A:C = 16:5."
+]
+},
+{
+"slug": "series-average",
+"t": "What is the 29th term of the series 24, 29, 34, 39, …?",
+"o": [
+"169",
+"159",
+"164",
+"165"
+],
+"k": 2,
+"s": [
+"First term a = 24, common difference d = 5.",
+"Tₙ = a + (n − 1)d = 24 + 28 × 5 = 164."
+]
+},
+{
+"slug": "lcm-hcf",
+"t": "The product of two numbers is 1,452 and their HCF is 11. What is their LCM?",
+"o": [
+"1452",
+"132",
+"726",
+"143"
+],
+"k": 1,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 1,452/11 = 132."
+]
+},
+{
+"slug": "number-system",
+"t": "How many factors does 270 have?",
+"o": [
+"18",
+"5",
+"16",
+"14"
+],
+"k": 2,
+"s": [
+"270 = 2 × 3³ × 5.",
+"Number of factors = (1 + 1) × (3 + 1) × (1 + 1) = 16."
+]
+},
+{
+"slug": "time-work",
+"t": "Ravi can finish a work in 12 days and Sonam can finish it in 24 days. In how many days can they finish it together?",
+"o": [
+"18 days",
+"7 days",
+"8 days",
+"10 days"
+],
+"k": 2,
+"s": [
+"One day's work together = 1/12 + 1/24 = 1/8.",
+"So they finish the work in 8 days."
+]
+},
+{
+"slug": "time-speed-distance",
+"t": "A train 350 m long is running at 63 km/h. In how much time will it cross a pole?",
+"o": [
+"18 seconds",
+"22 seconds",
+"40 seconds",
+"20 seconds"
+],
+"k": 3,
+"s": [
+"Speed = 63 × 5/18 = 17.5 m/s.",
+"Time = 350/17.5 = 20 seconds."
+]
+},
+{
+"slug": "mensuration",
+"t": "The side of a square is 6 cm. What is its area?",
+"o": [
+"36 cm²",
+"42 cm²",
+"24 cm²",
+"72 cm²"
+],
+"k": 0,
+"s": [
+"Area = side² = 6².",
+"= 36 cm²."
+]
+},
+{
+"slug": "geometry",
+"t": "What is the sum of the interior angles of a polygon with 11 sides?",
+"o": [
+"1,620°",
+"1,440°",
+"1,980°",
+"1,800°"
+],
+"k": 0,
+"s": [
+"Sum of interior angles = (n − 2) × 180°.",
+"= 9 × 180 = 1,620°."
+]
+},
+{
+"slug": "statistics",
+"t": "Find the mean of 52, 9, 59, 58, 53, 39, 9, 49.",
+"o": [
+"41",
+"40",
+"43",
+"52"
+],
+"k": 0,
+"s": [
+"Sum = 328, number of values = 8.",
+"Mean = 328/8 = 41."
+]
+},
+{
+"slug": "simplification",
+"t": "Simplify: 59 + 8 × 12 − 15 ÷ 5",
+"o": [
+"140",
+"157",
+"152",
+"801"
+],
+"k": 2,
+"s": [
+"Do ÷ and × first: 8 × 12 = 96, 15 ÷ 5 = 3.",
+"59 + 96 − 3 = 152."
+]
+},
+{
+"slug": "fractions",
+"t": "Which is the largest of 5/9, 7/10, 2/3, 5/6?",
+"o": [
+"5/6",
+"5/9",
+"2/3",
+"7/10"
+],
+"k": 0,
+"s": [
+"In decimals: 5/9 = 0.556, 7/10 = 0.700, 2/3 = 0.667, 5/6 = 0.833.",
+"The largest is 5/6."
+]
+},
+{
+"slug": "power-exponents",
+"t": "What is the value of 2⁵ + 2⁰?",
+"o": [
+"32",
+"34",
+"33",
+"11"
+],
+"k": 2,
+"s": [
+"2⁵ = 32 and any non-zero number to the power 0 is 1.",
+"32 + 1 = 33."
+]
+},
+{
+"slug": "decimal",
+"t": "Find the value of 15.27 + 2.4 − 2.07.",
+"o": [
+"15.5",
+"19.74",
+"16.6",
+"15.6"
+],
+"k": 3,
+"s": [
+"15.27 + 2.4 = 17.67.",
+"17.67 − 2.07 = 15.6."
+]
+},
+{
+"slug": "percentage",
+"t": "The price of a book is first increased by 20% and then decreased by 10%. What is the net percentage change in its price?",
+"o": [
+"8% increase",
+"10% increase",
+"30% increase",
+"2% decrease"
+],
+"k": 0,
+"s": [
+"Net change = a − b − ab/100 = 20 − 10 − (20×10)/100.",
+"= 8%, so the answer is: 8% increase."
+]
+},
+{
+"slug": "profit-loss",
+"t": "An article bought for Rs. 1,350 is sold for Rs. 1,755. Find the profit or loss per cent.",
+"o": [
+"30% loss",
+"35% profit",
+"30% profit",
+"28% profit"
+],
+"k": 2,
+"s": [
+"Profit = 405.",
+"Profit% = 405/1,350 × 100 = 30%."
+]
+},
+{
+"slug": "simple-interest",
+"t": "A sum of Rs. 1,000 amounts to Rs. 1,120 in 2 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"6%",
+"5%",
+"8%",
+"7%"
+],
+"k": 0,
+"s": [
+"SI = 1,120 − 1,000 = 120.",
+"R = SI × 100/(P × T) = 120 × 100/(1,000 × 2) = 6%."
+]
+},
+{
+"slug": "compound-interest",
+"t": "What is the difference between compound interest and simple interest on Rs. 42,500 for 2 years at 4% per annum?",
+"o": [
+"Rs. 136",
+"Rs. 68",
+"Rs. 72",
+"Rs. 204"
+],
+"k": 1,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 42,500 × (4/100)² = Rs. 68."
+]
+},
+{
+"slug": "ratio-proportion",
+"t": "Rs. 6,400 is divided between Rina and Kago in the ratio 2:3. What is Rina's share?",
+"o": [
+"Rs. 3,840",
+"Rs. 3,200",
+"Rs. 2,560",
+"Rs. 1,280"
+],
+"k": 2,
+"s": [
+"Total parts = 2 + 3 = 5.",
+"Rina's share = 6,400 × 2/5 = Rs. 2,560."
+]
+},
+{
+"slug": "series-average",
+"t": "What is the sum of the first 40 even numbers?",
+"o": [
+"1640",
+"1600",
+"1680",
+"1601"
+],
+"k": 0,
+"s": [
+"Sum of the first n even numbers = n(n + 1).",
+"= 40 × 41 = 1640."
+]
+},
+{
+"slug": "lcm-hcf",
+"t": "What is the least number exactly divisible by 12, 15 and 20?",
+"o": [
+"120",
+"30",
+"180",
+"60"
+],
+"k": 3,
+"s": [
+"Required number = LCM of 12, 15 and 20.",
+"= 60."
+]
+},
+{
+"slug": "number-system",
+"t": "Which of the following numbers is divisible by 3?",
+"o": [
+"22597",
+"46757",
+"88932",
+"75055"
+],
+"k": 2,
+"s": [
+"A number is divisible by 3 if the sum of its digits is divisible by 3.",
+"Only 88932 satisfies this test."
+]
+},
+{
+"slug": "time-work",
+"t": "A pipe can fill a tank in 4 hours and another pipe can empty it in 5 hours. If both are opened together, in how much time will the empty tank be filled?",
+"o": [
+"20 hours",
+"22 hours",
+"1 hours",
+"9 hours"
+],
+"k": 0,
+"s": [
+"Net filling in 1 hour = 1/4 − 1/5 = 1/20.",
+"So the tank is filled in 20 hours."
+]
+},
+{
+"slug": "time-speed-distance",
+"t": "A person goes to a place at 45 km/h and comes back by the same road at 90 km/h. What is his average speed for the whole journey?",
+"o": [
+"60 km/h",
+"67 km/h",
+"62 km/h",
+"57 km/h"
+],
+"k": 0,
+"s": [
+"For equal distances, average speed = 2xy/(x + y).",
+"= 2 × 45 × 90/(45 + 90) = 60 km/h."
+]
+},
+{
+"slug": "mensuration",
+"t": "Find the circumference of a circle of radius 35 cm. (Use π = 22/7)",
+"o": [
+"3850 cm",
+"220 cm",
+"110 cm",
+"242 cm"
+],
+"k": 1,
+"s": [
+"Circumference = 2πr = 2 × (22/7) × 35.",
+"= 220 cm."
+]
+},
+{
+"slug": "geometry",
+"t": "What is the measure of each exterior angle of a regular polygon with 30 sides?",
+"o": [
+"22°",
+"12°",
+"168°",
+"6°"
+],
+"k": 1,
+"s": [
+"Each exterior angle = 360°/n.",
+"= 360/30 = 12°."
+]
+},
+{
+"slug": "statistics",
+"t": "Find the median of 86, 43, 24, 37, 10, 11, 14.",
+"o": [
+"24",
+"32",
+"37",
+"14"
+],
+"k": 0,
+"s": [
+"Arranged in order: 10, 11, 14, 24, 37, 43, 86.",
+"The middle (4th) value = 24."
+]
+},
+{
+"slug": "simplification",
+"t": "Simplify: 19 − 8 × (4 + 3)",
+"o": [
+"77",
+"-29",
+"-37",
+"-10"
+],
+"k": 2,
+"s": [
+"Bracket first: 4 + 3 = 7; then 8 × 7 = 56.",
+"19 − 56 = -37."
+]
+},
+{
+"slug": "fractions",
+"t": "Which is the largest of 7/8, 3/11, 6/11, 7/9?",
+"o": [
+"7/8",
+"3/11",
+"7/9",
+"6/11"
+],
+"k": 0,
+"s": [
+"In decimals: 7/8 = 0.875, 3/11 = 0.273, 6/11 = 0.545, 7/9 = 0.778.",
+"The largest is 7/8."
+]
+},
+{
+"slug": "power-exponents",
+"t": "What is the value of 4² + 4⁰?",
+"o": [
+"17",
+"16",
+"9",
+"20"
+],
+"k": 0,
+"s": [
+"4² = 16 and any non-zero number to the power 0 is 1.",
+"16 + 1 = 17."
+]
+},
+{
+"slug": "decimal",
+"t": "Find the value of 14.25 + 2.1 − 3.28.",
+"o": [
+"19.63",
+"12.97",
+"14.07",
+"13.07"
+],
+"k": 3,
+"s": [
+"14.25 + 2.1 = 16.35.",
+"16.35 − 3.28 = 13.07."
+]
+},
+{
+"slug": "percentage",
+"t": "What is 15% of 2,100?",
+"o": [
+"525",
+"315",
+"210",
+"420"
+],
+"k": 1,
+"s": [
+"15% of 2,100 = (15/100) × 2,100.",
+"= 315."
+]
+},
+{
+"slug": "profit-loss",
+"t": "The marked price of a jacket is Rs. 3,300. A discount of 10% is given. What is the selling price?",
+"o": [
+"Rs. 2,805",
+"Rs. 2,970",
+"Rs. 3,630",
+"Rs. 3,290"
+],
+"k": 1,
+"s": [
+"Discount = 10% of 3,300 = 330.",
+"SP = 3,300 − 330 = Rs. 2,970."
+]
+},
+{
+"slug": "simple-interest",
+"t": "What amount will Rs. 6,500 become in 5 years at 10% per annum simple interest?",
+"o": [
+"Rs. 10,400",
+"Rs. 9,750",
+"Rs. 9,100",
+"Rs. 3,250"
+],
+"k": 1,
+"s": [
+"SI = 6,500 × 10 × 5/100 = 3,250.",
+"Amount = 6,500 + 3,250 = Rs. 9,750."
+]
+},
+{
+"slug": "compound-interest",
+"t": "Find the compound interest on Rs. 30,000 for 2 years at 5% per annum, compounded annually.",
+"o": [
+"Rs. 3,075",
+"Rs. 33,075",
+"Rs. 3,000",
+"Rs. 3,125"
+],
+"k": 0,
+"s": [
+"Amount = 30,000 × (1 + 5/100)² = 33,075.",
+"CI = 33,075 − 30,000 = Rs. 3,075."
+]
+},
+{
+"slug": "ratio-proportion",
+"t": "If A:B = 3:8 and B:C = 8:7, find A:C.",
+"o": [
+"21:64",
+"3:7",
+"7:3",
+"11:15"
+],
+"k": 1,
+"s": [
+"A/C = (A/B) × (B/C) = (3/8) × (8/7) = 24/56.",
+"A:C = 3:7."
+]
+},
+{
+"slug": "series-average",
+"t": "The average of 8 numbers is 75. If the number 21 is added, what is the new average?",
+"o": [
+"68",
+"48",
+"69",
+"70"
+],
+"k": 2,
+"s": [
+"Sum of 8 numbers = 8 × 75 = 600.",
+"New average = (600 + 21)/9 = 69."
+]
+},
+{
+"slug": "lcm-hcf",
+"t": "What is the LCM of 99 and 135?",
+"o": [
+"1485",
+"13365",
+"1494",
+"2970"
+],
+"k": 0,
+"s": [
+"HCF of 99 and 135 = 9.",
+"LCM = 99 × 135/9 = 1485."
+]
+},
+{
+"slug": "number-system",
+"t": "What is the unit digit of 38²⁵?",
+"o": [
+"0",
+"1",
+"9",
+"8"
+],
+"k": 3,
+"s": [
+"Unit digits of powers of 8 repeat in the cycle 8, 4, 2, 6 (length 4).",
+"25 ÷ 4 leaves remainder 1, so take position 1: the unit digit is 8."
+]
+},
+{
+"slug": "time-work",
+"t": "A can finish a work in 18 days and B can finish it in 36 days. In how many days can they finish it together?",
+"o": [
+"27 days",
+"14 days",
+"11 days",
+"12 days"
+],
+"k": 3,
+"s": [
+"One day's work together = 1/18 + 1/36 = 1/12.",
+"So they finish the work in 12 days."
+]
+},
+{
+"slug": "time-speed-distance",
+"t": "Convert 35 m/s into km/h.",
+"o": [
+"63 km/h",
+"117 km/h",
+"144 km/h",
+"126 km/h"
+],
+"k": 3,
+"s": [
+"1 m/s = 18/5 km/h.",
+"35 × 18/5 = 126 km/h."
+]
+},
+{
+"slug": "mensuration",
+"t": "Find the area of a circle of radius 21 cm. (Use π = 22/7)",
+"o": [
+"132 cm²",
+"2,772 cm²",
+"1,407 cm²",
+"1,386 cm²"
+],
+"k": 3,
+"s": [
+"Area = πr² = (22/7) × 21 × 21.",
+"= 1,386 cm²."
+]
+},
+{
+"slug": "geometry",
+"t": "What is the sum of the interior angles of a polygon with 6 sides?",
+"o": [
+"540°",
+"900°",
+"1,080°",
+"720°"
+],
+"k": 3,
+"s": [
+"Sum of interior angles = (n − 2) × 180°.",
+"= 4 × 180 = 720°."
+]
+},
+{
+"slug": "statistics",
+"t": "Find the median of 37, 66, 89, 14, 83, 33, 60, 57, 48.",
+"o": [
+"57",
+"54",
+"48",
+"60"
+],
+"k": 0,
+"s": [
+"Arranged in order: 14, 33, 37, 48, 57, 60, 66, 83, 89.",
+"The middle (5th) value = 57."
+]
+},
+{
+"slug": "simplification",
+"t": "Find the value of √5,184.",
+"o": [
+"74",
+"73",
+"72",
+"71"
+],
+"k": 2,
+"s": [
+"72 × 72 = 5,184.",
+"So √5,184 = 72."
+]
+},
+{
+"slug": "fractions",
+"t": "Find 2/5 of 2/5 of 450.",
+"o": [
+"144",
+"180",
+"74",
+"72"
+],
+"k": 3,
+"s": [
+"2/5 × 2/5 × 450.",
+"= 72."
+]
+},
+{
+"slug": "power-exponents",
+"t": "What is the value of 2³ + 2⁰?",
+"o": [
+"7",
+"10",
+"8",
+"9"
+],
+"k": 3,
+"s": [
+"2³ = 8 and any non-zero number to the power 0 is 1.",
+"8 + 1 = 9."
+]
+},
+{
+"slug": "decimal",
+"t": "Find the value of 2.39 + 5.2 − 0.96.",
+"o": [
+"7.63",
+"6.53",
+"6.63",
+"8.55"
+],
+"k": 2,
+"s": [
+"2.39 + 5.2 = 7.59.",
+"7.59 − 0.96 = 6.63."
+]
+},
+{
+"slug": "percentage",
+"t": "If 75% of a number is 1,605, what is the number?",
+"o": [
+"2,140",
+"1,926",
+"2,354",
+"4,280"
+],
+"k": 0,
+"s": [
+"Let the number be N. Then (75/100) × N = 1,605.",
+"N = 1,605 × 100/75 = 2,140."
+]
+},
+{
+"slug": "profit-loss",
+"t": "A shopkeeper buys an article for Rs. 1,150 and sells it at a profit of 8%. What is the selling price?",
+"o": [
+"Rs. 1,058",
+"Rs. 1,357",
+"Rs. 1,158",
+"Rs. 1,242"
+],
+"k": 3,
+"s": [
+"SP = CP × (100 + 8)/100 = 1,150 × 108/100.",
+"= Rs. 1,242."
+]
+},
+{
+"slug": "simple-interest",
+"t": "A sum of Rs. 15,500 amounts to Rs. 16,740 in 2 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"3%",
+"6%",
+"4%",
+"5%"
+],
+"k": 2,
+"s": [
+"SI = 16,740 − 15,500 = 1,240.",
+"R = SI × 100/(P × T) = 1,240 × 100/(15,500 × 2) = 4%."
+]
+},
+{
+"slug": "compound-interest",
+"t": "What is the difference between compound interest and simple interest on Rs. 4,700 for 2 years at 10% per annum?",
+"o": [
+"Rs. 57",
+"Rs. 141",
+"Rs. 47",
+"Rs. 94"
+],
+"k": 2,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 4,700 × (10/100)² = Rs. 47."
+]
+},
+{
+"slug": "ratio-proportion",
+"t": "Find the mean proportional between 5 and 45.",
+"o": [
+"25",
+"17",
+"15",
+"13"
+],
+"k": 2,
+"s": [
+"Mean proportional = √(5 × 45) = √225.",
+"= 15."
+]
+},
+{
+"slug": "series-average",
+"t": "What is the 16th term of the series 16, 20, 24, 28, …?",
+"o": [
+"77",
+"76",
+"72",
+"80"
+],
+"k": 1,
+"s": [
+"First term a = 16, common difference d = 4.",
+"Tₙ = a + (n − 1)d = 16 + 15 × 4 = 76."
+]
+},
+{
+"slug": "lcm-hcf",
+"t": "The product of two numbers is 1,100 and their HCF is 5. What is their LCM?",
+"o": [
+"225",
+"550",
+"220",
+"1100"
+],
+"k": 2,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 1,100/5 = 220."
+]
+},
+{
+"slug": "number-system",
+"t": "How many factors does 1,080 have?",
+"o": [
+"7",
+"34",
+"32",
+"30"
+],
+"k": 2,
+"s": [
+"1,080 = 2³ × 3³ × 5.",
+"Number of factors = (3 + 1) × (3 + 1) × (1 + 1) = 32."
+]
+},
+{
+"slug": "time-work",
+"t": "A pipe can fill a tank in 2 hours and another pipe can empty it in 3 hours. If both are opened together, in how much time will the empty tank be filled?",
+"o": [
+"6 hours",
+"1 hours",
+"5 hours",
+"8 hours"
+],
+"k": 0,
+"s": [
+"Net filling in 1 hour = 1/2 − 1/3 = 1/6.",
+"So the tank is filled in 6 hours."
+]
+},
+{
+"slug": "time-speed-distance",
+"t": "A train 480 m long is running at 72 km/h. In how much time will it cross a pole?",
+"o": [
+"24 seconds",
+"26 seconds",
+"22 seconds",
+"48 seconds"
+],
+"k": 0,
+"s": [
+"Speed = 72 × 5/18 = 20 m/s.",
+"Time = 480/20 = 24 seconds."
+]
+},
+{
+"slug": "mensuration",
+"t": "The side of a square is 9 cm. What is its area?",
+"o": [
+"81 cm²",
+"90 cm²",
+"162 cm²",
+"36 cm²"
+],
+"k": 0,
+"s": [
+"Area = side² = 9².",
+"= 81 cm²."
+]
+}
+],
+"reasoning_mixed": [
+{
+"slug": "r-number-series",
+"t": "Find the next term: 4, 8, 16, 32, 64, ?",
+"o": [
+"128",
+"129",
+"127",
+"130"
+],
+"k": 0,
+"s": [
+"Each term is multiplied by 2.",
+"So the next term is 128."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "If the English alphabet is written in reverse order, which letter will be 11th from the left?",
+"o": [
+"O",
+"K",
+"Q",
+"P"
+],
+"k": 3,
+"s": [
+"In reverse order, the 11th letter from the left is the 11th letter from the right of the normal order.",
+"That is the 16th letter = P."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, BREAD is written as DAERB. How is MONEY written in that code?",
+"o": [
+"ONEYM",
+"YONEM",
+"YENOM",
+"NPOFZ"
+],
+"k": 2,
+"s": [
+"The letters of BREAD are written in reverse order.",
+"So MONEY is written as YENOM."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Biri walks 7 km towards the North, then turns left and walks 24 km. How far is Biri from the starting point?",
+"o": [
+"25 km",
+"17 km",
+"27 km",
+"31 km"
+],
+"k": 0,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(7² + 24²) = 25 km."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "X is the sister of N. N is the daughter of B. How is X related to B?",
+"o": [
+"Sister",
+"Niece",
+"Mother",
+"Daughter"
+],
+"k": 3,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If today is Sunday, what day of the week will it be after 146 days?",
+"o": [
+"Sunday",
+"Saturday",
+"Monday",
+"Friday"
+],
+"k": 1,
+"s": [
+"146 days = 20 weeks and 6 odd days.",
+"Sunday + 6 days = Saturday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 8:44?",
+"o": [
+"12°",
+"178°",
+"13°",
+"2°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 8 − 5.5 × 44|.",
+"= 2°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a row of students, Mohan is 15th from the left and 5th from the right. How many students are there in the row?",
+"o": [
+"20",
+"18",
+"19",
+"21"
+],
+"k": 2,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 15 + 5 − 1 = 19."
+]
+},
+{
+"slug": "r-analogy",
+"t": "3 : 28 :: 6 : ?",
+"o": [
+"216",
+"223",
+"217",
+"218"
+],
+"k": 2,
+"s": [
+"The relation is n : n³ + 1: 3 → 28.",
+"So 6 → 217."
+]
+},
+{
+"slug": "r-classification",
+"t": "Find the odd one out:",
+"o": [
+"114",
+"104",
+"35",
+"34"
+],
+"k": 2,
+"s": [
+"All the others are even numbers; 35 is odd.",
+"So 35 is the odd one out."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Stand  2. Starve  3. Statue  4. Stamp",
+"o": [
+"2, 4, 3, 1",
+"4, 3, 1, 2",
+"1, 2, 4, 3",
+"4, 1, 2, 3"
+],
+"k": 3,
+"s": [
+"In dictionary order: Stamp, Stand, Starve, Statue.",
+"So the order is 4, 1, 2, 3."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 64 equal smaller cubes. How many smaller cubes have exactly three faces painted?",
+"o": [
+"64",
+"8",
+"24",
+"16"
+],
+"k": 1,
+"s": [
+"The cube is cut 4 × 4 × 4, so n = 4.",
+"Cubes with three painted faces are the 8 corners. = 8."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 20, 22, 26, 32, 40, ?",
+"o": [
+"50",
+"49",
+"51",
+"52"
+],
+"k": 0,
+"s": [
+"The differences increase by 2: +2, +4, +6, …",
+"So the next term is 50."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "In the English alphabet, which letter is 6th to the right of the 12th letter from the left?",
+"o": [
+"R",
+"L",
+"Q",
+"S"
+],
+"k": 0,
+"s": [
+"The 12th letter from the left is L.",
+"6 places to the right gives the 18th letter = R."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "If CAT = 24, then SAND = ?",
+"o": [
+"41",
+"39",
+"36",
+"38"
+],
+"k": 3,
+"s": [
+"Each letter takes its position number in the alphabet, and they are added: CAT = 3 + 1 + 20 = 24.",
+"SAND = 19 + 1 + 14 + 4 = 38."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Tamo walks 9 km towards the West, then turns right and walks 12 km. In which direction is Tamo now from the starting point?",
+"o": [
+"South-West",
+"South-East",
+"North-West",
+"North-East"
+],
+"k": 2,
+"s": [
+"Tamo goes West and then North.",
+"So Tamo is to the North-West of the starting point."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "B is the mother of P. P is the sister of R. How is B related to R?",
+"o": [
+"Sister",
+"Mother",
+"Aunt",
+"Grandmother"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Mother."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If 4 May 2027 is a Tuesday, what day of the week is 20 September 2027?",
+"o": [
+"Monday",
+"Sunday",
+"Tuesday",
+"Wednesday"
+],
+"k": 0,
+"s": [
+"Number of days from 4 May 2027 to 20 September 2027 = 139, which gives 6 odd days.",
+"Tuesday + 6 = Monday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 6:16?",
+"o": [
+"92°",
+"88°",
+"102°",
+"77°"
+],
+"k": 0,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 6 − 5.5 × 16|.",
+"= 92°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a row of students, Rina is 21st from the left and 5th from the right. How many students are there in the row?",
+"o": [
+"26",
+"27",
+"25",
+"24"
+],
+"k": 2,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 21 + 5 − 1 = 25."
+]
+},
+{
+"slug": "r-analogy",
+"t": "AB : DE :: TU : ?",
+"o": [
+"VW",
+"QR",
+"XY",
+"WX"
+],
+"k": 3,
+"s": [
+"Each letter of AB moves 3 places forward to give DE.",
+"So TU becomes WX."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Margin  2. Master  3. Market  4. Marble",
+"o": [
+"4, 2, 1, 3",
+"4, 1, 3, 2",
+"3, 2, 1, 4",
+"3, 1, 4, 2"
+],
+"k": 1,
+"s": [
+"In dictionary order: Marble, Margin, Market, Master.",
+"So the order is 4, 1, 3, 2."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 216 equal smaller cubes. How many smaller cubes have no face painted?",
+"o": [
+"96",
+"8",
+"48",
+"64"
+],
+"k": 3,
+"s": [
+"The cube is cut 6 × 6 × 6, so n = 6.",
+"No face painted = (n − 2)³ = 4³. = 64."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 10, 17, 26, 37, 50, ?",
+"o": [
+"65",
+"64",
+"67",
+"66"
+],
+"k": 0,
+"s": [
+"The terms are n² + 1 for n = 3, 4, 5, …",
+"So the next term is 65."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "Find the next term: BY, CX, DW, EV, ?",
+"o": [
+"FV",
+"GU",
+"UF",
+"FU"
+],
+"k": 3,
+"s": [
+"The first letters move forward (+1) and the second letters move backward (−1).",
+"So the next term is FU."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, LIGHT is written as KHFGS. How is LAMP written in that code?",
+"o": [
+"OLZK",
+"KZLO",
+"MBNQ",
+"LAMP"
+],
+"k": 1,
+"s": [
+"Each letter of LIGHT moves 1 place backward.",
+"Doing the same with LAMP gives KZLO."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Rina walks 15 km towards the West, then turns left and walks 20 km. In which direction is Rina now from the starting point?",
+"o": [
+"North-East",
+"South-East",
+"North-West",
+"South-West"
+],
+"k": 3,
+"s": [
+"Rina goes West and then South.",
+"So Rina is to the South-West of the starting point."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "D is the father of N. N is the father of X. How is D related to X?",
+"o": [
+"Uncle",
+"Brother",
+"Grandfather",
+"Father"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Grandfather."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If today is Thursday, what day of the week will it be after 184 days?",
+"o": [
+"Monday",
+"Sunday",
+"Friday",
+"Saturday"
+],
+"k": 3,
+"s": [
+"184 days = 26 weeks and 2 odd days.",
+"Thursday + 2 days = Saturday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 9:06?",
+"o": [
+"57°",
+"123°",
+"108°",
+"133°"
+],
+"k": 1,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 9 − 5.5 × 6|.",
+"= 123°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a class of 57 students, Nima is 16th from the top. What is Nima's position from the bottom?",
+"o": [
+"43rd",
+"41st",
+"44th",
+"42nd"
+],
+"k": 3,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 57 − 16 + 1 = 42."
+]
+},
+{
+"slug": "r-analogy",
+"t": "HI : JK :: OP : ?",
+"o": [
+"PQ",
+"RS",
+"QR",
+"MN"
+],
+"k": 2,
+"s": [
+"Each letter of HI moves 2 places forward to give JK.",
+"So OP becomes QR."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Garden  2. Gamble  3. Garland  4. Gather",
+"o": [
+"1, 2, 3, 4",
+"2, 1, 3, 4",
+"3, 1, 4, 2",
+"2, 1, 4, 3"
+],
+"k": 1,
+"s": [
+"In dictionary order: Gamble, Garden, Garland, Gather.",
+"So the order is 2, 1, 3, 4."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 343 equal smaller cubes. How many smaller cubes have no face painted?",
+"o": [
+"125",
+"60",
+"150",
+"8"
+],
+"k": 0,
+"s": [
+"The cube is cut 7 × 7 × 7, so n = 7.",
+"No face painted = (n − 2)³ = 5³. = 125."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 1, 3, 7, 15, 31, ?",
+"o": [
+"63",
+"65",
+"64",
+"62"
+],
+"k": 0,
+"s": [
+"Each term = previous term × 2 + 1.",
+"So the next term is 63."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "If the English alphabet is written in reverse order, which letter will be 7th from the left?",
+"o": [
+"T",
+"U",
+"G",
+"S"
+],
+"k": 0,
+"s": [
+"In reverse order, the 7th letter from the left is the 7th letter from the right of the normal order.",
+"That is the 20th letter = T."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, SAND is written as HZMW. How is GLASS written in that code?",
+"o": [
+"TOZHH",
+"HHZOT",
+"UPAII",
+"HMBTT"
+],
+"k": 0,
+"s": [
+"Each letter is replaced by its opposite letter (A↔Z, B↔Y, C↔X, …).",
+"So GLASS is written as TOZHH."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Rina walks 6 km towards the South, then turns right and walks 8 km. In which direction is Rina now from the starting point?",
+"o": [
+"South-East",
+"South-West",
+"North-East",
+"North-West"
+],
+"k": 1,
+"s": [
+"Rina goes South and then West.",
+"So Rina is to the South-West of the starting point."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "N is the son of X. X is the wife of R. How is N related to R?",
+"o": [
+"Nephew",
+"Son",
+"Brother",
+"Grandson"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Son."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If 6 January 2027 is a Wednesday, what day of the week is 17 March 2027?",
+"o": [
+"Friday",
+"Thursday",
+"Tuesday",
+"Wednesday"
+],
+"k": 3,
+"s": [
+"Number of days from 6 January 2027 to 17 March 2027 = 70, which gives 0 odd days.",
+"Wednesday + 0 = Wednesday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 9:08?",
+"o": [
+"144°",
+"46°",
+"119°",
+"134°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 9 − 5.5 × 8|.",
+"= 134°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a row of students, Sonam is 13th from the left and 24th from the right. How many students are there in the row?",
+"o": [
+"35",
+"37",
+"36",
+"38"
+],
+"k": 2,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 13 + 24 − 1 = 36."
+]
+},
+{
+"slug": "r-analogy",
+"t": "4 : 65 :: 2 : ?",
+"o": [
+"9",
+"10",
+"8",
+"11"
+],
+"k": 0,
+"s": [
+"The relation is n : n³ + 1: 4 → 65.",
+"So 2 → 9."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Gamble  2. Garland  3. Gather  4. Garden",
+"o": [
+"4, 1, 2, 3",
+"1, 4, 2, 3",
+"4, 2, 1, 3",
+"2, 1, 4, 3"
+],
+"k": 1,
+"s": [
+"In dictionary order: Gamble, Garden, Garland, Gather.",
+"So the order is 1, 4, 2, 3."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 343 equal smaller cubes. How many smaller cubes have exactly two faces painted?",
+"o": [
+"125",
+"150",
+"60",
+"8"
+],
+"k": 2,
+"s": [
+"The cube is cut 7 × 7 × 7, so n = 7.",
+"Two faces painted = 12(n − 2) = 12 × 5. = 60."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 11, 53, 13, 49, 15, ?",
+"o": [
+"47",
+"46",
+"44",
+"45"
+],
+"k": 3,
+"s": [
+"Two series alternate: 11, 13, 15 (+2) and 53, 49, 45 (−4).",
+"So the next term is 45."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "In the English alphabet, which letter is 6th to the left of the 8th letter from the left?",
+"o": [
+"B",
+"H",
+"A",
+"C"
+],
+"k": 0,
+"s": [
+"The 8th letter from the left is H.",
+"6 places to the left gives the 2nd letter = B."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, LAMP is written as OZNK. How is PLANT written in that code?",
+"o": [
+"GMZOK",
+"KOZMG",
+"QMBOU",
+"LPANH"
+],
+"k": 1,
+"s": [
+"Each letter is replaced by its opposite letter (A↔Z, B↔Y, C↔X, …).",
+"So PLANT is written as KOZMG."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Anu walks 8 m towards the North, then turns right and walks 15 m. How far is Anu from the starting point?",
+"o": [
+"7 m",
+"23 m",
+"19 m",
+"17 m"
+],
+"k": 3,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(8² + 15²) = 17 m."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "A is the sister of Z. Z is the daughter of N. How is A related to N?",
+"o": [
+"Sister",
+"Daughter",
+"Niece",
+"Mother"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If 7 May 2027 is a Friday, what day of the week is 19 September 2027?",
+"o": [
+"Monday",
+"Saturday",
+"Tuesday",
+"Sunday"
+],
+"k": 3,
+"s": [
+"Number of days from 7 May 2027 to 19 September 2027 = 135, which gives 2 odd days.",
+"Friday + 2 = Sunday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 9:58?",
+"o": [
+"131°",
+"49°",
+"34°",
+"59°"
+],
+"k": 1,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 9 − 5.5 × 58|.",
+"= 49°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a row of students, Biri is 25th from the left and 27th from the right. How many students are there in the row?",
+"o": [
+"51",
+"52",
+"53",
+"50"
+],
+"k": 0,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 25 + 27 − 1 = 51."
+]
+},
+{
+"slug": "r-analogy",
+"t": "6 : 217 :: 2 : ?",
+"o": [
+"9",
+"10",
+"8",
+"11"
+],
+"k": 0,
+"s": [
+"The relation is n : n³ + 1: 6 → 217.",
+"So 2 → 9."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Player  2. Plastic  3. Planet  4. Plenty",
+"o": [
+"3, 4, 1, 2",
+"4, 2, 3, 1",
+"3, 2, 1, 4",
+"2, 1, 3, 4"
+],
+"k": 2,
+"s": [
+"In dictionary order: Planet, Plastic, Player, Plenty.",
+"So the order is 3, 2, 1, 4."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 125 equal smaller cubes. How many smaller cubes have exactly one face painted?",
+"o": [
+"36",
+"27",
+"54",
+"8"
+],
+"k": 2,
+"s": [
+"The cube is cut 5 × 5 × 5, so n = 5.",
+"One face painted = 6(n − 2)² = 6 × 9. = 54."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 125, 216, 343, 512, 729, ?",
+"o": [
+"1002",
+"999",
+"1001",
+"1000"
+],
+"k": 3,
+"s": [
+"The terms are cubes: 5³, 6³, 7³, …",
+"So the next term is 1000."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "If the English alphabet is written in reverse order, which letter will be 20th from the left?",
+"o": [
+"T",
+"F",
+"G",
+"H"
+],
+"k": 2,
+"s": [
+"In reverse order, the 20th letter from the left is the 20th letter from the right of the normal order.",
+"That is the 7th letter = G."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, BREAD is written as DAERB. How is KING written in that code?",
+"o": [
+"INGK",
+"GNIK",
+"LJOH",
+"GINK"
+],
+"k": 1,
+"s": [
+"The letters of BREAD are written in reverse order.",
+"So KING is written as GNIK."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Kiran walks 15 km towards the North, then turns right and walks 20 km. How far is Kiran from the starting point?",
+"o": [
+"25 km",
+"35 km",
+"5 km",
+"27 km"
+],
+"k": 0,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(15² + 20²) = 25 km."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "C is the wife of D. D is the son of X. How is C related to X?",
+"o": [
+"Niece",
+"Daughter",
+"Daughter-in-law",
+"Sister"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter-in-law."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If 5 March 2027 is a Friday, what day of the week is 14 July 2027?",
+"o": [
+"Friday",
+"Thursday",
+"Wednesday",
+"Tuesday"
+],
+"k": 2,
+"s": [
+"Number of days from 5 March 2027 to 14 July 2027 = 131, which gives 5 odd days.",
+"Friday + 5 = Wednesday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 6:04?",
+"o": [
+"22°",
+"168°",
+"158°",
+"143°"
+],
+"k": 2,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 6 − 5.5 × 4|.",
+"= 158°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a row of students, Tamo is 16th from the left and 29th from the right. How many students are there in the row?",
+"o": [
+"43",
+"46",
+"45",
+"44"
+],
+"k": 3,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 16 + 29 − 1 = 44."
+]
+},
+{
+"slug": "r-analogy",
+"t": "12 : 145 :: 4 : ?",
+"o": [
+"18",
+"16",
+"21",
+"17"
+],
+"k": 3,
+"s": [
+"The relation is n : n² + 1: 12 → 145.",
+"So 4 → 17."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Crayon  2. Crazy  3. Crater  4. Cradle",
+"o": [
+"3, 2, 1, 4",
+"4, 1, 2, 3",
+"4, 3, 1, 2",
+"1, 3, 2, 4"
+],
+"k": 2,
+"s": [
+"In dictionary order: Cradle, Crater, Crayon, Crazy.",
+"So the order is 4, 3, 1, 2."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 343 equal smaller cubes. How many smaller cubes have exactly one face painted?",
+"o": [
+"8",
+"60",
+"150",
+"125"
+],
+"k": 2,
+"s": [
+"The cube is cut 7 × 7 × 7, so n = 7.",
+"One face painted = 6(n − 2)² = 6 × 25. = 150."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 9, 16, 25, 36, 49, ?",
+"o": [
+"65",
+"64",
+"66",
+"63"
+],
+"k": 1,
+"s": [
+"The terms are squares: 3², 4², 5², …",
+"So the next term is 64."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "Find the next letter: I, K, M, O, Q, ?",
+"o": [
+"T",
+"S",
+"U",
+"R"
+],
+"k": 1,
+"s": [
+"Each letter moves 2 places forward.",
+"So the next letter is S."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, WIND is written as XJOE. How is TIME written in that code?",
+"o": [
+"FNJU",
+"SHLD",
+"VKOG",
+"UJNF"
+],
+"k": 3,
+"s": [
+"Each letter of WIND moves 1 place forward.",
+"Doing the same with TIME gives UJNF."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Kiran walks 5 km towards the North, then turns left and walks 12 km. How far is Kiran from the starting point?",
+"o": [
+"13 km",
+"17 km",
+"7 km",
+"15 km"
+],
+"k": 0,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(5² + 12²) = 13 km."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "C is the father of B. B is the mother of D. How is C related to D?",
+"o": [
+"Uncle",
+"Grandfather",
+"Brother-in-law",
+"Father"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Grandfather."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If 25 April 2027 is a Sunday, what day of the week is 29 August 2027?",
+"o": [
+"Saturday",
+"Tuesday",
+"Sunday",
+"Monday"
+],
+"k": 2,
+"s": [
+"Number of days from 25 April 2027 to 29 August 2027 = 126, which gives 0 odd days.",
+"Sunday + 0 = Sunday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 4:56?",
+"o": [
+"172°",
+"182°",
+"157°",
+"8°"
+],
+"k": 0,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 4 − 5.5 × 56|.",
+"= 172°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a class of 43 students, Anu is 22nd from the top. What is Anu's position from the bottom?",
+"o": [
+"24th",
+"23rd",
+"21st",
+"22nd"
+],
+"k": 3,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 43 − 22 + 1 = 22."
+]
+},
+{
+"slug": "r-analogy",
+"t": "7 : 343 :: 2 : ?",
+"o": [
+"7",
+"9",
+"8",
+"10"
+],
+"k": 2,
+"s": [
+"The relation is n : n³: 7 → 343.",
+"So 2 → 8."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Market  2. Matter  3. Margin  4. Master",
+"o": [
+"3, 1, 4, 2",
+"2, 3, 4, 1",
+"3, 2, 4, 1",
+"2, 4, 1, 3"
+],
+"k": 0,
+"s": [
+"In dictionary order: Margin, Market, Master, Matter.",
+"So the order is 3, 1, 4, 2."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 125 equal smaller cubes. How many smaller cubes have exactly three faces painted?",
+"o": [
+"54",
+"8",
+"36",
+"27"
+],
+"k": 1,
+"s": [
+"The cube is cut 5 × 5 × 5, so n = 5.",
+"Cubes with three painted faces are the 8 corners. = 8."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 8, 45, 13, 43, 18, ?",
+"o": [
+"43",
+"41",
+"40",
+"42"
+],
+"k": 1,
+"s": [
+"Two series alternate: 8, 13, 18 (+5) and 45, 43, 41 (−2).",
+"So the next term is 41."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "Find the next term: DW, EV, FU, GT, ?",
+"o": [
+"HT",
+"SH",
+"IS",
+"HS"
+],
+"k": 3,
+"s": [
+"The first letters move forward (+1) and the second letters move backward (−1).",
+"So the next term is HS."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, TIME is written as EMIT. How is DOOR written in that code?",
+"o": [
+"ROOD",
+"OORD",
+"EPPS",
+"SPPE"
+],
+"k": 0,
+"s": [
+"The letters of TIME are written in reverse order.",
+"So DOOR is written as ROOD."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Pema walks 6 m towards the North, then turns right and walks 8 m. In which direction is Pema now from the starting point?",
+"o": [
+"North-East",
+"South-West",
+"South-East",
+"North-West"
+],
+"k": 0,
+"s": [
+"Pema goes North and then East.",
+"So Pema is to the North-East of the starting point."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "A is the mother of B. B is the wife of Y. How is A related to Y?",
+"o": [
+"Aunt",
+"Mother-in-law",
+"Sister-in-law",
+"Mother"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Mother-in-law."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If 27 March 2027 is a Saturday, what day of the week is 20 June 2027?",
+"o": [
+"Monday",
+"Sunday",
+"Tuesday",
+"Saturday"
+],
+"k": 1,
+"s": [
+"Number of days from 27 March 2027 to 20 June 2027 = 85, which gives 1 odd day.",
+"Saturday + 1 = Sunday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 11:20?",
+"o": [
+"150°",
+"125°",
+"140°",
+"40°"
+],
+"k": 2,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 11 − 5.5 × 20|.",
+"= 140°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a class of 33 students, Doli is 23rd from the top. What is Doli's position from the bottom?",
+"o": [
+"13th",
+"11th",
+"12th",
+"10th"
+],
+"k": 1,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 33 − 23 + 1 = 11."
+]
+},
+{
+"slug": "r-analogy",
+"t": "10 : 100 :: 7 : ?",
+"o": [
+"49",
+"48",
+"56",
+"50"
+],
+"k": 0,
+"s": [
+"The relation is n : n²: 10 → 100.",
+"So 7 → 49."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Player  2. Planet  3. Plenty  4. Pledge",
+"o": [
+"2, 1, 4, 3",
+"1, 3, 4, 2",
+"2, 4, 3, 1",
+"4, 3, 2, 1"
+],
+"k": 0,
+"s": [
+"In dictionary order: Planet, Player, Pledge, Plenty.",
+"So the order is 2, 1, 4, 3."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 216 equal smaller cubes. How many smaller cubes have exactly two faces painted?",
+"o": [
+"96",
+"48",
+"8",
+"64"
+],
+"k": 1,
+"s": [
+"The cube is cut 6 × 6 × 6, so n = 6.",
+"Two faces painted = 12(n − 2) = 12 × 4. = 48."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 18, 24, 36, 54, 78, ?",
+"o": [
+"107",
+"110",
+"109",
+"108"
+],
+"k": 3,
+"s": [
+"The differences increase by 6: +6, +12, +18, …",
+"So the next term is 108."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "Find the next letter: C, E, G, I, K, ?",
+"o": [
+"N",
+"L",
+"M",
+"O"
+],
+"k": 2,
+"s": [
+"Each letter moves 2 places forward.",
+"So the next letter is M."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, MANGO is written as KYLEM. How is WATER written in that code?",
+"o": [
+"UYRCP",
+"VZSDQ",
+"YCVGT",
+"PCRYU"
+],
+"k": 0,
+"s": [
+"Each letter of MANGO moves 2 places backward.",
+"Doing the same with WATER gives UYRCP."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Tana walks 7 m towards the North, then turns right and walks 24 m. How far is Tana from the starting point?",
+"o": [
+"31 m",
+"25 m",
+"27 m",
+"17 m"
+],
+"k": 1,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(7² + 24²) = 25 m."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "B is the brother of Z. Z is the mother of Y. How is B related to Y?",
+"o": [
+"Brother",
+"Father",
+"Maternal uncle",
+"Grandfather"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Maternal uncle."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If today is Monday, what day of the week will it be after 74 days?",
+"o": [
+"Friday",
+"Saturday",
+"Sunday",
+"Thursday"
+],
+"k": 0,
+"s": [
+"74 days = 10 weeks and 4 odd days.",
+"Monday + 4 days = Friday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 8:18?",
+"o": [
+"126°",
+"151°",
+"141°",
+"39°"
+],
+"k": 2,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 8 − 5.5 × 18|.",
+"= 141°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a row of students, Tamo is 10th from the left and 15th from the right. How many students are there in the row?",
+"o": [
+"24",
+"25",
+"23",
+"26"
+],
+"k": 0,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 10 + 15 − 1 = 24."
+]
+},
+{
+"slug": "r-analogy",
+"t": "DE : FG :: KL : ?",
+"o": [
+"LM",
+"MN",
+"NO",
+"IJ"
+],
+"k": 1,
+"s": [
+"Each letter of DE moves 2 places forward to give FG.",
+"So KL becomes MN."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Brief  2. Bright  3. Brick  4. Bridge",
+"o": [
+"3, 2, 1, 4",
+"4, 2, 3, 1",
+"3, 4, 1, 2",
+"1, 4, 2, 3"
+],
+"k": 2,
+"s": [
+"In dictionary order: Brick, Bridge, Brief, Bright.",
+"So the order is 3, 4, 1, 2."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 27 equal smaller cubes. How many smaller cubes have exactly one face painted?",
+"o": [
+"1",
+"8",
+"6",
+"12"
+],
+"k": 2,
+"s": [
+"The cube is cut 3 × 3 × 3, so n = 3.",
+"One face painted = 6(n − 2)² = 6 × 1. = 6."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 27, 39, 51, 63, 75, ?",
+"o": [
+"88",
+"89",
+"86",
+"87"
+],
+"k": 3,
+"s": [
+"Each term increases by 12.",
+"So the next term is 87."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "In the English alphabet, which letter is 7th to the right of the 15th letter from the left?",
+"o": [
+"U",
+"V",
+"W",
+"O"
+],
+"k": 1,
+"s": [
+"The 15th letter from the left is O.",
+"7 places to the right gives the 22nd letter = V."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, GLASS is written as TOZHH. How is SALT written in that code?",
+"o": [
+"IAPH",
+"TBMU",
+"GOZH",
+"HZOG"
+],
+"k": 3,
+"s": [
+"Each letter is replaced by its opposite letter (A↔Z, B↔Y, C↔X, …).",
+"So SALT is written as HZOG."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Kago walks 3 km towards the West, then turns left and walks 4 km. How far is Kago from the starting point?",
+"o": [
+"5 km",
+"7 km",
+"10 km",
+"1 km"
+],
+"k": 0,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(3² + 4²) = 5 km."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "C is the son of B. B is the wife of R. How is C related to R?",
+"o": [
+"Nephew",
+"Brother",
+"Son",
+"Grandson"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Son."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If today is Wednesday, what day of the week will it be after 93 days?",
+"o": [
+"Friday",
+"Saturday",
+"Thursday",
+"Sunday"
+],
+"k": 0,
+"s": [
+"93 days = 13 weeks and 2 odd days.",
+"Wednesday + 2 days = Friday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 11:54?",
+"o": [
+"147°",
+"33°",
+"43°",
+"18°"
+],
+"k": 1,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 11 − 5.5 × 54|.",
+"= 33°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a row of students, Kago is 19th from the left and 7th from the right. How many students are there in the row?",
+"o": [
+"24",
+"27",
+"26",
+"25"
+],
+"k": 3,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 19 + 7 − 1 = 25."
+]
+},
+{
+"slug": "r-analogy",
+"t": "8 : 64 :: 6 : ?",
+"o": [
+"37",
+"42",
+"35",
+"36"
+],
+"k": 3,
+"s": [
+"The relation is n : n²: 8 → 64.",
+"So 6 → 36."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Marble  2. Margin  3. Matter  4. Market",
+"o": [
+"4, 3, 2, 1",
+"1, 3, 4, 2",
+"4, 2, 1, 3",
+"1, 2, 4, 3"
+],
+"k": 3,
+"s": [
+"In dictionary order: Marble, Margin, Market, Matter.",
+"So the order is 1, 2, 4, 3."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 343 equal smaller cubes. How many smaller cubes have exactly three faces painted?",
+"o": [
+"8",
+"125",
+"60",
+"150"
+],
+"k": 0,
+"s": [
+"The cube is cut 7 × 7 × 7, so n = 7.",
+"Cubes with three painted faces are the 8 corners. = 8."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 8, 16, 24, 32, 40, ?",
+"o": [
+"50",
+"49",
+"47",
+"48"
+],
+"k": 3,
+"s": [
+"Each term increases by 8.",
+"So the next term is 48."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "Find the next term: HS, IR, JQ, KP, ?",
+"o": [
+"OL",
+"MO",
+"LO",
+"LP"
+],
+"k": 2,
+"s": [
+"The first letters move forward (+1) and the second letters move backward (−1).",
+"So the next term is LO."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, ROSE is written as ESOR. How is STAR written in that code?",
+"o": [
+"RTAS",
+"TUBS",
+"RATS",
+"TARS"
+],
+"k": 2,
+"s": [
+"The letters of ROSE are written in reverse order.",
+"So STAR is written as RATS."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Biri walks 15 m towards the North, then turns left and walks 20 m. How far is Biri from the starting point?",
+"o": [
+"25 m",
+"35 m",
+"5 m",
+"27 m"
+],
+"k": 0,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(15² + 20²) = 25 m."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "X is the wife of B. B is the son of P. How is X related to P?",
+"o": [
+"Niece",
+"Daughter-in-law",
+"Daughter",
+"Sister"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter-in-law."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If today is Tuesday, what day of the week will it be after 147 days?",
+"o": [
+"Thursday",
+"Tuesday",
+"Monday",
+"Wednesday"
+],
+"k": 1,
+"s": [
+"147 days = 21 weeks and 0 odd days.",
+"Tuesday + 0 days = Tuesday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 5:04?",
+"o": [
+"138°",
+"113°",
+"52°",
+"128°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 5 − 5.5 × 4|.",
+"= 128°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a class of 41 students, Yamang is 12th from the top. What is Yamang's position from the bottom?",
+"o": [
+"30th",
+"29th",
+"32nd",
+"31st"
+],
+"k": 0,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 41 − 12 + 1 = 30."
+]
+},
+{
+"slug": "r-analogy",
+"t": "5 : 126 :: 3 : ?",
+"o": [
+"27",
+"31",
+"28",
+"29"
+],
+"k": 2,
+"s": [
+"The relation is n : n³ + 1: 5 → 126.",
+"So 3 → 28."
+]
+},
+{
+"slug": "r-word-formation",
+"t": "Arrange the following words in dictionary order: 1. Marble  2. Margin  3. Market  4. Matter",
+"o": [
+"2, 3, 1, 4",
+"1, 2, 3, 4",
+"1, 4, 2, 3",
+"4, 1, 2, 3"
+],
+"k": 1,
+"s": [
+"In dictionary order: Marble, Margin, Market, Matter.",
+"So the order is 1, 2, 3, 4."
+]
+},
+{
+"slug": "r-cube-cuboid",
+"t": "A cube painted red on all faces is cut into 125 equal smaller cubes. How many smaller cubes have no face painted?",
+"o": [
+"36",
+"54",
+"27",
+"8"
+],
+"k": 2,
+"s": [
+"The cube is cut 5 × 5 × 5, so n = 5.",
+"No face painted = (n − 2)³ = 3³. = 27."
+]
+},
+{
+"slug": "r-number-series",
+"t": "Find the next term: 5, 10, 20, 40, 80, ?",
+"o": [
+"160",
+"159",
+"162",
+"161"
+],
+"k": 0,
+"s": [
+"Each term is multiplied by 2.",
+"So the next term is 160."
+]
+},
+{
+"slug": "r-alphabetical-series",
+"t": "Find the next letter: H, K, N, Q, T, ?",
+"o": [
+"Y",
+"W",
+"X",
+"V"
+],
+"k": 1,
+"s": [
+"Each letter moves 3 places forward.",
+"So the next letter is W."
+]
+},
+{
+"slug": "r-coding-decoding",
+"t": "In a certain code, ROSE is written as TQUG. How is MANGO written in that code?",
+"o": [
+"QIPCO",
+"PDQJR",
+"OCPIQ",
+"KYLEM"
+],
+"k": 2,
+"s": [
+"Each letter of ROSE moves 2 places forward.",
+"Doing the same with MANGO gives OCPIQ."
+]
+},
+{
+"slug": "r-direction-distance",
+"t": "Pema walks 3 m towards the South, then turns right and walks 4 m. How far is Pema from the starting point?",
+"o": [
+"7 m",
+"1 m",
+"5 m",
+"10 m"
+],
+"k": 2,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(3² + 4²) = 5 m."
+]
+},
+{
+"slug": "r-blood-relation",
+"t": "N is the sister of C. C is the father of P. How is N related to P?",
+"o": [
+"Sister",
+"Mother",
+"Grandmother",
+"Aunt"
+],
+"k": 3,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Aunt."
+]
+},
+{
+"slug": "r-calendar",
+"t": "If 2 March 2025 is a Sunday, what day of the week is 28 May 2025?",
+"o": [
+"Thursday",
+"Friday",
+"Tuesday",
+"Wednesday"
+],
+"k": 3,
+"s": [
+"Number of days from 2 March 2025 to 28 May 2025 = 87, which gives 3 odd days.",
+"Sunday + 3 = Wednesday."
+]
+},
+{
+"slug": "r-clock",
+"t": "What is the angle between the hour hand and the minute hand of a clock at 9:46?",
+"o": [
+"163°",
+"2°",
+"27°",
+"17°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 9 − 5.5 × 46|.",
+"= 17°."
+]
+},
+{
+"slug": "r-ranking-seating",
+"t": "In a row of students, Kago is 14th from the left and 10th from the right. How many students are there in the row?",
+"o": [
+"23",
+"22",
+"24",
+"25"
+],
+"k": 0,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 14 + 10 − 1 = 23."
+]
+}
+],
+"mq": {
+"percentage": [
+{
+"t": "The price of a book is first increased by 40% and then decreased by 25%. What is the net percentage change in its price?",
+"o": [
+"10% decrease",
+"65% increase",
+"15% increase",
+"5% increase"
+],
+"k": 3,
+"s": [
+"Net change = a − b − ab/100 = 40 − 25 − (40×25)/100.",
+"= 5%, so the answer is: 5% increase."
+]
+},
+{
+"t": "What is 18% of 800?",
+"o": [
+"224",
+"184",
+"104",
+"144"
+],
+"k": 3,
+"s": [
+"18% of 800 = (18/100) × 800.",
+"= 144."
+]
+},
+{
+"t": "If 35% of a number is 721, what is the number?",
+"o": [
+"2,060",
+"2,266",
+"4,120",
+"1,854"
+],
+"k": 0,
+"s": [
+"Let the number be N. Then (35/100) × N = 721.",
+"N = 721 × 100/35 = 2,060."
+]
+},
+{
+"t": "The price of a mobile phone is first increased by 20% and then decreased by 20%. What is the net percentage change in its price?",
+"o": [
+"4% increase",
+"4% decrease",
+"40% increase",
+"2% increase"
+],
+"k": 1,
+"s": [
+"Net change = a − b − ab/100 = 20 − 20 − (20×20)/100.",
+"= -4%, so the answer is: 4% decrease."
+]
+},
+{
+"t": "What is 75% of 1,400?",
+"o": [
+"1,190",
+"1,050",
+"1,120",
+"980"
+],
+"k": 1,
+"s": [
+"75% of 1,400 = (75/100) × 1,400.",
+"= 1,050."
+]
+},
+{
+"t": "If 20% of a number is 380, what is the number?",
+"o": [
+"1,710",
+"1,900",
+"3,800",
+"2,090"
+],
+"k": 1,
+"s": [
+"Let the number be N. Then (20/100) × N = 380.",
+"N = 380 × 100/20 = 1,900."
+]
+},
+{
+"t": "What is 25% of 500?",
+"o": [
+"150",
+"100",
+"175",
+"125"
+],
+"k": 3,
+"s": [
+"25% of 500 = (25/100) × 500.",
+"= 125."
+]
+},
+{
+"t": "If 75% of a number is 1,170, what is the number?",
+"o": [
+"3,120",
+"1,560",
+"1,716",
+"1,404"
+],
+"k": 1,
+"s": [
+"Let the number be N. Then (75/100) × N = 1,170.",
+"N = 1,170 × 100/75 = 1,560."
+]
+},
+{
+"t": "The price of a bag of rice is first increased by 40% and then decreased by 25%. What is the net percentage change in its price?",
+"o": [
+"15% increase",
+"10% decrease",
+"65% increase",
+"5% increase"
+],
+"k": 3,
+"s": [
+"Net change = a − b − ab/100 = 40 − 25 − (40×25)/100.",
+"= 5%, so the answer is: 5% increase."
+]
+},
+{
+"t": "What is 16% of 875?",
+"o": [
+"183.75",
+"227",
+"96.25",
+"140"
+],
+"k": 3,
+"s": [
+"16% of 875 = (16/100) × 875.",
+"= 140."
+]
+},
+{
+"t": "If 80% of a number is 720, what is the number?",
+"o": [
+"1,800",
+"810",
+"990",
+"900"
+],
+"k": 3,
+"s": [
+"Let the number be N. Then (80/100) × N = 720.",
+"N = 720 × 100/80 = 900."
+]
+},
+{
+"t": "The price of a book is first increased by 20% and then decreased by 20%. What is the net percentage change in its price?",
+"o": [
+"2% increase",
+"40% increase",
+"4% increase",
+"4% decrease"
+],
+"k": 3,
+"s": [
+"Net change = a − b − ab/100 = 20 − 20 − (20×20)/100.",
+"= -4%, so the answer is: 4% decrease."
+]
+},
+{
+"t": "What is 16% of 775?",
+"o": [
+"85.25",
+"201",
+"124",
+"162.75"
+],
+"k": 2,
+"s": [
+"16% of 775 = (16/100) × 775.",
+"= 124."
+]
+},
+{
+"t": "If 15% of a number is 126, what is the number?",
+"o": [
+"924",
+"1,680",
+"756",
+"840"
+],
+"k": 3,
+"s": [
+"Let the number be N. Then (15/100) × N = 126.",
+"N = 126 × 100/15 = 840."
+]
+},
+{
+"t": "The price of a book is first increased by 20% and then decreased by 25%. What is the net percentage change in its price?",
+"o": [
+"10% decrease",
+"10% increase",
+"45% increase",
+"5% decrease"
+],
+"k": 0,
+"s": [
+"Net change = a − b − ab/100 = 20 − 25 − (20×25)/100.",
+"= -10%, so the answer is: 10% decrease."
+]
+},
+{
+"t": "What is 60% of 1,825?",
+"o": [
+"1,095",
+"1003.75",
+"1186.25",
+"1,277"
+],
+"k": 0,
+"s": [
+"60% of 1,825 = (60/100) × 1,825.",
+"= 1,095."
+]
+},
+{
+"t": "If 12% of a number is 156, what is the number?",
+"o": [
+"2,600",
+"1,170",
+"1,430",
+"1,300"
+],
+"k": 3,
+"s": [
+"Let the number be N. Then (12/100) × N = 156.",
+"N = 156 × 100/12 = 1,300."
+]
+},
+{
+"t": "The price of a mobile phone is first increased by 20% and then decreased by 10%. What is the net percentage change in its price?",
+"o": [
+"10% increase",
+"8% increase",
+"2% decrease",
+"30% increase"
+],
+"k": 1,
+"s": [
+"Net change = a − b − ab/100 = 20 − 10 − (20×10)/100.",
+"= 8%, so the answer is: 8% increase."
+]
+},
+{
+"t": "What is 18% of 2,300?",
+"o": [
+"414",
+"529",
+"644",
+"299"
+],
+"k": 0,
+"s": [
+"18% of 2,300 = (18/100) × 2,300.",
+"= 414."
+]
+},
+{
+"t": "If 25% of a number is 225, what is the number?",
+"o": [
+"990",
+"1,800",
+"810",
+"900"
+],
+"k": 3,
+"s": [
+"Let the number be N. Then (25/100) × N = 225.",
+"N = 225 × 100/25 = 900."
+]
+},
+{
+"t": "The price of a bicycle is first increased by 30% and then decreased by 10%. What is the net percentage change in its price?",
+"o": [
+"3% decrease",
+"17% increase",
+"20% increase",
+"40% increase"
+],
+"k": 1,
+"s": [
+"Net change = a − b − ab/100 = 30 − 10 − (30×10)/100.",
+"= 17%, so the answer is: 17% increase."
+]
+},
+{
+"t": "What is 25% of 2,100?",
+"o": [
+"420",
+"630",
+"525",
+"735"
+],
+"k": 2,
+"s": [
+"25% of 2,100 = (25/100) × 2,100.",
+"= 525."
+]
+},
+{
+"t": "If 12% of a number is 72, what is the number?",
+"o": [
+"660",
+"1,200",
+"600",
+"540"
+],
+"k": 2,
+"s": [
+"Let the number be N. Then (12/100) × N = 72.",
+"N = 72 × 100/12 = 600."
+]
+},
+{
+"t": "The price of a watch is first increased by 50% and then decreased by 20%. What is the net percentage change in its price?",
+"o": [
+"70% increase",
+"30% increase",
+"10% decrease",
+"20% increase"
+],
+"k": 3,
+"s": [
+"Net change = a − b − ab/100 = 50 − 20 − (50×20)/100.",
+"= 20%, so the answer is: 20% increase."
+]
+}
+],
+"profit-loss": [
+{
+"t": "An article bought for Rs. 650 is sold for Rs. 780. Find the profit or loss per cent.",
+"o": [
+"20% loss",
+"20% profit",
+"25% profit",
+"18% profit"
+],
+"k": 1,
+"s": [
+"Profit = 130.",
+"Profit% = 130/650 × 100 = 20%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 4,000. A discount of 40% is given. What is the selling price?",
+"o": [
+"Rs. 3,960",
+"Rs. 5,600",
+"Rs. 2,200",
+"Rs. 2,400"
+],
+"k": 3,
+"s": [
+"Discount = 40% of 4,000 = 1,600.",
+"SP = 4,000 − 1,600 = Rs. 2,400."
+]
+},
+{
+"t": "Two successive discounts of 10% and 5% are equal to a single discount of:",
+"o": [
+"14.5%",
+"16.5%",
+"11.5%",
+"15%"
+],
+"k": 0,
+"s": [
+"Single discount = a + b − ab/100 = 10 + 5 − 50/100.",
+"= 14.5%."
+]
+},
+{
+"t": "A shopkeeper buys an article for Rs. 5,500 and sells it at a profit of 30%. What is the selling price?",
+"o": [
+"Rs. 7,150",
+"Rs. 3,850",
+"Rs. 7,700",
+"Rs. 5,530"
+],
+"k": 0,
+"s": [
+"SP = CP × (100 + 30)/100 = 5,500 × 130/100.",
+"= Rs. 7,150."
+]
+},
+{
+"t": "An article bought for Rs. 1,200 is sold for Rs. 900. Find the profit or loss per cent.",
+"o": [
+"30% loss",
+"25% loss",
+"23% loss",
+"25% profit"
+],
+"k": 1,
+"s": [
+"Loss = 300.",
+"Loss% = 300/1,200 × 100 = 25%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 1,700. A discount of 10% is given. What is the selling price?",
+"o": [
+"Rs. 1,690",
+"Rs. 1,870",
+"Rs. 1,445",
+"Rs. 1,530"
+],
+"k": 3,
+"s": [
+"Discount = 10% of 1,700 = 170.",
+"SP = 1,700 − 170 = Rs. 1,530."
+]
+},
+{
+"t": "Two successive discounts of 25% and 20% are equal to a single discount of:",
+"o": [
+"42%",
+"45%",
+"37%",
+"40%"
+],
+"k": 3,
+"s": [
+"Single discount = a + b − ab/100 = 25 + 20 − 500/100.",
+"= 40%."
+]
+},
+{
+"t": "A shopkeeper buys an article for Rs. 700 and sells it at a profit of 20%. What is the selling price?",
+"o": [
+"Rs. 840",
+"Rs. 910",
+"Rs. 560",
+"Rs. 720"
+],
+"k": 0,
+"s": [
+"SP = CP × (100 + 20)/100 = 700 × 120/100.",
+"= Rs. 840."
+]
+},
+{
+"t": "An article bought for Rs. 1,150 is sold for Rs. 1,495. Find the profit or loss per cent.",
+"o": [
+"28% profit",
+"30% profit",
+"35% profit",
+"30% loss"
+],
+"k": 1,
+"s": [
+"Profit = 345.",
+"Profit% = 345/1,150 × 100 = 30%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 2,200. A discount of 10% is given. What is the selling price?",
+"o": [
+"Rs. 1,980",
+"Rs. 2,420",
+"Rs. 2,190",
+"Rs. 1,870"
+],
+"k": 0,
+"s": [
+"Discount = 10% of 2,200 = 220.",
+"SP = 2,200 − 220 = Rs. 1,980."
+]
+},
+{
+"t": "A shopkeeper buys an article for Rs. 3,400 and sells it at a profit of 25%. What is the selling price?",
+"o": [
+"Rs. 4,590",
+"Rs. 4,250",
+"Rs. 2,550",
+"Rs. 3,425"
+],
+"k": 1,
+"s": [
+"SP = CP × (100 + 25)/100 = 3,400 × 125/100.",
+"= Rs. 4,250."
+]
+},
+{
+"t": "An article bought for Rs. 4,100 is sold for Rs. 3,608. Find the profit or loss per cent.",
+"o": [
+"17% loss",
+"10% loss",
+"12% loss",
+"12% profit"
+],
+"k": 2,
+"s": [
+"Loss = 492.",
+"Loss% = 492/4,100 × 100 = 12%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 2,100. A discount of 15% is given. What is the selling price?",
+"o": [
+"Rs. 2,415",
+"Rs. 2,085",
+"Rs. 1,785",
+"Rs. 1,680"
+],
+"k": 2,
+"s": [
+"Discount = 15% of 2,100 = 315.",
+"SP = 2,100 − 315 = Rs. 1,785."
+]
+},
+{
+"t": "A shopkeeper buys an article for Rs. 3,950 and sells it at a profit of 8%. What is the selling price?",
+"o": [
+"Rs. 3,634",
+"Rs. 4,661",
+"Rs. 4,266",
+"Rs. 3,958"
+],
+"k": 2,
+"s": [
+"SP = CP × (100 + 8)/100 = 3,950 × 108/100.",
+"= Rs. 4,266."
+]
+},
+{
+"t": "An article bought for Rs. 4,100 is sold for Rs. 3,485. Find the profit or loss per cent.",
+"o": [
+"15% loss",
+"13% loss",
+"15% profit",
+"20% loss"
+],
+"k": 0,
+"s": [
+"Loss = 615.",
+"Loss% = 615/4,100 × 100 = 15%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 4,800. A discount of 12% is given. What is the selling price?",
+"o": [
+"Rs. 5,376",
+"Rs. 3,984",
+"Rs. 4,224",
+"Rs. 4,788"
+],
+"k": 2,
+"s": [
+"Discount = 12% of 4,800 = 576.",
+"SP = 4,800 − 576 = Rs. 4,224."
+]
+},
+{
+"t": "Two successive discounts of 40% and 10% are equal to a single discount of:",
+"o": [
+"48%",
+"50%",
+"43%",
+"46%"
+],
+"k": 3,
+"s": [
+"Single discount = a + b − ab/100 = 40 + 10 − 400/100.",
+"= 46%."
+]
+},
+{
+"t": "A shopkeeper buys an article for Rs. 3,900 and sells it at a profit of 25%. What is the selling price?",
+"o": [
+"Rs. 2,925",
+"Rs. 5,265",
+"Rs. 4,875",
+"Rs. 3,925"
+],
+"k": 2,
+"s": [
+"SP = CP × (100 + 25)/100 = 3,900 × 125/100.",
+"= Rs. 4,875."
+]
+},
+{
+"t": "An article bought for Rs. 2,550 is sold for Rs. 3,060. Find the profit or loss per cent.",
+"o": [
+"25% profit",
+"20% profit",
+"20% loss",
+"18% profit"
+],
+"k": 1,
+"s": [
+"Profit = 510.",
+"Profit% = 510/2,550 × 100 = 20%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 1,700. A discount of 12% is given. What is the selling price?",
+"o": [
+"Rs. 1,688",
+"Rs. 1,904",
+"Rs. 1,411",
+"Rs. 1,496"
+],
+"k": 3,
+"s": [
+"Discount = 12% of 1,700 = 204.",
+"SP = 1,700 − 204 = Rs. 1,496."
+]
+},
+{
+"t": "Two successive discounts of 50% and 20% are equal to a single discount of:",
+"o": [
+"60%",
+"70%",
+"62%",
+"57%"
+],
+"k": 0,
+"s": [
+"Single discount = a + b − ab/100 = 50 + 20 − 1000/100.",
+"= 60%."
+]
+},
+{
+"t": "A shopkeeper buys an article for Rs. 6,000 and sells it at a profit of 12%. What is the selling price?",
+"o": [
+"Rs. 5,280",
+"Rs. 7,320",
+"Rs. 6,720",
+"Rs. 6,012"
+],
+"k": 2,
+"s": [
+"SP = CP × (100 + 12)/100 = 6,000 × 112/100.",
+"= Rs. 6,720."
+]
+},
+{
+"t": "An article bought for Rs. 4,650 is sold for Rs. 6,045. Find the profit or loss per cent.",
+"o": [
+"30% loss",
+"28% profit",
+"35% profit",
+"30% profit"
+],
+"k": 3,
+"s": [
+"Profit = 1,395.",
+"Profit% = 1,395/4,650 × 100 = 30%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 6,100. A discount of 25% is given. What is the selling price?",
+"o": [
+"Rs. 7,625",
+"Rs. 4,270",
+"Rs. 4,575",
+"Rs. 6,075"
+],
+"k": 2,
+"s": [
+"Discount = 25% of 6,100 = 1,525.",
+"SP = 6,100 − 1,525 = Rs. 4,575."
+]
+},
+{
+"t": "A shopkeeper buys an article for Rs. 5,800 and sells it at a profit of 15%. What is the selling price?",
+"o": [
+"Rs. 5,815",
+"Rs. 6,670",
+"Rs. 4,930",
+"Rs. 7,250"
+],
+"k": 1,
+"s": [
+"SP = CP × (100 + 15)/100 = 5,800 × 115/100.",
+"= Rs. 6,670."
+]
+},
+{
+"t": "An article bought for Rs. 300 is sold for Rs. 285. Find the profit or loss per cent.",
+"o": [
+"5% profit",
+"10% loss",
+"3% loss",
+"5% loss"
+],
+"k": 3,
+"s": [
+"Loss = 15.",
+"Loss% = 15/300 × 100 = 5%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 5,200. A discount of 30% is given. What is the selling price?",
+"o": [
+"Rs. 5,170",
+"Rs. 3,640",
+"Rs. 3,380",
+"Rs. 6,760"
+],
+"k": 1,
+"s": [
+"Discount = 30% of 5,200 = 1,560.",
+"SP = 5,200 − 1,560 = Rs. 3,640."
+]
+},
+{
+"t": "Two successive discounts of 25% and 10% are equal to a single discount of:",
+"o": [
+"35%",
+"29.5%",
+"32.5%",
+"34.5%"
+],
+"k": 2,
+"s": [
+"Single discount = a + b − ab/100 = 25 + 10 − 250/100.",
+"= 32.5%."
+]
+},
+{
+"t": "A shopkeeper buys an article for Rs. 1,050 and sells it at a profit of 12%. What is the selling price?",
+"o": [
+"Rs. 1,062",
+"Rs. 1,281",
+"Rs. 1,176",
+"Rs. 924"
+],
+"k": 2,
+"s": [
+"SP = CP × (100 + 12)/100 = 1,050 × 112/100.",
+"= Rs. 1,176."
+]
+},
+{
+"t": "An article bought for Rs. 3,650 is sold for Rs. 3,942. Find the profit or loss per cent.",
+"o": [
+"8% loss",
+"8% profit",
+"6% profit",
+"13% profit"
+],
+"k": 1,
+"s": [
+"Profit = 292.",
+"Profit% = 292/3,650 × 100 = 8%."
+]
+},
+{
+"t": "The marked price of a jacket is Rs. 7,100. A discount of 30% is given. What is the selling price?",
+"o": [
+"Rs. 9,230",
+"Rs. 4,970",
+"Rs. 4,615",
+"Rs. 7,070"
+],
+"k": 1,
+"s": [
+"Discount = 30% of 7,100 = 2,130.",
+"SP = 7,100 − 2,130 = Rs. 4,970."
+]
+}
+],
+"simple-interest": [
+{
+"t": "What amount will Rs. 6,500 become in 3 years at 15% per annum simple interest?",
+"o": [
+"Rs. 9,425",
+"Rs. 2,925",
+"Rs. 8,450",
+"Rs. 10,400"
+],
+"k": 0,
+"s": [
+"SI = 6,500 × 15 × 3/100 = 2,925.",
+"Amount = 6,500 + 2,925 = Rs. 9,425."
+]
+},
+{
+"t": "A sum of Rs. 14,500 amounts to Rs. 25,375 in 5 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"17%",
+"15%",
+"14%",
+"16%"
+],
+"k": 1,
+"s": [
+"SI = 25,375 − 14,500 = 10,875.",
+"R = SI × 100/(P × T) = 10,875 × 100/(14,500 × 5) = 15%."
+]
+},
+{
+"t": "What amount will Rs. 12,500 become in 3 years at 6% per annum simple interest?",
+"o": [
+"Rs. 14,000",
+"Rs. 15,500",
+"Rs. 2,250",
+"Rs. 14,750"
+],
+"k": 3,
+"s": [
+"SI = 12,500 × 6 × 3/100 = 2,250.",
+"Amount = 12,500 + 2,250 = Rs. 14,750."
+]
+},
+{
+"t": "A sum of Rs. 10,500 amounts to Rs. 13,650 in 3 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"11%",
+"12%",
+"9%",
+"10%"
+],
+"k": 3,
+"s": [
+"SI = 13,650 − 10,500 = 3,150.",
+"R = SI × 100/(P × T) = 3,150 × 100/(10,500 × 3) = 10%."
+]
+},
+{
+"t": "What amount will Rs. 3,500 become in 6 years at 15% per annum simple interest?",
+"o": [
+"Rs. 6,650",
+"Rs. 3,150",
+"Rs. 7,175",
+"Rs. 6,125"
+],
+"k": 0,
+"s": [
+"SI = 3,500 × 15 × 6/100 = 3,150.",
+"Amount = 3,500 + 3,150 = Rs. 6,650."
+]
+},
+{
+"t": "A sum of Rs. 12,000 amounts to Rs. 14,400 in 4 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"7%",
+"4%",
+"5%",
+"6%"
+],
+"k": 2,
+"s": [
+"SI = 14,400 − 12,000 = 2,400.",
+"R = SI × 100/(P × T) = 2,400 × 100/(12,000 × 4) = 5%."
+]
+},
+{
+"t": "Find the simple interest on Rs. 25,000 at 10% per annum for 3 years.",
+"o": [
+"Rs. 32,500",
+"Rs. 7,500",
+"Rs. 10,000",
+"Rs. 5,000"
+],
+"k": 1,
+"s": [
+"SI = P × R × T/100 = 25,000 × 10 × 3/100.",
+"= Rs. 7,500."
+]
+},
+{
+"t": "A sum of Rs. 2,500 amounts to Rs. 3,700 in 4 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"11%",
+"12%",
+"14%",
+"13%"
+],
+"k": 1,
+"s": [
+"SI = 3,700 − 2,500 = 1,200.",
+"R = SI × 100/(P × T) = 1,200 × 100/(2,500 × 4) = 12%."
+]
+},
+{
+"t": "What amount will Rs. 6,000 become in 4 years at 5% per annum simple interest?",
+"o": [
+"Rs. 7,500",
+"Rs. 6,900",
+"Rs. 1,200",
+"Rs. 7,200"
+],
+"k": 3,
+"s": [
+"SI = 6,000 × 5 × 4/100 = 1,200.",
+"Amount = 6,000 + 1,200 = Rs. 7,200."
+]
+},
+{
+"t": "A sum of Rs. 11,000 amounts to Rs. 15,950 in 3 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"15%",
+"16%",
+"14%",
+"17%"
+],
+"k": 0,
+"s": [
+"SI = 15,950 − 11,000 = 4,950.",
+"R = SI × 100/(P × T) = 4,950 × 100/(11,000 × 3) = 15%."
+]
+},
+{
+"t": "What amount will Rs. 8,500 become in 4 years at 5% per annum simple interest?",
+"o": [
+"Rs. 1,700",
+"Rs. 10,200",
+"Rs. 9,775",
+"Rs. 10,625"
+],
+"k": 1,
+"s": [
+"SI = 8,500 × 5 × 4/100 = 1,700.",
+"Amount = 8,500 + 1,700 = Rs. 10,200."
+]
+},
+{
+"t": "A sum of Rs. 5,500 amounts to Rs. 7,150 in 2 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"15%",
+"16%",
+"14%",
+"17%"
+],
+"k": 0,
+"s": [
+"SI = 7,150 − 5,500 = 1,650.",
+"R = SI × 100/(P × T) = 1,650 × 100/(5,500 × 2) = 15%."
+]
+},
+{
+"t": "Find the simple interest on Rs. 28,500 at 10% per annum for 4 years.",
+"o": [
+"Rs. 11,400",
+"Rs. 14,250",
+"Rs. 39,900",
+"Rs. 8,550"
+],
+"k": 0,
+"s": [
+"SI = P × R × T/100 = 28,500 × 10 × 4/100.",
+"= Rs. 11,400."
+]
+},
+{
+"t": "A sum of Rs. 4,500 amounts to Rs. 5,040 in 2 years at simple interest. What is the rate of interest per annum?",
+"o": [
+"8%",
+"5%",
+"7%",
+"6%"
+],
+"k": 3,
+"s": [
+"SI = 5,040 − 4,500 = 540.",
+"R = SI × 100/(P × T) = 540 × 100/(4,500 × 2) = 6%."
+]
+}
+],
+"compound-interest": [
+{
+"t": "Find the compound interest on Rs. 6,400 for 2 years at 10% per annum, compounded annually.",
+"o": [
+"Rs. 1,444",
+"Rs. 1,280",
+"Rs. 7,744",
+"Rs. 1,344"
+],
+"k": 3,
+"s": [
+"Amount = 6,400 × (1 + 10/100)² = 7,744.",
+"CI = 7,744 − 6,400 = Rs. 1,344."
+]
+},
+{
+"t": "What is the difference between compound interest and simple interest on Rs. 4,000 for 2 years at 10% per annum?",
+"o": [
+"Rs. 40",
+"Rs. 50",
+"Rs. 80",
+"Rs. 120"
+],
+"k": 0,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 4,000 × (10/100)² = Rs. 40."
+]
+},
+{
+"t": "Find the compound interest on Rs. 6,900 for 2 years at 10% per annum, compounded annually.",
+"o": [
+"Rs. 8,349",
+"Rs. 1,549",
+"Rs. 1,449",
+"Rs. 1,380"
+],
+"k": 2,
+"s": [
+"Amount = 6,900 × (1 + 10/100)² = 8,349.",
+"CI = 8,349 − 6,900 = Rs. 1,449."
+]
+},
+{
+"t": "What is the difference between compound interest and simple interest on Rs. 5,700 for 2 years at 10% per annum?",
+"o": [
+"Rs. 114",
+"Rs. 57",
+"Rs. 67",
+"Rs. 171"
+],
+"k": 1,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 5,700 × (10/100)² = Rs. 57."
+]
+},
+{
+"t": "Find the compound interest on Rs. 5,800 for 2 years at 10% per annum, compounded annually.",
+"o": [
+"Rs. 1,160",
+"Rs. 1,318",
+"Rs. 7,018",
+"Rs. 1,218"
+],
+"k": 3,
+"s": [
+"Amount = 5,800 × (1 + 10/100)² = 7,018.",
+"CI = 7,018 − 5,800 = Rs. 1,218."
+]
+},
+{
+"t": "What is the difference between compound interest and simple interest on Rs. 32,000 for 2 years at 5% per annum?",
+"o": [
+"Rs. 160",
+"Rs. 85",
+"Rs. 240",
+"Rs. 80"
+],
+"k": 3,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 32,000 × (5/100)² = Rs. 80."
+]
+},
+{
+"t": "Find the compound interest on Rs. 2,800 for 2 years at 20% per annum, compounded annually.",
+"o": [
+"Rs. 4,032",
+"Rs. 1,232",
+"Rs. 1,432",
+"Rs. 1,120"
+],
+"k": 1,
+"s": [
+"Amount = 2,800 × (1 + 20/100)² = 4,032.",
+"CI = 4,032 − 2,800 = Rs. 1,232."
+]
+},
+{
+"t": "What is the difference between compound interest and simple interest on Rs. 2,225 for 2 years at 20% per annum?",
+"o": [
+"Rs. 89",
+"Rs. 109",
+"Rs. 178",
+"Rs. 267"
+],
+"k": 0,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 2,225 × (20/100)² = Rs. 89."
+]
+},
+{
+"t": "Find the compound interest on Rs. 1,925 for 2 years at 20% per annum, compounded annually.",
+"o": [
+"Rs. 2,772",
+"Rs. 847",
+"Rs. 770",
+"Rs. 1,047"
+],
+"k": 1,
+"s": [
+"Amount = 1,925 × (1 + 20/100)² = 2,772.",
+"CI = 2,772 − 1,925 = Rs. 847."
+]
+},
+{
+"t": "What is the difference between compound interest and simple interest on Rs. 34,400 for 2 years at 5% per annum?",
+"o": [
+"Rs. 258",
+"Rs. 86",
+"Rs. 172",
+"Rs. 91"
+],
+"k": 1,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 34,400 × (5/100)² = Rs. 86."
+]
+},
+{
+"t": "Find the compound interest on Rs. 26,800 for 2 years at 5% per annum, compounded annually.",
+"o": [
+"Rs. 2,680",
+"Rs. 2,747",
+"Rs. 2,797",
+"Rs. 29,547"
+],
+"k": 1,
+"s": [
+"Amount = 26,800 × (1 + 5/100)² = 29,547.",
+"CI = 29,547 − 26,800 = Rs. 2,747."
+]
+},
+{
+"t": "What is the difference between compound interest and simple interest on Rs. 1,300 for 2 years at 10% per annum?",
+"o": [
+"Rs. 13",
+"Rs. 39",
+"Rs. 26",
+"Rs. 23"
+],
+"k": 0,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 1,300 × (10/100)² = Rs. 13."
+]
+},
+{
+"t": "Find the compound interest on Rs. 475 for 2 years at 20% per annum, compounded annually.",
+"o": [
+"Rs. 209",
+"Rs. 684",
+"Rs. 409",
+"Rs. 190"
+],
+"k": 0,
+"s": [
+"Amount = 475 × (1 + 20/100)² = 684.",
+"CI = 684 − 475 = Rs. 209."
+]
+},
+{
+"t": "What is the difference between compound interest and simple interest on Rs. 425 for 2 years at 20% per annum?",
+"o": [
+"Rs. 51",
+"Rs. 17",
+"Rs. 37",
+"Rs. 34"
+],
+"k": 1,
+"s": [
+"For 2 years, CI − SI = P × (R/100)².",
+"= 425 × (20/100)² = Rs. 17."
+]
+}
+],
+"ratio-proportion": [
+{
+"t": "Rs. 8,580 is divided between Nima and Yarin in the ratio 4:7. What is Nima's share?",
+"o": [
+"Rs. 3,120",
+"Rs. 3,900",
+"Rs. 5,460",
+"Rs. 4,290"
+],
+"k": 0,
+"s": [
+"Total parts = 4 + 7 = 11.",
+"Nima's share = 8,580 × 4/11 = Rs. 3,120."
+]
+},
+{
+"t": "If A:B = 1:2 and B:C = 1:5, find A:C.",
+"o": [
+"2:7",
+"5:2",
+"10:1",
+"1:10"
+],
+"k": 3,
+"s": [
+"A/C = (A/B) × (B/C) = (1/2) × (1/5) = 1/10.",
+"A:C = 1:10."
+]
+},
+{
+"t": "Find the mean proportional between 4 and 25.",
+"o": [
+"8",
+"14",
+"10",
+"12"
+],
+"k": 2,
+"s": [
+"Mean proportional = √(4 × 25) = √100.",
+"= 10."
+]
+},
+{
+"t": "Rs. 8,520 is divided between Ravi and Tenzing in the ratio 5:7. What is Ravi's share?",
+"o": [
+"Rs. 3,550",
+"Rs. 4,970",
+"Rs. 4,260",
+"Rs. 2,840"
+],
+"k": 0,
+"s": [
+"Total parts = 5 + 7 = 12.",
+"Ravi's share = 8,520 × 5/12 = Rs. 3,550."
+]
+},
+{
+"t": "If A:B = 1:6 and B:C = 8:7, find A:C.",
+"o": [
+"21:4",
+"9:13",
+"4:21",
+"7:48"
+],
+"k": 2,
+"s": [
+"A/C = (A/B) × (B/C) = (1/6) × (8/7) = 8/42.",
+"A:C = 4:21."
+]
+},
+{
+"t": "Rs. 3,290 is divided between Tana and Pema in the ratio 3:4. What is Tana's share?",
+"o": [
+"Rs. 1,645",
+"Rs. 1,410",
+"Rs. 940",
+"Rs. 1,880"
+],
+"k": 1,
+"s": [
+"Total parts = 3 + 4 = 7.",
+"Tana's share = 3,290 × 3/7 = Rs. 1,410."
+]
+},
+{
+"t": "If A:B = 1:4 and B:C = 7:5, find A:C.",
+"o": [
+"20:7",
+"5:28",
+"8:9",
+"7:20"
+],
+"k": 3,
+"s": [
+"A/C = (A/B) × (B/C) = (1/4) × (7/5) = 7/20.",
+"A:C = 7:20."
+]
+},
+{
+"t": "Find the mean proportional between 4 and 9.",
+"o": [
+"4",
+"6",
+"8",
+"12"
+],
+"k": 1,
+"s": [
+"Mean proportional = √(4 × 9) = √36.",
+"= 6."
+]
+},
+{
+"t": "Rs. 3,120 is divided between Tana and Pema in the ratio 5:8. What is Tana's share?",
+"o": [
+"Rs. 1,560",
+"Rs. 1,200",
+"Rs. 1,440",
+"Rs. 1,920"
+],
+"k": 1,
+"s": [
+"Total parts = 5 + 8 = 13.",
+"Tana's share = 3,120 × 5/13 = Rs. 1,200."
+]
+},
+{
+"t": "If A:B = 1:2 and B:C = 7:1, find A:C.",
+"o": [
+"2:7",
+"8:3",
+"7:2",
+"1:14"
+],
+"k": 2,
+"s": [
+"A/C = (A/B) × (B/C) = (1/2) × (7/1) = 7/2.",
+"A:C = 7:2."
+]
+},
+{
+"t": "Rs. 3,800 is divided between Tana and Pema in the ratio 1:3. What is Tana's share?",
+"o": [
+"Rs. 2,850",
+"Rs. 950",
+"Rs. 1,900",
+"Rs. 0"
+],
+"k": 1,
+"s": [
+"Total parts = 1 + 3 = 4.",
+"Tana's share = 3,800 × 1/4 = Rs. 950."
+]
+},
+{
+"t": "If A:B = 4:1 and B:C = 2:3, find A:C.",
+"o": [
+"8:3",
+"6:1",
+"3:8",
+"6:4"
+],
+"k": 0,
+"s": [
+"A/C = (A/B) × (B/C) = (4/1) × (2/3) = 8/3.",
+"A:C = 8:3."
+]
+},
+{
+"t": "Find the mean proportional between 12 and 27.",
+"o": [
+"20",
+"18",
+"16",
+"19"
+],
+"k": 1,
+"s": [
+"Mean proportional = √(12 × 27) = √324.",
+"= 18."
+]
+},
+{
+"t": "Rs. 8,190 is divided between Rina and Kago in the ratio 4:5. What is Rina's share?",
+"o": [
+"Rs. 4,095",
+"Rs. 3,640",
+"Rs. 4,550",
+"Rs. 2,730"
+],
+"k": 1,
+"s": [
+"Total parts = 4 + 5 = 9.",
+"Rina's share = 8,190 × 4/9 = Rs. 3,640."
+]
+},
+{
+"t": "If A:B = 7:5 and B:C = 3:2, find A:C.",
+"o": [
+"10:7",
+"14:15",
+"10:21",
+"21:10"
+],
+"k": 3,
+"s": [
+"A/C = (A/B) × (B/C) = (7/5) × (3/2) = 21/10.",
+"A:C = 21:10."
+]
+},
+{
+"t": "Rs. 6,800 is divided between Rina and Kago in the ratio 3:5. What is Rina's share?",
+"o": [
+"Rs. 1,700",
+"Rs. 2,550",
+"Rs. 3,400",
+"Rs. 4,250"
+],
+"k": 1,
+"s": [
+"Total parts = 3 + 5 = 8.",
+"Rina's share = 6,800 × 3/8 = Rs. 2,550."
+]
+},
+{
+"t": "If A:B = 1:3 and B:C = 2:7, find A:C.",
+"o": [
+"3:10",
+"21:2",
+"7:6",
+"2:21"
+],
+"k": 3,
+"s": [
+"A/C = (A/B) × (B/C) = (1/3) × (2/7) = 2/21.",
+"A:C = 2:21."
+]
+}
+],
+"series-average": [
+{
+"t": "What is the sum of the first 10 natural numbers?",
+"o": [
+"65",
+"101",
+"45",
+"55"
+],
+"k": 3,
+"s": [
+"Sum = n(n + 1)/2 = 10 × 11/2.",
+"= 55."
+]
+},
+{
+"t": "The average of 8 numbers is 76. If the number 49 is added, what is the new average?",
+"o": [
+"73",
+"62",
+"72",
+"74"
+],
+"k": 0,
+"s": [
+"Sum of 8 numbers = 8 × 76 = 608.",
+"New average = (608 + 49)/9 = 73."
+]
+},
+{
+"t": "What is the 37th term of the series 16, 24, 32, 40, …?",
+"o": [
+"305",
+"312",
+"304",
+"296"
+],
+"k": 2,
+"s": [
+"First term a = 16, common difference d = 8.",
+"Tₙ = a + (n − 1)d = 16 + 36 × 8 = 304."
+]
+},
+{
+"t": "What is the sum of the first 12 even numbers?",
+"o": [
+"145",
+"144",
+"156",
+"168"
+],
+"k": 2,
+"s": [
+"Sum of the first n even numbers = n(n + 1).",
+"= 12 × 13 = 156."
+]
+},
+{
+"t": "The average of 5 numbers is 48. If the number 138 is added, what is the new average?",
+"o": [
+"64",
+"93",
+"62",
+"63"
+],
+"k": 3,
+"s": [
+"Sum of 5 numbers = 5 × 48 = 240.",
+"New average = (240 + 138)/6 = 63."
+]
+},
+{
+"t": "What is the 40th term of the series 15, 17, 19, 21, …?",
+"o": [
+"91",
+"93",
+"94",
+"95"
+],
+"k": 1,
+"s": [
+"First term a = 15, common difference d = 2.",
+"Tₙ = a + (n − 1)d = 15 + 39 × 2 = 93."
+]
+},
+{
+"t": "What is the sum of the first 40 natural numbers?",
+"o": [
+"780",
+"820",
+"1601",
+"860"
+],
+"k": 1,
+"s": [
+"Sum = n(n + 1)/2 = 40 × 41/2.",
+"= 820."
+]
+},
+{
+"t": "The average of 5 numbers is 42. If the number 102 is added, what is the new average?",
+"o": [
+"51",
+"72",
+"53",
+"52"
+],
+"k": 3,
+"s": [
+"Sum of 5 numbers = 5 × 42 = 210.",
+"New average = (210 + 102)/6 = 52."
+]
+},
+{
+"t": "What is the 33rd term of the series 8, 15, 22, 29, …?",
+"o": [
+"239",
+"233",
+"232",
+"225"
+],
+"k": 2,
+"s": [
+"First term a = 8, common difference d = 7.",
+"Tₙ = a + (n − 1)d = 8 + 32 × 7 = 232."
+]
+},
+{
+"t": "The average of 5 numbers is 58. If the number 16 is added, what is the new average?",
+"o": [
+"37",
+"51",
+"52",
+"50"
+],
+"k": 1,
+"s": [
+"Sum of 5 numbers = 5 × 58 = 290.",
+"New average = (290 + 16)/6 = 51."
+]
+},
+{
+"t": "What is the 28th term of the series 15, 20, 25, 30, …?",
+"o": [
+"145",
+"151",
+"150",
+"155"
+],
+"k": 2,
+"s": [
+"First term a = 15, common difference d = 5.",
+"Tₙ = a + (n − 1)d = 15 + 27 × 5 = 150."
+]
+},
+{
+"t": "What is the sum of the first 20 odd numbers?",
+"o": [
+"420",
+"800",
+"380",
+"400"
+],
+"k": 3,
+"s": [
+"Sum of the first n odd numbers = n².",
+"= 20² = 400."
+]
+},
+{
+"t": "The average of 8 numbers is 25. If the number 133 is added, what is the new average?",
+"o": [
+"36",
+"37",
+"79",
+"38"
+],
+"k": 1,
+"s": [
+"Sum of 8 numbers = 8 × 25 = 200.",
+"New average = (200 + 133)/9 = 37."
+]
+},
+{
+"t": "What is the 37th term of the series 12, 21, 30, 39, …?",
+"o": [
+"337",
+"345",
+"336",
+"327"
+],
+"k": 2,
+"s": [
+"First term a = 12, common difference d = 9.",
+"Tₙ = a + (n − 1)d = 12 + 36 × 9 = 336."
+]
+},
+{
+"t": "What is the sum of the first 25 even numbers?",
+"o": [
+"626",
+"650",
+"625",
+"675"
+],
+"k": 1,
+"s": [
+"Sum of the first n even numbers = n(n + 1).",
+"= 25 × 26 = 650."
+]
+},
+{
+"t": "The average of 8 numbers is 67. If the number 139 is added, what is the new average?",
+"o": [
+"74",
+"75",
+"76",
+"103"
+],
+"k": 1,
+"s": [
+"Sum of 8 numbers = 8 × 67 = 536.",
+"New average = (536 + 139)/9 = 75."
+]
+},
+{
+"t": "What is the 37th term of the series 16, 21, 26, 31, …?",
+"o": [
+"191",
+"201",
+"196",
+"197"
+],
+"k": 2,
+"s": [
+"First term a = 16, common difference d = 5.",
+"Tₙ = a + (n − 1)d = 16 + 36 × 5 = 196."
+]
+},
+{
+"t": "What is the sum of the first 50 natural numbers?",
+"o": [
+"1225",
+"1275",
+"2501",
+"1325"
+],
+"k": 1,
+"s": [
+"Sum = n(n + 1)/2 = 50 × 51/2.",
+"= 1275."
+]
+},
+{
+"t": "The average of 6 numbers is 29. If the number 71 is added, what is the new average?",
+"o": [
+"35",
+"50",
+"36",
+"34"
+],
+"k": 0,
+"s": [
+"Sum of 6 numbers = 6 × 29 = 174.",
+"New average = (174 + 71)/7 = 35."
+]
+},
+{
+"t": "What is the 24th term of the series 9, 13, 17, 21, …?",
+"o": [
+"102",
+"97",
+"105",
+"101"
+],
+"k": 3,
+"s": [
+"First term a = 9, common difference d = 4.",
+"Tₙ = a + (n − 1)d = 9 + 23 × 4 = 101."
+]
+},
+{
+"t": "What is the sum of the first 20 even numbers?",
+"o": [
+"400",
+"440",
+"420",
+"401"
+],
+"k": 2,
+"s": [
+"Sum of the first n even numbers = n(n + 1).",
+"= 20 × 21 = 420."
+]
+}
+],
+"lcm-hcf": [
+{
+"t": "What is the least number exactly divisible by 14, 21 and 28?",
+"o": [
+"84",
+"294",
+"168",
+"42"
+],
+"k": 0,
+"s": [
+"Required number = LCM of 14, 21 and 28.",
+"= 84."
+]
+},
+{
+"t": "What is the LCM of 6 and 9?",
+"o": [
+"36",
+"18",
+"54",
+"9"
+],
+"k": 1,
+"s": [
+"HCF of 6 and 9 = 3.",
+"LCM = 6 × 9/3 = 18."
+]
+},
+{
+"t": "The product of two numbers is 3,168 and their HCF is 6. What is their LCM?",
+"o": [
+"1584",
+"3168",
+"534",
+"528"
+],
+"k": 3,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 3,168/6 = 528."
+]
+},
+{
+"t": "What is the least number which leaves a remainder of 7 when divided by 12, 15 or 20?",
+"o": [
+"68",
+"60",
+"127",
+"67"
+],
+"k": 3,
+"s": [
+"LCM of 12, 15 and 20 = 60.",
+"Required number = 60 + 7 = 67."
+]
+},
+{
+"t": "What is the HCF of 75 and 40?",
+"o": [
+"6",
+"10",
+"5",
+"75"
+],
+"k": 2,
+"s": [
+"75 = 5 × 15 and 40 = 5 × 8.",
+"15 and 8 have no common factor, so HCF = 5."
+]
+},
+{
+"t": "The product of two numbers is 1,701 and their HCF is 9. What is their LCM?",
+"o": [
+"198",
+"1701",
+"189",
+"850"
+],
+"k": 2,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 1,701/9 = 189."
+]
+},
+{
+"t": "What is the least number which leaves a remainder of 5 when divided by 14, 21 or 28?",
+"o": [
+"89",
+"84",
+"90",
+"173"
+],
+"k": 0,
+"s": [
+"LCM of 14, 21 and 28 = 84.",
+"Required number = 84 + 5 = 89."
+]
+},
+{
+"t": "What is the LCM of 225 and 30?",
+"o": [
+"6750",
+"450",
+"900",
+"225"
+],
+"k": 1,
+"s": [
+"HCF of 225 and 30 = 15.",
+"LCM = 225 × 30/15 = 450."
+]
+},
+{
+"t": "The product of two numbers is 1,000 and their HCF is 5. What is their LCM?",
+"o": [
+"200",
+"205",
+"500",
+"1000"
+],
+"k": 0,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 1,000/5 = 200."
+]
+},
+{
+"t": "What is the least number which leaves a remainder of 7 when divided by 14, 21 or 28?",
+"o": [
+"91",
+"84",
+"92",
+"175"
+],
+"k": 0,
+"s": [
+"LCM of 14, 21 and 28 = 84.",
+"Required number = 84 + 7 = 91."
+]
+},
+{
+"t": "What is the LCM of 88 and 80?",
+"o": [
+"7040",
+"880",
+"440",
+"1760"
+],
+"k": 1,
+"s": [
+"HCF of 88 and 80 = 8.",
+"LCM = 88 × 80/8 = 880."
+]
+},
+{
+"t": "The product of two numbers is 2,250 and their HCF is 5. What is their LCM?",
+"o": [
+"2250",
+"1125",
+"450",
+"455"
+],
+"k": 2,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 2,250/5 = 450."
+]
+},
+{
+"t": "What is the LCM of 120 and 156?",
+"o": [
+"3120",
+"780",
+"18720",
+"1560"
+],
+"k": 3,
+"s": [
+"HCF of 120 and 156 = 12.",
+"LCM = 120 × 156/12 = 1560."
+]
+},
+{
+"t": "The product of two numbers is 315 and their HCF is 3. What is their LCM?",
+"o": [
+"108",
+"157",
+"315",
+"105"
+],
+"k": 3,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 315/3 = 105."
+]
+},
+{
+"t": "What is the LCM of 20 and 48?",
+"o": [
+"480",
+"120",
+"240",
+"960"
+],
+"k": 2,
+"s": [
+"HCF of 20 and 48 = 4.",
+"LCM = 20 × 48/4 = 240."
+]
+},
+{
+"t": "The product of two numbers is 6,655 and their HCF is 11. What is their LCM?",
+"o": [
+"616",
+"605",
+"6655",
+"3327"
+],
+"k": 1,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 6,655/11 = 605."
+]
+},
+{
+"t": "What is the least number exactly divisible by 6, 10 and 14?",
+"o": [
+"60",
+"105",
+"420",
+"210"
+],
+"k": 3,
+"s": [
+"Required number = LCM of 6, 10 and 14.",
+"= 210."
+]
+},
+{
+"t": "What is the LCM of 14 and 10?",
+"o": [
+"35",
+"70",
+"140",
+"84"
+],
+"k": 1,
+"s": [
+"HCF of 14 and 10 = 2.",
+"LCM = 14 × 10/2 = 70."
+]
+},
+{
+"t": "The product of two numbers is 1,408 and their HCF is 4. What is their LCM?",
+"o": [
+"352",
+"704",
+"1408",
+"356"
+],
+"k": 0,
+"s": [
+"Product of two numbers = HCF × LCM.",
+"LCM = 1,408/4 = 352."
+]
+},
+{
+"t": "What is the least number which leaves a remainder of 5 when divided by 4, 6 or 9?",
+"o": [
+"77",
+"41",
+"42",
+"36"
+],
+"k": 1,
+"s": [
+"LCM of 4, 6 and 9 = 36.",
+"Required number = 36 + 5 = 41."
+]
+}
+],
+"number-system": [
+{
+"t": "Which of the following numbers is divisible by 8?",
+"o": [
+"13036",
+"39511",
+"71680",
+"75062"
+],
+"k": 2,
+"s": [
+"A number is divisible by 8 if the number formed by its last three digits is divisible by 8.",
+"Only 71680 satisfies this test."
+]
+},
+{
+"t": "What is the unit digit of 38¹⁵²?",
+"o": [
+"6",
+"7",
+"8",
+"9"
+],
+"k": 0,
+"s": [
+"Unit digits of powers of 8 repeat in the cycle 8, 4, 2, 6 (length 4).",
+"152 ÷ 4 leaves remainder 0, so take the last digit of the cycle: the unit digit is 6."
+]
+},
+{
+"t": "Which of the following numbers is divisible by 4?",
+"o": [
+"36958",
+"11719",
+"35488",
+"61351"
+],
+"k": 2,
+"s": [
+"A number is divisible by 4 if the number formed by its last two digits is divisible by 4.",
+"Only 35488 satisfies this test."
+]
+},
+{
+"t": "What is the unit digit of 17¹⁸¹?",
+"o": [
+"0",
+"8",
+"7",
+"9"
+],
+"k": 2,
+"s": [
+"Unit digits of powers of 7 repeat in the cycle 7, 9, 3, 1 (length 4).",
+"181 ÷ 4 leaves remainder 1, so take position 1: the unit digit is 7."
+]
+},
+{
+"t": "What is the unit digit of 7⁵⁵?",
+"o": [
+"6",
+"5",
+"3",
+"4"
+],
+"k": 2,
+"s": [
+"Unit digits of powers of 7 repeat in the cycle 7, 9, 3, 1 (length 4).",
+"55 ÷ 4 leaves remainder 3, so take position 3: the unit digit is 3."
+]
+},
+{
+"t": "How many factors does 240 have?",
+"o": [
+"20",
+"6",
+"18",
+"22"
+],
+"k": 0,
+"s": [
+"240 = 2⁴ × 3 × 5.",
+"Number of factors = (4 + 1) × (1 + 1) × (1 + 1) = 20."
+]
+},
+{
+"t": "What is the unit digit of 9¹⁸⁴?",
+"o": [
+"2",
+"4",
+"3",
+"1"
+],
+"k": 3,
+"s": [
+"Unit digits of powers of 9 repeat in the cycle 9, 1 (length 2).",
+"184 ÷ 2 leaves remainder 0, so take the last digit of the cycle: the unit digit is 1."
+]
+},
+{
+"t": "How many factors does 108 have?",
+"o": [
+"14",
+"10",
+"5",
+"12"
+],
+"k": 3,
+"s": [
+"108 = 2² × 3³.",
+"Number of factors = (2 + 1) × (3 + 1) = 12."
+]
+},
+{
+"t": "What is the unit digit of 2³²?",
+"o": [
+"6",
+"8",
+"7",
+"9"
+],
+"k": 0,
+"s": [
+"Unit digits of powers of 2 repeat in the cycle 2, 4, 8, 6 (length 4).",
+"32 ÷ 4 leaves remainder 0, so take the last digit of the cycle: the unit digit is 6."
+]
+},
+{
+"t": "How many factors does 600 have?",
+"o": [
+"24",
+"26",
+"6",
+"22"
+],
+"k": 0,
+"s": [
+"600 = 2³ × 3 × 5².",
+"Number of factors = (3 + 1) × (1 + 1) × (2 + 1) = 24."
+]
+},
+{
+"t": "What is the unit digit of 33⁷³?",
+"o": [
+"6",
+"5",
+"3",
+"4"
+],
+"k": 2,
+"s": [
+"Unit digits of powers of 3 repeat in the cycle 3, 9, 7, 1 (length 4).",
+"73 ÷ 4 leaves remainder 1, so take position 1: the unit digit is 3."
+]
+},
+{
+"t": "How many factors does 192 have?",
+"o": [
+"14",
+"12",
+"16",
+"7"
+],
+"k": 0,
+"s": [
+"192 = 2⁶ × 3.",
+"Number of factors = (6 + 1) × (1 + 1) = 14."
+]
+},
+{
+"t": "What is the unit digit of 7¹⁸³?",
+"o": [
+"6",
+"5",
+"4",
+"3"
+],
+"k": 3,
+"s": [
+"Unit digits of powers of 7 repeat in the cycle 7, 9, 3, 1 (length 4).",
+"183 ÷ 4 leaves remainder 3, so take position 3: the unit digit is 3."
+]
+},
+{
+"t": "Which of the following numbers is divisible by 9?",
+"o": [
+"63927",
+"35518",
+"88405",
+"60307"
+],
+"k": 0,
+"s": [
+"A number is divisible by 9 if the sum of its digits is divisible by 9.",
+"Only 63927 satisfies this test."
+]
+}
+],
+"time-work": [
+{
+"t": "Tani can finish a work in 30 days and Yamang can finish it in 60 days. In how many days can they finish it together?",
+"o": [
+"20 days",
+"45 days",
+"22 days",
+"19 days"
+],
+"k": 0,
+"s": [
+"One day's work together = 1/30 + 1/60 = 1/20.",
+"So they finish the work in 20 days."
+]
+},
+{
+"t": "A pipe can fill a tank in 3 hours and another pipe can empty it in 6 hours. If both are opened together, in how much time will the empty tank be filled?",
+"o": [
+"8 hours",
+"9 hours",
+"3 hours",
+"6 hours"
+],
+"k": 3,
+"s": [
+"Net filling in 1 hour = 1/3 − 1/6 = 1/6.",
+"So the tank is filled in 6 hours."
+]
+},
+{
+"t": "Ravi can finish a work in 10 days and Sonam can finish it in 15 days. In how many days can they finish it together?",
+"o": [
+"8 days",
+"5 days",
+"12 days",
+"6 days"
+],
+"k": 3,
+"s": [
+"One day's work together = 1/10 + 1/15 = 1/6.",
+"So they finish the work in 6 days."
+]
+},
+{
+"t": "Ravi can finish a work in 15 days and Sonam can finish it in 30 days. In how many days can they finish it together?",
+"o": [
+"9 days",
+"12 days",
+"10 days",
+"22 days"
+],
+"k": 2,
+"s": [
+"One day's work together = 1/15 + 1/30 = 1/10.",
+"So they finish the work in 10 days."
+]
+},
+{
+"t": "A pipe can fill a tank in 4 hours and another pipe can empty it in 6 hours. If both are opened together, in how much time will the empty tank be filled?",
+"o": [
+"14 hours",
+"2 hours",
+"12 hours",
+"10 hours"
+],
+"k": 2,
+"s": [
+"Net filling in 1 hour = 1/4 − 1/6 = 1/12.",
+"So the tank is filled in 12 hours."
+]
+},
+{
+"t": "A can finish a work in 12 days and B can finish it in 24 days. In how many days can they finish it together?",
+"o": [
+"18 days",
+"7 days",
+"8 days",
+"10 days"
+],
+"k": 2,
+"s": [
+"One day's work together = 1/12 + 1/24 = 1/8.",
+"So they finish the work in 8 days."
+]
+},
+{
+"t": "A pipe can fill a tank in 6 hours and another pipe can empty it in 9 hours. If both are opened together, in how much time will the empty tank be filled?",
+"o": [
+"3 hours",
+"15 hours",
+"18 hours",
+"20 hours"
+],
+"k": 2,
+"s": [
+"Net filling in 1 hour = 1/6 − 1/9 = 1/18.",
+"So the tank is filled in 18 hours."
+]
+}
+],
+"time-speed-distance": [
+{
+"t": "A person goes to a place at 40 km/h and comes back by the same road at 60 km/h. What is his average speed for the whole journey?",
+"o": [
+"48 km/h",
+"53 km/h",
+"45 km/h",
+"50 km/h"
+],
+"k": 0,
+"s": [
+"For equal distances, average speed = 2xy/(x + y).",
+"= 2 × 40 × 60/(40 + 60) = 48 km/h."
+]
+},
+{
+"t": "Convert 162 km/h into m/s.",
+"o": [
+"42 m/s",
+"90 m/s",
+"50 m/s",
+"45 m/s"
+],
+"k": 3,
+"s": [
+"1 km/h = 5/18 m/s.",
+"162 × 5/18 = 45 m/s."
+]
+},
+{
+"t": "A train 150 m long is running at 45 km/h. In how much time will it cross a pole?",
+"o": [
+"14 seconds",
+"12 seconds",
+"10 seconds",
+"24 seconds"
+],
+"k": 1,
+"s": [
+"Speed = 45 × 5/18 = 12.5 m/s.",
+"Time = 150/12.5 = 12 seconds."
+]
+},
+{
+"t": "Convert 144 km/h into m/s.",
+"o": [
+"40 m/s",
+"80 m/s",
+"37 m/s",
+"45 m/s"
+],
+"k": 0,
+"s": [
+"1 km/h = 5/18 m/s.",
+"144 × 5/18 = 40 m/s."
+]
+},
+{
+"t": "A train 200 m long, running at 90 km/h, crosses a platform 150 m long. How much time does it take?",
+"o": [
+"18 seconds",
+"11 seconds",
+"8 seconds",
+"14 seconds"
+],
+"k": 3,
+"s": [
+"Distance = 200 + 150 = 350 m; speed = 25 m/s.",
+"Time = 350/25 = 14 seconds."
+]
+},
+{
+"t": "A person goes to a place at 50 km/h and comes back by the same road at 75 km/h. What is his average speed for the whole journey?",
+"o": [
+"65 km/h",
+"60 km/h",
+"62 km/h",
+"57 km/h"
+],
+"k": 1,
+"s": [
+"For equal distances, average speed = 2xy/(x + y).",
+"= 2 × 50 × 75/(50 + 75) = 60 km/h."
+]
+},
+{
+"t": "Convert 45 m/s into km/h.",
+"o": [
+"162 km/h",
+"81 km/h",
+"153 km/h",
+"180 km/h"
+],
+"k": 0,
+"s": [
+"1 m/s = 18/5 km/h.",
+"45 × 18/5 = 162 km/h."
+]
+},
+{
+"t": "A train 570 m long is running at 108 km/h. In how much time will it cross a pole?",
+"o": [
+"19 seconds",
+"21 seconds",
+"17 seconds",
+"38 seconds"
+],
+"k": 0,
+"s": [
+"Speed = 108 × 5/18 = 30 m/s.",
+"Time = 570/30 = 19 seconds."
+]
+},
+{
+"t": "Convert 5 m/s into km/h.",
+"o": [
+"18 km/h",
+"27 km/h",
+"36 km/h",
+"9 km/h"
+],
+"k": 0,
+"s": [
+"1 m/s = 18/5 km/h.",
+"5 × 18/5 = 18 km/h."
+]
+},
+{
+"t": "A train 300 m long, running at 54 km/h, crosses a platform 390 m long. How much time does it take?",
+"o": [
+"20 seconds",
+"50 seconds",
+"46 seconds",
+"43 seconds"
+],
+"k": 2,
+"s": [
+"Distance = 300 + 390 = 690 m; speed = 15 m/s.",
+"Time = 690/15 = 46 seconds."
+]
+},
+{
+"t": "Convert 108 km/h into m/s.",
+"o": [
+"35 m/s",
+"27 m/s",
+"60 m/s",
+"30 m/s"
+],
+"k": 3,
+"s": [
+"1 km/h = 5/18 m/s.",
+"108 × 5/18 = 30 m/s."
+]
+},
+{
+"t": "A train 550 m long, running at 90 km/h, crosses a platform 450 m long. How much time does it take?",
+"o": [
+"37 seconds",
+"40 seconds",
+"22 seconds",
+"44 seconds"
+],
+"k": 1,
+"s": [
+"Distance = 550 + 450 = 1000 m; speed = 25 m/s.",
+"Time = 1000/25 = 40 seconds."
+]
+},
+{
+"t": "Convert 216 km/h into m/s.",
+"o": [
+"57 m/s",
+"120 m/s",
+"65 m/s",
+"60 m/s"
+],
+"k": 3,
+"s": [
+"1 km/h = 5/18 m/s.",
+"216 × 5/18 = 60 m/s."
+]
+},
+{
+"t": "A train 360 m long is running at 36 km/h. In how much time will it cross a pole?",
+"o": [
+"72 seconds",
+"36 seconds",
+"34 seconds",
+"38 seconds"
+],
+"k": 1,
+"s": [
+"Speed = 36 × 5/18 = 10 m/s.",
+"Time = 360/10 = 36 seconds."
+]
+},
+{
+"t": "Convert 90 km/h into m/s.",
+"o": [
+"25 m/s",
+"30 m/s",
+"324 m/s",
+"50 m/s"
+],
+"k": 0,
+"s": [
+"1 km/h = 5/18 m/s.",
+"90 × 5/18 = 25 m/s."
+]
+},
+{
+"t": "A train 150 m long, running at 45 km/h, crosses a platform 400 m long. How much time does it take?",
+"o": [
+"41 seconds",
+"44 seconds",
+"12 seconds",
+"48 seconds"
+],
+"k": 1,
+"s": [
+"Distance = 150 + 400 = 550 m; speed = 12.5 m/s.",
+"Time = 550/12.5 = 44 seconds."
+]
+}
+],
+"mensuration": [
+{
+"t": "The side of a square is 37 cm. What is its area?",
+"o": [
+"2738 cm²",
+"1369 cm²",
+"1406 cm²",
+"148 cm²"
+],
+"k": 1,
+"s": [
+"Area = side² = 37².",
+"= 1369 cm²."
+]
+},
+{
+"t": "Find the volume of a cylinder of radius 7 cm and height 21 cm. (Use π = 22/7)",
+"o": [
+"924 cm³",
+"6,468 cm³",
+"3,388 cm³",
+"3,234 cm³"
+],
+"k": 3,
+"s": [
+"Volume = πr²h = (22/7) × 7 × 7 × 21.",
+"= 3,234 cm³."
+]
+}
+],
+"geometry": [
+{
+"t": "What is the complement of an angle of 58°?",
+"o": [
+"42°",
+"122°",
+"32°",
+"58°"
+],
+"k": 2,
+"s": [
+"Complementary angles add up to 90°.",
+"Complement = 90 − 58 = 32°."
+]
+},
+{
+"t": "What is the complement of an angle of 20°?",
+"o": [
+"70°",
+"20°",
+"160°",
+"80°"
+],
+"k": 0,
+"s": [
+"Complementary angles add up to 90°.",
+"Complement = 90 − 20 = 70°."
+]
+}
+],
+"statistics": [
+{
+"t": "Find the mean of 52, 58, 11, 12, 5, 38, 13.",
+"o": [
+"13",
+"27",
+"26",
+"29"
+],
+"k": 1,
+"s": [
+"Sum = 189, number of values = 7.",
+"Mean = 189/7 = 27."
+]
+},
+{
+"t": "Find the mean of 35, 53, 16, 16, 23, 43, 24.",
+"o": [
+"30",
+"24",
+"29",
+"32"
+],
+"k": 0,
+"s": [
+"Sum = 210, number of values = 7.",
+"Mean = 210/7 = 30."
+]
+},
+{
+"t": "Find the mode of 20, 8, 8, 8, 22, 14, 3, 20.",
+"o": [
+"14",
+"3",
+"8",
+"20"
+],
+"k": 2,
+"s": [
+"8 appears 3 times, more than any other value.",
+"Mode = 8."
+]
+}
+],
+"simplification": [
+{
+"t": "Simplify: 8 + 6 × 8 − 108 ÷ 9",
+"o": [
+"44",
+"-52",
+"100",
+"53"
+],
+"k": 0,
+"s": [
+"Do ÷ and × first: 6 × 8 = 48, 108 ÷ 9 = 12.",
+"8 + 48 − 12 = 44."
+]
+},
+{
+"t": "Simplify: 18 + 12 × 10 − 66 ÷ 6",
+"o": [
+"127",
+"133",
+"289",
+"72"
+],
+"k": 0,
+"s": [
+"Do ÷ and × first: 12 × 10 = 120, 66 ÷ 6 = 11.",
+"18 + 120 − 11 = 127."
+]
+},
+{
+"t": "Simplify: 30 + 10 × 2 − 9 ÷ 3",
+"o": [
+"77",
+"41",
+"50",
+"47"
+],
+"k": 3,
+"s": [
+"Do ÷ and × first: 10 × 2 = 20, 9 ÷ 3 = 3.",
+"30 + 20 − 3 = 47."
+]
+}
+],
+"fractions": [
+{
+"t": "Which is the largest of 1/2, 10/11, 1/3, 4/5?",
+"o": [
+"10/11",
+"1/3",
+"1/2",
+"4/5"
+],
+"k": 0,
+"s": [
+"In decimals: 1/2 = 0.500, 10/11 = 0.909, 1/3 = 0.333, 4/5 = 0.800.",
+"The largest is 10/11."
+]
+},
+{
+"t": "Find 2/3 of 2/5 of 120.",
+"o": [
+"34",
+"32",
+"64",
+"80"
+],
+"k": 1,
+"s": [
+"2/3 × 2/5 × 120.",
+"= 32."
+]
+},
+{
+"t": "Which is the largest of 8/11, 2/5, 10/11, 4/5?",
+"o": [
+"2/5",
+"4/5",
+"10/11",
+"8/11"
+],
+"k": 2,
+"s": [
+"In decimals: 8/11 = 0.727, 2/5 = 0.400, 10/11 = 0.909, 4/5 = 0.800.",
+"The largest is 10/11."
+]
+}
+],
+"power-exponents": [
+{
+"t": "What is the value of 4⁴ + 4⁰?",
+"o": [
+"257",
+"260",
+"17",
+"256"
+],
+"k": 0,
+"s": [
+"4⁴ = 256 and any non-zero number to the power 0 is 1.",
+"256 + 1 = 257."
+]
+},
+{
+"t": "Simplify: (10⁸ × 10⁷) ÷ 10²",
+"o": [
+"10¹⁷",
+"10¹³",
+"10⁵⁴",
+"10¹⁴"
+],
+"k": 1,
+"s": [
+"aᵐ × aⁿ = aᵐ⁺ⁿ and aᵐ ÷ aⁿ = aᵐ⁻ⁿ.",
+"Power = 8 + 7 − 2 = 13, so the answer is 10¹³."
+]
+},
+{
+"t": "What is the value of 4³ + 4⁰?",
+"o": [
+"64",
+"13",
+"68",
+"65"
+],
+"k": 3,
+"s": [
+"4³ = 64 and any non-zero number to the power 0 is 1.",
+"64 + 1 = 65."
+]
+}
+],
+"decimal": [
+{
+"t": "Find the value of 1.5 × 0.02.",
+"o": [
+"1.52",
+"0.3",
+"0.03",
+"0.003"
+],
+"k": 2,
+"s": [
+"Multiply as whole numbers and count the decimal places.",
+"1.5 × 0.02 = 0.03."
+]
+},
+{
+"t": "Find the value of 0.4 × 0.3.",
+"o": [
+"0.12",
+"1.2",
+"0.012",
+"0.7"
+],
+"k": 0,
+"s": [
+"Multiply as whole numbers and count the decimal places.",
+"0.4 × 0.3 = 0.12."
+]
+},
+{
+"t": "Express 1/4 as a decimal.",
+"o": [
+"4",
+"0.025",
+"0.25",
+"0.35"
+],
+"k": 2,
+"s": [
+"Divide 1 by 4.",
+"1/4 = 0.25."
+]
+}
+],
+"r-number-series": [
+{
+"t": "Find the next term: 2, 5, 10, 17, 26, ?",
+"o": [
+"38",
+"36",
+"39",
+"37"
+],
+"k": 3,
+"s": [
+"The terms are n² + 1 for n = 1, 2, 3, …",
+"So the next term is 37."
+]
+},
+{
+"t": "Find the next term: 3, 7, 15, 31, 63, ?",
+"o": [
+"128",
+"127",
+"129",
+"126"
+],
+"k": 1,
+"s": [
+"Each term = previous term × 2 + 1.",
+"So the next term is 127."
+]
+},
+{
+"t": "Find the next term: 65, 82, 101, 122, 145, ?",
+"o": [
+"171",
+"169",
+"170",
+"172"
+],
+"k": 2,
+"s": [
+"The terms are n² + 1 for n = 8, 9, 10, …",
+"So the next term is 170."
+]
+},
+{
+"t": "Find the next term: 27, 64, 125, 216, 343, ?",
+"o": [
+"511",
+"512",
+"513",
+"514"
+],
+"k": 1,
+"s": [
+"The terms are cubes: 3³, 4³, 5³, …",
+"So the next term is 512."
+]
+},
+{
+"t": "Find the next term: 18, 24, 30, 36, 42, ?",
+"o": [
+"48",
+"47",
+"49",
+"50"
+],
+"k": 0,
+"s": [
+"Each term increases by 6.",
+"So the next term is 48."
+]
+},
+{
+"t": "Find the next term: 9, 24, 39, 54, 69, ?",
+"o": [
+"84",
+"83",
+"86",
+"85"
+],
+"k": 0,
+"s": [
+"Each term increases by 15.",
+"So the next term is 84."
+]
+},
+{
+"t": "Find the next term: 6, 41, 10, 38, 14, ?",
+"o": [
+"36",
+"35",
+"34",
+"37"
+],
+"k": 1,
+"s": [
+"Two series alternate: 6, 10, 14 (+4) and 41, 38, 35 (−3).",
+"So the next term is 35."
+]
+},
+{
+"t": "Find the next term: 24, 32, 40, 48, 56, ?",
+"o": [
+"64",
+"66",
+"65",
+"63"
+],
+"k": 0,
+"s": [
+"Each term increases by 8.",
+"So the next term is 64."
+]
+},
+{
+"t": "Find the next term: 64, 125, 216, 343, 512, ?",
+"o": [
+"731",
+"730",
+"728",
+"729"
+],
+"k": 3,
+"s": [
+"The terms are cubes: 4³, 5³, 6³, …",
+"So the next term is 729."
+]
+},
+{
+"t": "Find the next term: 11, 24, 37, 50, 63, ?",
+"o": [
+"78",
+"76",
+"77",
+"75"
+],
+"k": 1,
+"s": [
+"Each term increases by 13.",
+"So the next term is 76."
+]
+},
+{
+"t": "Find the next term: 5, 38, 8, 33, 11, ?",
+"o": [
+"27",
+"30",
+"28",
+"29"
+],
+"k": 2,
+"s": [
+"Two series alternate: 5, 8, 11 (+3) and 38, 33, 28 (−5).",
+"So the next term is 28."
+]
+},
+{
+"t": "Find the next term: 36, 49, 64, 81, 100, ?",
+"o": [
+"122",
+"120",
+"121",
+"123"
+],
+"k": 2,
+"s": [
+"The terms are squares: 6², 7², 8², …",
+"So the next term is 121."
+]
+},
+{
+"t": "Find the next term: 8, 12, 20, 32, 48, ?",
+"o": [
+"70",
+"68",
+"69",
+"67"
+],
+"k": 1,
+"s": [
+"The differences increase by 4: +4, +8, +12, …",
+"So the next term is 68."
+]
+},
+{
+"t": "Find the next term: 1, 8, 27, 64, 125, ?",
+"o": [
+"215",
+"217",
+"216",
+"218"
+],
+"k": 2,
+"s": [
+"The terms are cubes: 1³, 2³, 3³, …",
+"So the next term is 216."
+]
+}
+],
+"r-alphabetical-series": [
+{
+"t": "If the English alphabet is written in reverse order, which letter will be 10th from the left?",
+"o": [
+"J",
+"Q",
+"R",
+"P"
+],
+"k": 1,
+"s": [
+"In reverse order, the 10th letter from the left is the 10th letter from the right of the normal order.",
+"That is the 17th letter = Q."
+]
+},
+{
+"t": "If the English alphabet is written in reverse order, which letter will be 19th from the left?",
+"o": [
+"G",
+"I",
+"S",
+"H"
+],
+"k": 3,
+"s": [
+"In reverse order, the 19th letter from the left is the 19th letter from the right of the normal order.",
+"That is the 8th letter = H."
+]
+},
+{
+"t": "In the English alphabet, which letter is 6th to the left of the 11th letter from the left?",
+"o": [
+"K",
+"E",
+"D",
+"F"
+],
+"k": 1,
+"s": [
+"The 11th letter from the left is K.",
+"6 places to the left gives the 5th letter = E."
+]
+},
+{
+"t": "In the English alphabet, which letter is 4th to the right of the 6th letter from the left?",
+"o": [
+"F",
+"I",
+"J",
+"K"
+],
+"k": 2,
+"s": [
+"The 6th letter from the left is F.",
+"4 places to the right gives the 10th letter = J."
+]
+},
+{
+"t": "Find the next letter: E, H, K, N, Q, ?",
+"o": [
+"S",
+"T",
+"V",
+"U"
+],
+"k": 1,
+"s": [
+"Each letter moves 3 places forward.",
+"So the next letter is T."
+]
+},
+{
+"t": "In the English alphabet, which letter is 7th to the right of the 11th letter from the left?",
+"o": [
+"Q",
+"K",
+"S",
+"R"
+],
+"k": 3,
+"s": [
+"The 11th letter from the left is K.",
+"7 places to the right gives the 18th letter = R."
+]
+},
+{
+"t": "Find the next term: IR, JQ, KP, LO, ?",
+"o": [
+"MO",
+"NN",
+"NM",
+"MN"
+],
+"k": 3,
+"s": [
+"The first letters move forward (+1) and the second letters move backward (−1).",
+"So the next term is MN."
+]
+},
+{
+"t": "If the English alphabet is written in reverse order, which letter will be 4th from the left?",
+"o": [
+"V",
+"D",
+"X",
+"W"
+],
+"k": 3,
+"s": [
+"In reverse order, the 4th letter from the left is the 4th letter from the right of the normal order.",
+"That is the 23rd letter = W."
+]
+},
+{
+"t": "In the English alphabet, which letter is 4th to the left of the 9th letter from the left?",
+"o": [
+"I",
+"F",
+"D",
+"E"
+],
+"k": 3,
+"s": [
+"The 9th letter from the left is I.",
+"4 places to the left gives the 5th letter = E."
+]
+},
+{
+"t": "Find the next term: AZ, BY, CX, DW, ?",
+"o": [
+"EV",
+"VE",
+"FV",
+"EW"
+],
+"k": 0,
+"s": [
+"The first letters move forward (+1) and the second letters move backward (−1).",
+"So the next term is EV."
+]
+},
+{
+"t": "If the English alphabet is written in reverse order, which letter will be 16th from the left?",
+"o": [
+"J",
+"P",
+"K",
+"L"
+],
+"k": 2,
+"s": [
+"In reverse order, the 16th letter from the left is the 16th letter from the right of the normal order.",
+"That is the 11th letter = K."
+]
+},
+{
+"t": "In the English alphabet, which letter is 6th to the right of the 6th letter from the left?",
+"o": [
+"F",
+"L",
+"K",
+"M"
+],
+"k": 1,
+"s": [
+"The 6th letter from the left is F.",
+"6 places to the right gives the 12th letter = L."
+]
+},
+{
+"t": "Find the next term: FU, GT, HS, IR, ?",
+"o": [
+"JQ",
+"JR",
+"KQ",
+"QJ"
+],
+"k": 0,
+"s": [
+"The first letters move forward (+1) and the second letters move backward (−1).",
+"So the next term is JQ."
+]
+},
+{
+"t": "If the English alphabet is written in reverse order, which letter will be 15th from the left?",
+"o": [
+"L",
+"K",
+"M",
+"O"
+],
+"k": 0,
+"s": [
+"In reverse order, the 15th letter from the left is the 15th letter from the right of the normal order.",
+"That is the 12th letter = L."
+]
+},
+{
+"t": "In the English alphabet, which letter is 7th to the right of the 7th letter from the left?",
+"o": [
+"N",
+"M",
+"G",
+"O"
+],
+"k": 0,
+"s": [
+"The 7th letter from the left is G.",
+"7 places to the right gives the 14th letter = N."
+]
+},
+{
+"t": "If the English alphabet is written in reverse order, which letter will be 17th from the left?",
+"o": [
+"K",
+"Q",
+"I",
+"J"
+],
+"k": 3,
+"s": [
+"In reverse order, the 17th letter from the left is the 17th letter from the right of the normal order.",
+"That is the 10th letter = J."
+]
+}
+],
+"r-coding-decoding": [
+{
+"t": "In a certain code, ROSE is written as ESOR. How is HOUSE written in that code?",
+"o": [
+"IPVTF",
+"OUSEH",
+"ESUOH",
+"EOUSH"
+],
+"k": 2,
+"s": [
+"The letters of ROSE are written in reverse order.",
+"So HOUSE is written as ESUOH."
+]
+},
+{
+"t": "In a certain code, APPLE is written as ZKKOV. How is MOON written in that code?",
+"o": [
+"MLLN",
+"NPPO",
+"OMMN",
+"NLLM"
+],
+"k": 3,
+"s": [
+"Each letter is replaced by its opposite letter (A↔Z, B↔Y, C↔X, …).",
+"So MOON is written as NLLM."
+]
+},
+{
+"t": "If LAMP = 42, then RICE = ?",
+"o": [
+"38",
+"35",
+"36",
+"33"
+],
+"k": 1,
+"s": [
+"Each letter takes its position number in the alphabet, and they are added: LAMP = 12 + 1 + 13 + 16 = 42.",
+"RICE = 18 + 9 + 3 + 5 = 35."
+]
+},
+{
+"t": "In a certain code, BOOK is written as DQQM. How is MOON written in that code?",
+"o": [
+"KMML",
+"PRRQ",
+"PQQO",
+"OQQP"
+],
+"k": 3,
+"s": [
+"Each letter of BOOK moves 2 places forward.",
+"Doing the same with MOON gives OQQP."
+]
+},
+{
+"t": "If PARK = 46, then ROAD = ?",
+"o": [
+"38",
+"39",
+"36",
+"41"
+],
+"k": 0,
+"s": [
+"Each letter takes its position number in the alphabet, and they are added: PARK = 16 + 1 + 18 + 11 = 46.",
+"ROAD = 18 + 15 + 1 + 4 = 38."
+]
+},
+{
+"t": "In a certain code, RICE is written as ULFH. How is TRAIN written in that code?",
+"o": [
+"WUDLQ",
+"XVEMR",
+"QOXFK",
+"QLDUW"
+],
+"k": 0,
+"s": [
+"Each letter of RICE moves 3 places forward.",
+"Doing the same with TRAIN gives WUDLQ."
+]
+},
+{
+"t": "In a certain code, RICE is written as SJDF. How is FISH written in that code?",
+"o": [
+"ITJG",
+"EHRG",
+"HKUJ",
+"GJTI"
+],
+"k": 3,
+"s": [
+"Each letter of RICE moves 1 place forward.",
+"Doing the same with FISH gives GJTI."
+]
+},
+{
+"t": "In a certain code, APPLE is written as ZKKOV. How is MONEY written in that code?",
+"o": [
+"NPOFZ",
+"BVMLN",
+"OMNWC",
+"NLMVB"
+],
+"k": 3,
+"s": [
+"Each letter is replaced by its opposite letter (A↔Z, B↔Y, C↔X, …).",
+"So MONEY is written as NLMVB."
+]
+},
+{
+"t": "In a certain code, BIRD is written as ELUG. How is SALT written in that code?",
+"o": [
+"VDOW",
+"WEPX",
+"WODV",
+"PXIQ"
+],
+"k": 0,
+"s": [
+"Each letter of BIRD moves 3 places forward.",
+"Doing the same with SALT gives VDOW."
+]
+},
+{
+"t": "In a certain code, QUEEN is written as NEEUQ. How is BOOK written in that code?",
+"o": [
+"CPPL",
+"KOOB",
+"LPPC",
+"OOKB"
+],
+"k": 1,
+"s": [
+"The letters of QUEEN are written in reverse order.",
+"So BOOK is written as KOOB."
+]
+},
+{
+"t": "In a certain code, TREE is written as EERT. How is TIGER written in that code?",
+"o": [
+"UJHFS",
+"RIGET",
+"IGERT",
+"REGIT"
+],
+"k": 3,
+"s": [
+"The letters of TREE are written in reverse order.",
+"So TIGER is written as REGIT."
+]
+},
+{
+"t": "In a certain code, NURSE is written as MFIHV. How is LAMP written in that code?",
+"o": [
+"OZNK",
+"PAOL",
+"KNZO",
+"MBNQ"
+],
+"k": 0,
+"s": [
+"Each letter is replaced by its opposite letter (A↔Z, B↔Y, C↔X, …).",
+"So LAMP is written as OZNK."
+]
+},
+{
+"t": "In a certain code, PLANT is written as SODQW. How is BOOK written in that code?",
+"o": [
+"FSSO",
+"NRRE",
+"YLLH",
+"ERRN"
+],
+"k": 3,
+"s": [
+"Each letter of PLANT moves 3 places forward.",
+"Doing the same with BOOK gives ERRN."
+]
+},
+{
+"t": "In a certain code, TREE is written as USFF. How is MONEY written in that code?",
+"o": [
+"ZFOPN",
+"NPOFZ",
+"OQPGA",
+"LNMDX"
+],
+"k": 1,
+"s": [
+"Each letter of TREE moves 1 place forward.",
+"Doing the same with MONEY gives NPOFZ."
+]
+},
+{
+"t": "In a certain code, CHAIR is written as AFYGP. How is TRAIN written in that code?",
+"o": [
+"SQZHM",
+"VTCKP",
+"LGYPR",
+"RPYGL"
+],
+"k": 3,
+"s": [
+"Each letter of CHAIR moves 2 places backward.",
+"Doing the same with TRAIN gives RPYGL."
+]
+},
+{
+"t": "In a certain code, SMILE is written as UOKNG. How is KING written in that code?",
+"o": [
+"MKPI",
+"IPKM",
+"NLQJ",
+"IGLE"
+],
+"k": 0,
+"s": [
+"Each letter of SMILE moves 2 places forward.",
+"Doing the same with KING gives MKPI."
+]
+},
+{
+"t": "In a certain code, TRAIN is written as NIART. How is TABLE written in that code?",
+"o": [
+"ELBAT",
+"EABLT",
+"UBCMF",
+"ABLET"
+],
+"k": 0,
+"s": [
+"The letters of TRAIN are written in reverse order.",
+"So TABLE is written as ELBAT."
+]
+},
+{
+"t": "In a certain code, KING is written as JHMF. How is RAIN written in that code?",
+"o": [
+"SBJO",
+"RAIN",
+"MHZQ",
+"QZHM"
+],
+"k": 3,
+"s": [
+"Each letter of KING moves 1 place backward.",
+"Doing the same with RAIN gives QZHM."
+]
+},
+{
+"t": "If EGG = 19, then PARK = ?",
+"o": [
+"49",
+"46",
+"47",
+"44"
+],
+"k": 1,
+"s": [
+"Each letter takes its position number in the alphabet, and they are added: EGG = 5 + 7 + 7 = 19.",
+"PARK = 16 + 1 + 18 + 11 = 46."
+]
+},
+{
+"t": "In a certain code, SMILE is written as ELIMS. How is CHAIR written in that code?",
+"o": [
+"DIBJS",
+"HAIRC",
+"RHAIC",
+"RIAHC"
+],
+"k": 3,
+"s": [
+"The letters of SMILE are written in reverse order.",
+"So CHAIR is written as RIAHC."
+]
+},
+{
+"t": "In a certain code, PAPER is written as RCRGT. How is BIRD written in that code?",
+"o": [
+"ZGPB",
+"DKTF",
+"ELUG",
+"FTKD"
+],
+"k": 1,
+"s": [
+"Each letter of PAPER moves 2 places forward.",
+"Doing the same with BIRD gives DKTF."
+]
+}
+],
+"r-direction-distance": [
+{
+"t": "Anu walks 15 km towards the East, then turns left and walks 20 km. How far is Anu from the starting point?",
+"o": [
+"35 km",
+"25 km",
+"5 km",
+"27 km"
+],
+"k": 1,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(15² + 20²) = 25 km."
+]
+},
+{
+"t": "Doli walks 5 m towards the West, then turns right and walks 12 m. In which direction is Doli now from the starting point?",
+"o": [
+"North-East",
+"South-East",
+"North-West",
+"South-West"
+],
+"k": 2,
+"s": [
+"Doli goes West and then North.",
+"So Doli is to the North-West of the starting point."
+]
+},
+{
+"t": "Yamang walks 15 km towards the North, then turns right and walks 20 km. How far is Yamang from the starting point?",
+"o": [
+"5 km",
+"27 km",
+"35 km",
+"25 km"
+],
+"k": 3,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(15² + 20²) = 25 km."
+]
+},
+{
+"t": "Nima walks 6 m towards the North, then turns left and walks 8 m. How far is Nima from the starting point?",
+"o": [
+"12 m",
+"2 m",
+"14 m",
+"10 m"
+],
+"k": 3,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(6² + 8²) = 10 m."
+]
+},
+{
+"t": "Kiran walks 6 km towards the East, then turns right and walks 8 km. In which direction is Kiran now from the starting point?",
+"o": [
+"South-East",
+"South-West",
+"North-West",
+"North-East"
+],
+"k": 0,
+"s": [
+"Kiran goes East and then South.",
+"So Kiran is to the South-East of the starting point."
+]
+},
+{
+"t": "Kago walks 3 km towards the East, then turns right and walks 4 km. How far is Kago from the starting point?",
+"o": [
+"7 km",
+"10 km",
+"5 km",
+"1 km"
+],
+"k": 2,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(3² + 4²) = 5 km."
+]
+},
+{
+"t": "Yamang walks 8 m towards the South, then turns left and walks 15 m. How far is Yamang from the starting point?",
+"o": [
+"19 m",
+"17 m",
+"23 m",
+"7 m"
+],
+"k": 1,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(8² + 15²) = 17 m."
+]
+},
+{
+"t": "Tana walks 5 km towards the East, then turns left and walks 12 km. How far is Tana from the starting point?",
+"o": [
+"17 km",
+"7 km",
+"15 km",
+"13 km"
+],
+"k": 3,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(5² + 12²) = 13 km."
+]
+},
+{
+"t": "Rina walks 15 m towards the South, then turns right and walks 20 m. In which direction is Rina now from the starting point?",
+"o": [
+"North-East",
+"South-East",
+"North-West",
+"South-West"
+],
+"k": 3,
+"s": [
+"Rina goes South and then West.",
+"So Rina is to the South-West of the starting point."
+]
+},
+{
+"t": "Mohan walks 8 km towards the West, then turns right and walks 15 km. In which direction is Mohan now from the starting point?",
+"o": [
+"South-West",
+"South-East",
+"North-East",
+"North-West"
+],
+"k": 3,
+"s": [
+"Mohan goes West and then North.",
+"So Mohan is to the North-West of the starting point."
+]
+},
+{
+"t": "Pema walks 12 m towards the North, then turns left and walks 16 m. In which direction is Pema now from the starting point?",
+"o": [
+"South-West",
+"North-East",
+"North-West",
+"South-East"
+],
+"k": 2,
+"s": [
+"Pema goes North and then West.",
+"So Pema is to the North-West of the starting point."
+]
+},
+{
+"t": "Yarin walks 8 km towards the East, then turns right and walks 15 km. How far is Yarin from the starting point?",
+"o": [
+"19 km",
+"7 km",
+"17 km",
+"23 km"
+],
+"k": 2,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(8² + 15²) = 17 km."
+]
+},
+{
+"t": "Yarin walks 9 m towards the West, then turns right and walks 12 m. How far is Yarin from the starting point?",
+"o": [
+"3 m",
+"21 m",
+"17 m",
+"15 m"
+],
+"k": 3,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(9² + 12²) = 15 m."
+]
+},
+{
+"t": "Doli walks 3 km towards the South, then turns left and walks 4 km. How far is Doli from the starting point?",
+"o": [
+"1 km",
+"10 km",
+"7 km",
+"5 km"
+],
+"k": 3,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(3² + 4²) = 5 km."
+]
+},
+{
+"t": "Rina walks 7 km towards the South, then turns left and walks 24 km. In which direction is Rina now from the starting point?",
+"o": [
+"South-East",
+"South-West",
+"North-West",
+"North-East"
+],
+"k": 0,
+"s": [
+"Rina goes South and then East.",
+"So Rina is to the South-East of the starting point."
+]
+},
+{
+"t": "Rina walks 3 km towards the North, then turns left and walks 4 km. In which direction is Rina now from the starting point?",
+"o": [
+"North-East",
+"South-West",
+"North-West",
+"South-East"
+],
+"k": 2,
+"s": [
+"Rina goes North and then West.",
+"So Rina is to the North-West of the starting point."
+]
+},
+{
+"t": "Ravi walks 15 m towards the East, then turns left and walks 20 m. In which direction is Ravi now from the starting point?",
+"o": [
+"South-East",
+"South-West",
+"North-West",
+"North-East"
+],
+"k": 3,
+"s": [
+"Ravi goes East and then North.",
+"So Ravi is to the North-East of the starting point."
+]
+},
+{
+"t": "Yarin walks 12 m towards the South, then turns left and walks 16 m. In which direction is Yarin now from the starting point?",
+"o": [
+"North-East",
+"North-West",
+"South-East",
+"South-West"
+],
+"k": 2,
+"s": [
+"Yarin goes South and then East.",
+"So Yarin is to the South-East of the starting point."
+]
+},
+{
+"t": "Mohan walks 5 km towards the East, then turns right and walks 12 km. How far is Mohan from the starting point?",
+"o": [
+"17 km",
+"7 km",
+"15 km",
+"13 km"
+],
+"k": 3,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(5² + 12²) = 13 km."
+]
+},
+{
+"t": "Yarin walks 9 km towards the East, then turns right and walks 12 km. In which direction is Yarin now from the starting point?",
+"o": [
+"North-West",
+"South-West",
+"North-East",
+"South-East"
+],
+"k": 3,
+"s": [
+"Yarin goes East and then South.",
+"So Yarin is to the South-East of the starting point."
+]
+},
+{
+"t": "Rina walks 6 km towards the South, then turns left and walks 8 km. How far is Rina from the starting point?",
+"o": [
+"2 km",
+"14 km",
+"10 km",
+"12 km"
+],
+"k": 2,
+"s": [
+"The two paths are at right angles.",
+"Distance = √(6² + 8²) = 10 km."
+]
+}
+],
+"r-blood-relation": [
+{
+"t": "P is the sister of Q. Q is the daughter of A. How is P related to A?",
+"o": [
+"Mother",
+"Sister",
+"Niece",
+"Daughter"
+],
+"k": 3,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter."
+]
+},
+{
+"t": "Pointing to a girl, Nima said, \"She is the daughter of my paternal grandfather's only son.\" How is the girl related to Nima?",
+"o": [
+"Daughter",
+"Niece",
+"Sister",
+"Cousin"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Sister."
+]
+},
+{
+"t": "B is the daughter of Z. Z is the brother of D. How is B related to D?",
+"o": [
+"Niece",
+"Sister",
+"Cousin",
+"Daughter"
+],
+"k": 0,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Niece."
+]
+},
+{
+"t": "R is the sister of C. C is the father of Z. How is R related to Z?",
+"o": [
+"Mother",
+"Grandmother",
+"Sister",
+"Aunt"
+],
+"k": 3,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Aunt."
+]
+},
+{
+"t": "X is the husband of Q. Q is the daughter of P. How is X related to P?",
+"o": [
+"Son",
+"Brother",
+"Son-in-law",
+"Nephew"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Son-in-law."
+]
+},
+{
+"t": "N is the mother of C. C is the sister of X. How is N related to X?",
+"o": [
+"Mother",
+"Aunt",
+"Sister",
+"Grandmother"
+],
+"k": 0,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Mother."
+]
+},
+{
+"t": "Y is the son of D. D is the sister of Q. How is Y related to Q?",
+"o": [
+"Son",
+"Nephew",
+"Cousin",
+"Brother"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Nephew."
+]
+},
+{
+"t": "Z is the sister of N. N is the daughter of M. How is Z related to M?",
+"o": [
+"Sister",
+"Niece",
+"Daughter",
+"Mother"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter."
+]
+},
+{
+"t": "C is the mother of D. D is the sister of Z. How is C related to Z?",
+"o": [
+"Grandmother",
+"Aunt",
+"Mother",
+"Sister"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Mother."
+]
+},
+{
+"t": "Pointing to a photograph, Yarin said, \"His mother is the only daughter of my mother.\" How is Yarin related to the person in the photograph?",
+"o": [
+"Brother",
+"Maternal uncle",
+"Father",
+"Cousin"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Maternal uncle."
+]
+},
+{
+"t": "Q is the brother of D. D is the mother of A. How is Q related to A?",
+"o": [
+"Brother",
+"Maternal uncle",
+"Grandfather",
+"Father"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Maternal uncle."
+]
+},
+{
+"t": "Z is the wife of R. R is the son of X. How is Z related to X?",
+"o": [
+"Sister",
+"Daughter",
+"Daughter-in-law",
+"Niece"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter-in-law."
+]
+},
+{
+"t": "X is the mother of D. D is the wife of Y. How is X related to Y?",
+"o": [
+"Sister-in-law",
+"Mother-in-law",
+"Aunt",
+"Mother"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Mother-in-law."
+]
+},
+{
+"t": "B is the brother of N. N is the mother of Y. How is B related to Y?",
+"o": [
+"Father",
+"Grandfather",
+"Maternal uncle",
+"Brother"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Maternal uncle."
+]
+},
+{
+"t": "X is the sister of R. R is the daughter of D. How is X related to D?",
+"o": [
+"Sister",
+"Daughter",
+"Niece",
+"Mother"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter."
+]
+},
+{
+"t": "D is the sister of N. N is the daughter of Z. How is D related to Z?",
+"o": [
+"Daughter",
+"Mother",
+"Sister",
+"Niece"
+],
+"k": 0,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Daughter."
+]
+},
+{
+"t": "A is the brother of X. X is the mother of Q. How is A related to Q?",
+"o": [
+"Grandfather",
+"Brother",
+"Maternal uncle",
+"Father"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Maternal uncle."
+]
+},
+{
+"t": "Y is the daughter of N. N is the brother of P. How is Y related to P?",
+"o": [
+"Niece",
+"Daughter",
+"Cousin",
+"Sister"
+],
+"k": 0,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Niece."
+]
+},
+{
+"t": "N is the husband of M. M is the daughter of D. How is N related to D?",
+"o": [
+"Nephew",
+"Son",
+"Son-in-law",
+"Brother"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Son-in-law."
+]
+},
+{
+"t": "P is the brother of Z. Z is the mother of C. How is P related to C?",
+"o": [
+"Brother",
+"Maternal uncle",
+"Grandfather",
+"Father"
+],
+"k": 1,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Maternal uncle."
+]
+},
+{
+"t": "A is the brother of B. B is the mother of M. How is A related to M?",
+"o": [
+"Brother",
+"Father",
+"Maternal uncle",
+"Grandfather"
+],
+"k": 2,
+"s": [
+"Follow the relations one step at a time from the person asked about.",
+"The relation is: Maternal uncle."
+]
+}
+],
+"r-calendar": [
+{
+"t": "If 16 June 2026 is a Tuesday, what day of the week is 27 August 2026?",
+"o": [
+"Saturday",
+"Thursday",
+"Wednesday",
+"Friday"
+],
+"k": 1,
+"s": [
+"Number of days from 16 June 2026 to 27 August 2026 = 72, which gives 2 odd days.",
+"Tuesday + 2 = Thursday."
+]
+},
+{
+"t": "If today is Monday, what day of the week will it be after 88 days?",
+"o": [
+"Saturday",
+"Sunday",
+"Friday",
+"Thursday"
+],
+"k": 2,
+"s": [
+"88 days = 12 weeks and 4 odd days.",
+"Monday + 4 days = Friday."
+]
+},
+{
+"t": "If 26 June 2027 is a Saturday, what day of the week is 11 September 2027?",
+"o": [
+"Monday",
+"Friday",
+"Sunday",
+"Saturday"
+],
+"k": 3,
+"s": [
+"Number of days from 26 June 2027 to 11 September 2027 = 77, which gives 0 odd days.",
+"Saturday + 0 = Saturday."
+]
+},
+{
+"t": "If today is Sunday, what day of the week will it be after 191 days?",
+"o": [
+"Thursday",
+"Tuesday",
+"Monday",
+"Wednesday"
+],
+"k": 1,
+"s": [
+"191 days = 27 weeks and 2 odd days.",
+"Sunday + 2 days = Tuesday."
+]
+},
+{
+"t": "If today is Monday, what day of the week will it be after 36 days?",
+"o": [
+"Wednesday",
+"Monday",
+"Tuesday",
+"Thursday"
+],
+"k": 2,
+"s": [
+"36 days = 5 weeks and 1 odd day.",
+"Monday + 1 day = Tuesday."
+]
+},
+{
+"t": "If today is Friday, what day of the week will it be after 161 days?",
+"o": [
+"Saturday",
+"Sunday",
+"Thursday",
+"Friday"
+],
+"k": 3,
+"s": [
+"161 days = 23 weeks and 0 odd days.",
+"Friday + 0 days = Friday."
+]
+},
+{
+"t": "If 22 April 2026 is a Wednesday, what day of the week is 18 September 2026?",
+"o": [
+"Friday",
+"Saturday",
+"Thursday",
+"Sunday"
+],
+"k": 0,
+"s": [
+"Number of days from 22 April 2026 to 18 September 2026 = 149, which gives 2 odd days.",
+"Wednesday + 2 = Friday."
+]
+},
+{
+"t": "If 24 June 2025 is a Tuesday, what day of the week is 27 July 2025?",
+"o": [
+"Monday",
+"Saturday",
+"Sunday",
+"Tuesday"
+],
+"k": 2,
+"s": [
+"Number of days from 24 June 2025 to 27 July 2025 = 33, which gives 5 odd days.",
+"Tuesday + 5 = Sunday."
+]
+},
+{
+"t": "If 9 January 2027 is a Saturday, what day of the week is 1 June 2027?",
+"o": [
+"Wednesday",
+"Monday",
+"Thursday",
+"Tuesday"
+],
+"k": 3,
+"s": [
+"Number of days from 9 January 2027 to 1 June 2027 = 143, which gives 3 odd days.",
+"Saturday + 3 = Tuesday."
+]
+},
+{
+"t": "If 22 February 2026 is a Sunday, what day of the week is 8 July 2026?",
+"o": [
+"Wednesday",
+"Tuesday",
+"Thursday",
+"Friday"
+],
+"k": 0,
+"s": [
+"Number of days from 22 February 2026 to 8 July 2026 = 136, which gives 3 odd days.",
+"Sunday + 3 = Wednesday."
+]
+},
+{
+"t": "If 21 March 2026 is a Saturday, what day of the week is 2 August 2026?",
+"o": [
+"Saturday",
+"Monday",
+"Tuesday",
+"Sunday"
+],
+"k": 3,
+"s": [
+"Number of days from 21 March 2026 to 2 August 2026 = 134, which gives 1 odd day.",
+"Saturday + 1 = Sunday."
+]
+},
+{
+"t": "If 7 June 2025 is a Saturday, what day of the week is 29 August 2025?",
+"o": [
+"Saturday",
+"Friday",
+"Thursday",
+"Sunday"
+],
+"k": 1,
+"s": [
+"Number of days from 7 June 2025 to 29 August 2025 = 83, which gives 6 odd days.",
+"Saturday + 6 = Friday."
+]
+},
+{
+"t": "If 16 April 2026 is a Thursday, what day of the week is 11 August 2026?",
+"o": [
+"Thursday",
+"Monday",
+"Tuesday",
+"Wednesday"
+],
+"k": 2,
+"s": [
+"Number of days from 16 April 2026 to 11 August 2026 = 117, which gives 5 odd days.",
+"Thursday + 5 = Tuesday."
+]
+},
+{
+"t": "If today is Tuesday, what day of the week will it be after 181 days?",
+"o": [
+"Monday",
+"Sunday",
+"Tuesday",
+"Wednesday"
+],
+"k": 0,
+"s": [
+"181 days = 25 weeks and 6 odd days.",
+"Tuesday + 6 days = Monday."
+]
+},
+{
+"t": "If today is Friday, what day of the week will it be after 197 days?",
+"o": [
+"Monday",
+"Sunday",
+"Friday",
+"Saturday"
+],
+"k": 3,
+"s": [
+"197 days = 28 weeks and 1 odd day.",
+"Friday + 1 day = Saturday."
+]
+},
+{
+"t": "If 25 March 2025 is a Tuesday, what day of the week is 6 August 2025?",
+"o": [
+"Tuesday",
+"Friday",
+"Thursday",
+"Wednesday"
+],
+"k": 3,
+"s": [
+"Number of days from 25 March 2025 to 6 August 2025 = 134, which gives 1 odd day.",
+"Tuesday + 1 = Wednesday."
+]
+},
+{
+"t": "If 10 May 2026 is a Sunday, what day of the week is 30 June 2026?",
+"o": [
+"Tuesday",
+"Wednesday",
+"Monday",
+"Thursday"
+],
+"k": 0,
+"s": [
+"Number of days from 10 May 2026 to 30 June 2026 = 51, which gives 2 odd days.",
+"Sunday + 2 = Tuesday."
+]
+},
+{
+"t": "If today is Thursday, what day of the week will it be after 186 days?",
+"o": [
+"Sunday",
+"Tuesday",
+"Wednesday",
+"Monday"
+],
+"k": 3,
+"s": [
+"186 days = 26 weeks and 4 odd days.",
+"Thursday + 4 days = Monday."
+]
+},
+{
+"t": "If 24 June 2027 is a Thursday, what day of the week is 8 October 2027?",
+"o": [
+"Sunday",
+"Thursday",
+"Saturday",
+"Friday"
+],
+"k": 3,
+"s": [
+"Number of days from 24 June 2027 to 8 October 2027 = 106, which gives 1 odd day.",
+"Thursday + 1 = Friday."
+]
+},
+{
+"t": "If today is Monday, what day of the week will it be after 66 days?",
+"o": [
+"Saturday",
+"Friday",
+"Wednesday",
+"Thursday"
+],
+"k": 3,
+"s": [
+"66 days = 9 weeks and 3 odd days.",
+"Monday + 3 days = Thursday."
+]
+},
+{
+"t": "If today is Thursday, what day of the week will it be after 134 days?",
+"o": [
+"Sunday",
+"Thursday",
+"Friday",
+"Saturday"
+],
+"k": 2,
+"s": [
+"134 days = 19 weeks and 1 odd day.",
+"Thursday + 1 day = Friday."
+]
+}
+],
+"r-clock": [
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 9:18?",
+"o": [
+"9°",
+"171°",
+"181°",
+"156°"
+],
+"k": 1,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 9 − 5.5 × 18|.",
+"= 171°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 3:06?",
+"o": [
+"67°",
+"123°",
+"42°",
+"57°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 3 − 5.5 × 6|.",
+"= 57°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 8:58?",
+"o": [
+"101°",
+"64°",
+"79°",
+"89°"
+],
+"k": 2,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 8 − 5.5 × 58|.",
+"= 79°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 10:30?",
+"o": [
+"145°",
+"45°",
+"135°",
+"120°"
+],
+"k": 2,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 10 − 5.5 × 30|.",
+"= 135°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 9:26?",
+"o": [
+"112°",
+"53°",
+"137°",
+"127°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 9 − 5.5 × 26|.",
+"= 127°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 2:06?",
+"o": [
+"27°",
+"37°",
+"153°",
+"12°"
+],
+"k": 0,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 2 − 5.5 × 6|.",
+"= 27°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 2:34?",
+"o": [
+"127°",
+"53°",
+"137°",
+"112°"
+],
+"k": 0,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 2 − 5.5 × 34|.",
+"= 127°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 8:54?",
+"o": [
+"123°",
+"42°",
+"67°",
+"57°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 8 − 5.5 × 54|.",
+"= 57°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 5:30?",
+"o": [
+"15°",
+"165°",
+"0°",
+"25°"
+],
+"k": 0,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 5 − 5.5 × 30|.",
+"= 15°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 11:44?",
+"o": [
+"98°",
+"73°",
+"88°",
+"92°"
+],
+"k": 2,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 11 − 5.5 × 44|.",
+"= 88°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 2:58?",
+"o": [
+"101°",
+"79°",
+"111°",
+"86°"
+],
+"k": 0,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 2 − 5.5 × 58|.",
+"= 101°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 5:08?",
+"o": [
+"116°",
+"91°",
+"74°",
+"106°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 5 − 5.5 × 8|.",
+"= 106°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 5:48?",
+"o": [
+"114°",
+"99°",
+"124°",
+"66°"
+],
+"k": 0,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 5 − 5.5 × 48|.",
+"= 114°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 3:26?",
+"o": [
+"63°",
+"127°",
+"38°",
+"53°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 3 − 5.5 × 26|.",
+"= 53°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 1:16?",
+"o": [
+"43°",
+"58°",
+"68°",
+"122°"
+],
+"k": 1,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 1 − 5.5 × 16|.",
+"= 58°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 6:22?",
+"o": [
+"69°",
+"59°",
+"44°",
+"121°"
+],
+"k": 1,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 6 − 5.5 × 22|.",
+"= 59°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 1:54?",
+"o": [
+"103°",
+"93°",
+"87°",
+"78°"
+],
+"k": 1,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 1 − 5.5 × 54|.",
+"= 93°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 11:46?",
+"o": [
+"87°",
+"62°",
+"103°",
+"77°"
+],
+"k": 3,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 11 − 5.5 × 46|.",
+"= 77°."
+]
+},
+{
+"t": "What is the angle between the hour hand and the minute hand of a clock at 8:34?",
+"o": [
+"63°",
+"38°",
+"53°",
+"127°"
+],
+"k": 2,
+"s": [
+"Angle = |30H − 5.5M| = |30 × 8 − 5.5 × 34|.",
+"= 53°."
+]
+}
+],
+"r-ranking-seating": [
+{
+"t": "In a row of students, Rina is 30th from the left and 19th from the right. How many students are there in the row?",
+"o": [
+"47",
+"49",
+"50",
+"48"
+],
+"k": 3,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 30 + 19 − 1 = 48."
+]
+},
+{
+"t": "In a row of students, Nima is 25th from the left and 8th from the right. How many students are there in the row?",
+"o": [
+"34",
+"31",
+"33",
+"32"
+],
+"k": 3,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 25 + 8 − 1 = 32."
+]
+},
+{
+"t": "In a row of students, Kago is 15th from the left and 20th from the right. How many students are there in the row?",
+"o": [
+"34",
+"33",
+"36",
+"35"
+],
+"k": 0,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 15 + 20 − 1 = 34."
+]
+},
+{
+"t": "In a row of students, Yarin is 29th from the left and 5th from the right. How many students are there in the row?",
+"o": [
+"35",
+"32",
+"33",
+"34"
+],
+"k": 2,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 29 + 5 − 1 = 33."
+]
+},
+{
+"t": "In a class of 42 students, Tamo is 12th from the top. What is Tamo's position from the bottom?",
+"o": [
+"30th",
+"33rd",
+"32nd",
+"31st"
+],
+"k": 3,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 42 − 12 + 1 = 31."
+]
+},
+{
+"t": "In a row of students, Mohan is 8th from the left and 17th from the right. How many students are there in the row?",
+"o": [
+"26",
+"25",
+"23",
+"24"
+],
+"k": 3,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 8 + 17 − 1 = 24."
+]
+},
+{
+"t": "In a row of students, Yarin is 11th from the left and 16th from the right. How many students are there in the row?",
+"o": [
+"26",
+"27",
+"25",
+"28"
+],
+"k": 0,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 11 + 16 − 1 = 26."
+]
+},
+{
+"t": "In a class of 52 students, Yamang is 21st from the top. What is Yamang's position from the bottom?",
+"o": [
+"34th",
+"32nd",
+"31st",
+"33rd"
+],
+"k": 1,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 52 − 21 + 1 = 32."
+]
+},
+{
+"t": "In a row of students, Nima is 19th from the left and 8th from the right. How many students are there in the row?",
+"o": [
+"26",
+"28",
+"27",
+"25"
+],
+"k": 0,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 19 + 8 − 1 = 26."
+]
+},
+{
+"t": "In a class of 42 students, Yamang is 19th from the top. What is Yamang's position from the bottom?",
+"o": [
+"24th",
+"25th",
+"23rd",
+"26th"
+],
+"k": 0,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 42 − 19 + 1 = 24."
+]
+},
+{
+"t": "In a row of students, Ravi is 10th from the left and 17th from the right. How many students are there in the row?",
+"o": [
+"26",
+"27",
+"28",
+"25"
+],
+"k": 0,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 10 + 17 − 1 = 26."
+]
+},
+{
+"t": "In a row of students, Kiran is 5th from the left and 9th from the right. How many students are there in the row?",
+"o": [
+"15",
+"13",
+"14",
+"12"
+],
+"k": 1,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 5 + 9 − 1 = 13."
+]
+},
+{
+"t": "In a class of 55 students, Kago is 16th from the top. What is Kago's position from the bottom?",
+"o": [
+"40th",
+"42nd",
+"39th",
+"41st"
+],
+"k": 0,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 55 − 16 + 1 = 40."
+]
+},
+{
+"t": "In a class of 49 students, Tamo is 11th from the top. What is Tamo's position from the bottom?",
+"o": [
+"39th",
+"40th",
+"41st",
+"38th"
+],
+"k": 0,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 49 − 11 + 1 = 39."
+]
+},
+{
+"t": "In a class of 30 students, Tenzing is 11th from the top. What is Tenzing's position from the bottom?",
+"o": [
+"22nd",
+"21st",
+"20th",
+"19th"
+],
+"k": 2,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 30 − 11 + 1 = 20."
+]
+},
+{
+"t": "In a row of students, Mohan is 24th from the left and 14th from the right. How many students are there in the row?",
+"o": [
+"38",
+"36",
+"39",
+"37"
+],
+"k": 3,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 24 + 14 − 1 = 37."
+]
+},
+{
+"t": "In a row of students, Pema is 24th from the left and 11th from the right. How many students are there in the row?",
+"o": [
+"36",
+"35",
+"34",
+"33"
+],
+"k": 2,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 24 + 11 − 1 = 34."
+]
+},
+{
+"t": "In a class of 54 students, Mohan is 10th from the top. What is Mohan's position from the bottom?",
+"o": [
+"46th",
+"44th",
+"47th",
+"45th"
+],
+"k": 3,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 54 − 10 + 1 = 45."
+]
+},
+{
+"t": "In a row of students, Tenzing is 15th from the left and 13th from the right. How many students are there in the row?",
+"o": [
+"29",
+"27",
+"26",
+"28"
+],
+"k": 1,
+"s": [
+"Total = position from left + position from right − 1.",
+"= 15 + 13 − 1 = 27."
+]
+},
+{
+"t": "In a class of 60 students, Biri is 6th from the top. What is Biri's position from the bottom?",
+"o": [
+"56th",
+"57th",
+"55th",
+"54th"
+],
+"k": 2,
+"s": [
+"Position from bottom = total − position from top + 1.",
+"= 60 − 6 + 1 = 55."
+]
+}
+],
+"r-analogy": [
+{
+"t": "8 : 65 :: 2 : ?",
+"o": [
+"7",
+"5",
+"6",
+"4"
+],
+"k": 1,
+"s": [
+"The relation is n : n² + 1: 8 → 65.",
+"So 2 → 5."
+]
+},
+{
+"t": "2 : 9 :: 4 : ?",
+"o": [
+"64",
+"65",
+"66",
+"69"
+],
+"k": 1,
+"s": [
+"The relation is n : n³ + 1: 2 → 9.",
+"So 4 → 65."
+]
+},
+{
+"t": "EF : HI :: ST : ?",
+"o": [
+"VW",
+"UV",
+"PQ",
+"WX"
+],
+"k": 0,
+"s": [
+"Each letter of EF moves 3 places forward to give HI.",
+"So ST becomes VW."
+]
+},
+{
+"t": "4 : 16 :: 7 : ?",
+"o": [
+"50",
+"56",
+"49",
+"48"
+],
+"k": 2,
+"s": [
+"The relation is n : n²: 4 → 16.",
+"So 7 → 49."
+]
+},
+{
+"t": "4 : 64 :: 2 : ?",
+"o": [
+"9",
+"10",
+"8",
+"7"
+],
+"k": 2,
+"s": [
+"The relation is n : n³: 4 → 64.",
+"So 2 → 8."
+]
+},
+{
+"t": "IJ : LM :: PQ : ?",
+"o": [
+"ST",
+"RS",
+"TU",
+"MN"
+],
+"k": 0,
+"s": [
+"Each letter of IJ moves 3 places forward to give LM.",
+"So PQ becomes ST."
+]
+},
+{
+"t": "7 : 344 :: 3 : ?",
+"o": [
+"27",
+"29",
+"31",
+"28"
+],
+"k": 3,
+"s": [
+"The relation is n : n³ + 1: 7 → 344.",
+"So 3 → 28."
+]
+},
+{
+"t": "3 : 9 :: 12 : ?",
+"o": [
+"144",
+"145",
+"143",
+"156"
+],
+"k": 0,
+"s": [
+"The relation is n : n²: 3 → 9.",
+"So 12 → 144."
+]
+},
+{
+"t": "11 : 122 :: 5 : ?",
+"o": [
+"31",
+"26",
+"27",
+"25"
+],
+"k": 1,
+"s": [
+"The relation is n : n² + 1: 11 → 122.",
+"So 5 → 26."
+]
+},
+{
+"t": "4 : 16 :: 9 : ?",
+"o": [
+"82",
+"90",
+"80",
+"81"
+],
+"k": 3,
+"s": [
+"The relation is n : n²: 4 → 16.",
+"So 9 → 81."
+]
+},
+{
+"t": "4 : 65 :: 3 : ?",
+"o": [
+"27",
+"31",
+"28",
+"29"
+],
+"k": 2,
+"s": [
+"The relation is n : n³ + 1: 4 → 65.",
+"So 3 → 28."
+]
+},
+{
+"t": "2 : 8 :: 5 : ?",
+"o": [
+"130",
+"126",
+"124",
+"125"
+],
+"k": 3,
+"s": [
+"The relation is n : n³: 2 → 8.",
+"So 5 → 125."
+]
+},
+{
+"t": "PQ : TU :: TU : ?",
+"o": [
+"PQ",
+"XY",
+"YZ",
+"WX"
+],
+"k": 1,
+"s": [
+"Each letter of PQ moves 4 places forward to give TU.",
+"So TU becomes XY."
+]
+},
+{
+"t": "2 : 8 :: 4 : ?",
+"o": [
+"64",
+"63",
+"65",
+"68"
+],
+"k": 0,
+"s": [
+"The relation is n : n³: 2 → 8.",
+"So 4 → 64."
+]
+},
+{
+"t": "2 : 8 :: 6 : ?",
+"o": [
+"222",
+"217",
+"215",
+"216"
+],
+"k": 3,
+"s": [
+"The relation is n : n³: 2 → 8.",
+"So 6 → 216."
+]
+},
+{
+"t": "3 : 9 :: 8 : ?",
+"o": [
+"63",
+"65",
+"64",
+"72"
+],
+"k": 2,
+"s": [
+"The relation is n : n²: 3 → 9.",
+"So 8 → 64."
+]
+},
+{
+"t": "3 : 28 :: 7 : ?",
+"o": [
+"344",
+"345",
+"351",
+"343"
+],
+"k": 0,
+"s": [
+"The relation is n : n³ + 1: 3 → 28.",
+"So 7 → 344."
+]
+},
+{
+"t": "HI : IJ :: ST : ?",
+"o": [
+"TU",
+"RS",
+"XY",
+"UV"
+],
+"k": 0,
+"s": [
+"Each letter of HI moves 1 place forward to give IJ.",
+"So ST becomes TU."
+]
+},
+{
+"t": "12 : 144 :: 7 : ?",
+"o": [
+"50",
+"48",
+"56",
+"49"
+],
+"k": 3,
+"s": [
+"The relation is n : n²: 12 → 144.",
+"So 7 → 49."
+]
+},
+{
+"t": "6 : 217 :: 4 : ?",
+"o": [
+"69",
+"65",
+"66",
+"64"
+],
+"k": 1,
+"s": [
+"The relation is n : n³ + 1: 6 → 217.",
+"So 4 → 65."
+]
+}
+],
+"r-word-formation": [
+{
+"t": "Arrange the following words in dictionary order: 1. Brick  2. Bright  3. Bridle  4. Brief",
+"o": [
+"2, 4, 3, 1",
+"1, 2, 3, 4",
+"1, 2, 4, 3",
+"1, 3, 4, 2"
+],
+"k": 3,
+"s": [
+"In dictionary order: Brick, Bridle, Brief, Bright.",
+"So the order is 1, 3, 4, 2."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Crazy  2. Cradle  3. Crane  4. Crayon",
+"o": [
+"3, 2, 4, 1",
+"2, 3, 4, 1",
+"3, 1, 4, 2",
+"2, 1, 3, 4"
+],
+"k": 1,
+"s": [
+"In dictionary order: Cradle, Crane, Crayon, Crazy.",
+"So the order is 2, 3, 4, 1."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Planet  2. Plenty  3. Plastic  4. Pledge",
+"o": [
+"1, 3, 4, 2",
+"3, 2, 4, 1",
+"4, 3, 1, 2",
+"2, 3, 1, 4"
+],
+"k": 0,
+"s": [
+"In dictionary order: Planet, Plastic, Pledge, Plenty.",
+"So the order is 1, 3, 4, 2."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Gamble  2. Gallery  3. Gather  4. Garland",
+"o": [
+"4, 1, 3, 2",
+"1, 4, 3, 2",
+"2, 1, 4, 3",
+"1, 3, 2, 4"
+],
+"k": 2,
+"s": [
+"In dictionary order: Gallery, Gamble, Garland, Gather.",
+"So the order is 2, 1, 4, 3."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Crazy  2. Crayon  3. Cradle  4. Crane",
+"o": [
+"3, 4, 1, 2",
+"3, 2, 4, 1",
+"3, 4, 2, 1",
+"4, 1, 3, 2"
+],
+"k": 2,
+"s": [
+"In dictionary order: Cradle, Crane, Crayon, Crazy.",
+"So the order is 3, 4, 2, 1."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Brief  2. Bridge  3. Brick  4. Bridle",
+"o": [
+"3, 4, 2, 1",
+"3, 2, 4, 1",
+"4, 3, 1, 2",
+"1, 4, 3, 2"
+],
+"k": 1,
+"s": [
+"In dictionary order: Brick, Bridge, Bridle, Brief.",
+"So the order is 3, 2, 4, 1."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Statue  2. Stamp  3. Stand  4. Starve",
+"o": [
+"4, 3, 1, 2",
+"3, 2, 4, 1",
+"1, 3, 2, 4",
+"2, 3, 4, 1"
+],
+"k": 3,
+"s": [
+"In dictionary order: Stamp, Stand, Starve, Statue.",
+"So the order is 2, 3, 4, 1."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Crane  2. Crater  3. Cradle  4. Crayon",
+"o": [
+"2, 1, 4, 3",
+"4, 1, 3, 2",
+"3, 1, 2, 4",
+"2, 3, 4, 1"
+],
+"k": 2,
+"s": [
+"In dictionary order: Cradle, Crane, Crater, Crayon.",
+"So the order is 3, 1, 2, 4."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Stand  2. Starve  3. Stamp  4. Staple",
+"o": [
+"1, 2, 3, 4",
+"3, 1, 4, 2",
+"4, 3, 2, 1",
+"4, 1, 3, 2"
+],
+"k": 1,
+"s": [
+"In dictionary order: Stamp, Stand, Staple, Starve.",
+"So the order is 3, 1, 4, 2."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Bright  2. Brick  3. Brief  4. Bridle",
+"o": [
+"3, 4, 2, 1",
+"4, 1, 2, 3",
+"2, 4, 3, 1",
+"4, 2, 3, 1"
+],
+"k": 2,
+"s": [
+"In dictionary order: Brick, Bridle, Brief, Bright.",
+"So the order is 2, 4, 3, 1."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Bridle  2. Brief  3. Brick  4. Bridge",
+"o": [
+"3, 4, 1, 2",
+"3, 1, 4, 2",
+"4, 2, 3, 1",
+"4, 3, 1, 2"
+],
+"k": 0,
+"s": [
+"In dictionary order: Brick, Bridge, Bridle, Brief.",
+"So the order is 3, 4, 1, 2."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Garden  2. Gather  3. Gallery  4. Gamble",
+"o": [
+"3, 4, 1, 2",
+"3, 1, 2, 4",
+"3, 4, 2, 1",
+"4, 3, 1, 2"
+],
+"k": 0,
+"s": [
+"In dictionary order: Gallery, Gamble, Garden, Gather.",
+"So the order is 3, 4, 1, 2."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Gallery  2. Garden  3. Garland  4. Gather",
+"o": [
+"3, 4, 2, 1",
+"2, 1, 3, 4",
+"1, 2, 3, 4",
+"1, 4, 2, 3"
+],
+"k": 2,
+"s": [
+"In dictionary order: Gallery, Garden, Garland, Gather.",
+"So the order is 1, 2, 3, 4."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Marble  2. Matter  3. Master  4. Market",
+"o": [
+"3, 1, 2, 4",
+"1, 4, 3, 2",
+"1, 4, 2, 3",
+"1, 2, 4, 3"
+],
+"k": 1,
+"s": [
+"In dictionary order: Marble, Market, Master, Matter.",
+"So the order is 1, 4, 3, 2."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Planet  2. Plastic  3. Pledge  4. Plenty",
+"o": [
+"2, 3, 4, 1",
+"1, 3, 4, 2",
+"1, 2, 3, 4",
+"3, 2, 4, 1"
+],
+"k": 2,
+"s": [
+"In dictionary order: Planet, Plastic, Pledge, Plenty.",
+"So the order is 1, 2, 3, 4."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Gamble  2. Garland  3. Gather  4. Gallery",
+"o": [
+"2, 1, 3, 4",
+"2, 3, 1, 4",
+"4, 1, 2, 3",
+"1, 4, 3, 2"
+],
+"k": 2,
+"s": [
+"In dictionary order: Gallery, Gamble, Garland, Gather.",
+"So the order is 4, 1, 2, 3."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Gather  2. Garden  3. Garland  4. Gallery",
+"o": [
+"4, 3, 2, 1",
+"2, 3, 4, 1",
+"4, 2, 3, 1",
+"2, 3, 1, 4"
+],
+"k": 2,
+"s": [
+"In dictionary order: Gallery, Garden, Garland, Gather.",
+"So the order is 4, 2, 3, 1."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Starve  2. Statue  3. Stamp  4. Staple",
+"o": [
+"4, 3, 2, 1",
+"3, 4, 1, 2",
+"2, 4, 3, 1",
+"3, 2, 4, 1"
+],
+"k": 1,
+"s": [
+"In dictionary order: Stamp, Staple, Starve, Statue.",
+"So the order is 3, 4, 1, 2."
+]
+},
+{
+"t": "Arrange the following words in dictionary order: 1. Gallery  2. Gamble  3. Garland  4. Gather",
+"o": [
+"4, 2, 1, 3",
+"1, 4, 2, 3",
+"1, 2, 3, 4",
+"1, 3, 2, 4"
+],
+"k": 2,
+"s": [
+"In dictionary order: Gallery, Gamble, Garland, Gather.",
+"So the order is 1, 2, 3, 4."
+]
+}
+],
+"r-cube-cuboid": [
+{
+"t": "A cube painted red on all faces is cut into 64 equal smaller cubes. How many smaller cubes have exactly one face painted?",
+"o": [
+"64",
+"16",
+"24",
+"8"
+],
+"k": 2,
+"s": [
+"The cube is cut 4 × 4 × 4, so n = 4.",
+"One face painted = 6(n − 2)² = 6 × 4. = 24."
+]
+},
+{
+"t": "A cube painted red on all faces is cut into 216 equal smaller cubes. How many smaller cubes have exactly three faces painted?",
+"o": [
+"48",
+"96",
+"8",
+"64"
+],
+"k": 2,
+"s": [
+"The cube is cut 6 × 6 × 6, so n = 6.",
+"Cubes with three painted faces are the 8 corners. = 8."
+]
+},
+{
+"t": "A cube painted red on all faces is cut into 216 equal smaller cubes. How many smaller cubes have exactly one face painted?",
+"o": [
+"8",
+"96",
+"48",
+"64"
+],
+"k": 1,
+"s": [
+"The cube is cut 6 × 6 × 6, so n = 6.",
+"One face painted = 6(n − 2)² = 6 × 16. = 96."
+]
+},
+{
+"t": "A cube painted red on all faces is cut into 27 equal smaller cubes. How many smaller cubes have exactly three faces painted?",
+"o": [
+"12",
+"8",
+"1",
+"6"
+],
+"k": 1,
+"s": [
+"The cube is cut 3 × 3 × 3, so n = 3.",
+"Cubes with three painted faces are the 8 corners. = 8."
+]
+},
+{
+"t": "A cube painted red on all faces is cut into 27 equal smaller cubes. How many smaller cubes have no face painted?",
+"o": [
+"12",
+"8",
+"6",
+"1"
+],
+"k": 3,
+"s": [
+"The cube is cut 3 × 3 × 3, so n = 3.",
+"No face painted = (n − 2)³ = 1³. = 1."
+]
+}
+]
+}
+}

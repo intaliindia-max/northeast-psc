@@ -1,7 +1,10 @@
-# APSSB Maths Practice by Amarjeet Sir: source
+# APSSB Maths & Reasoning Practice by Amarjeet Sir: source
 
 This folder builds the website in `../maths-by-amarjeet-sir/`, live at https://northeastpsc.co.in/maths-by-amarjeet-sir/ .
-The owner is Amarjeet Sir, Maths faculty at Northeast PSC, Arunachal Pradesh. He writes instructions in Hindi or Hinglish. Reply to him in simple Roman Hinglish, short and phone-friendly.
+The owner is Amarjeet Sir, Maths and Reasoning faculty at Northeast PSC, Arunachal Pradesh. He writes instructions in Hindi or Hinglish. Reply to him in simple Roman Hinglish, short and phone-friendly.
+
+## Purpose
+The site exists to make students practise, keep them coming back, and turn that into course enquiries on WhatsApp. Keep practice free and open (no forms before a student has practised), and keep course offers relevant and polite (no repeated popups).
 
 ## Golden rules
 - Only change files inside `_maths-source/` and `maths-by-amarjeet-sir/`. Never touch anything else in this repository.
@@ -12,46 +15,30 @@ The owner is Amarjeet Sir, Maths faculty at Northeast PSC, Arunachal Pradesh. He
 - Commit the source change and the rebuilt `maths-by-amarjeet-sir/` together, with a short message. Then tell the owner in one or two lines what changed.
 
 ## Where things are
-- `build3.py`: all website content in the `SITE` dictionary (stats, recent toppers, year-wise selections, batches and prices, free classes, marathons, guidance videos, books, centres, addresses and phone numbers, links, About and Message text) and the image map `IMG` / `USED_IMG`.
+- `build3.py`: all website content in the `SITE` dictionary (stats, recent toppers, year-wise selections, batches and prices, free classes, marathons, guidance videos, books, centres, addresses and phone numbers, links, About and Message text) and the image map `IMG` / `USED_IMG`. It also turns `reasoning_data.json` into the Reasoning topics.
 - `site_img/`: website photos and posters. Add a new image here, then register it in `IMG` and `USED_IMG` in `build3.py`.
-- `app3.js`: the app (pages, quizzes, mock test, My report, score sharing).
+- `app3.js`: the app (pages, Maths/Reasoning tabs, quizzes with up to five options, mock tests for both subjects, previous-year Reasoning papers built from the PYQ labels, Question of the day with streaks, Revise my mistakes, My report with "Send my report to Sir" on WhatsApp, score-based course offers after every quiz, one-time milestone offers, the "Which batch is right for me?" finder, score sharing). Everything a student does is saved only on their phone (localStorage key `apssb-basic-maths-v1`).
 - `template3.html`: page shell and base styles. `site.css`: website styles.
-- `questions.json`, `solutions.json`: the 1,700 Basic Mathematics Practice Book questions and solutions (read through `build.py`).
-- `pyq_data.py` to `pyq_data4.py`: the 536 APSSB previous year questions. `img/`: figures used in those questions.
-- `build.py` and `build2.py` are read by `build3.py`. Do not run them directly.
+- Maths: `questions.json`, `solutions.json` (1,700 Basic Mathematics Practice Book questions, read through `build.py`), `pyq_data.py` to `pyq_data4.py` (536 APSSB PYQs), `img/` (figures for those PYQs). `build.py` and `build2.py` are read by `build3.py`; do not run them directly.
+- New questions: `new_questions.json` has 654 extra questions made by `gen_new_questions.py` (answers computed from the numbers): 130 Maths and 130 Reasoning questions in the "Mixed Practice Sets" topics, and 394 mock-test-only questions attached to their topics as `mq`. Together with the books this gives exactly 500 quizzes and 5,000 questions; keep those totals in mind before adding or removing questions.
+- Reasoning: `reasoning_data.json` has all 2,110 questions of the APSSB Reasoning Practice Book in 19 chapters (sections, question, options, key as 0-4, brief solution, PYQ label such as "APSSB CGL 2024" or "Meghalaya 2023", figure key, directions passage). `rimg/` has the Reasoning figures as PNG files named by figure key. To fix a Reasoning question, edit its entry in `reasoning_data.json`.
 
 ## Build and publish
 1. If `python3 -c "import PIL"` fails, run `pip install pillow`.
 2. Run `python3 publish.py`. It runs `build3.py` (website in `site_pkg/`, single-file HTML and website zip in `dist/`), then replaces `../maths-by-amarjeet-sir/` with `site_pkg/`. The service worker cache name changes automatically, so students' phones pick up the new version.
-3. If `node` is available, run `node test3.js && node test5.js && node test6.js`. They must report 0 problems and no bad tokens.
+3. If `node` is available, run `node test3.js && node test5.js && node test6.js && node test8.js && node test9.js && node test10.js`. They must report 0 problems and no bad tokens.
 4. Commit and push.
 
 ## Optional
 - `python3 brochure.py` makes the 2-page student brochure PDF in `dist/` (needs the DejaVu Sans fonts).
 
-## History (from the owner's earlier claude.ai project chat)
-This repository is now the master copy. Older copies made in that chat are out of date.
+## Notes from checking the Reasoning book
+- Corrected on the website: Classification Q15 option (c) "Quantum Machines" is shown as "Quantum Mechanics"; Alphabetical Series Q45 solution now says the repeating group is "mnom".
+- Statement, Assertion & Decision Making Q5 is tagged only "APSSB" in the book (exam and year missing).
 
-What is built:
-- APSSB Maths Practice: 2,236 questions (1,700 from the book + 536 PYQ), 231 quizzes, mock test (25 questions, 50 marks, 30 minutes, CHSL pattern), My report, score sharing, installable app with offline practice.
-- Website: selections and toppers, free classes, marathons, guidance, batches (Rs 1,500 Maths at the top, Rs 5,000 CSAT at the bottom), reviews, about, class photos, books, contact. Phone design is fixed; tablet/laptop styles are added.
-- Made outside this repo: 2-page brochure (QR points to the new address) and a prompt for a separate CSAT platform.
-
-Decisions:
-- Live address: https://northeastpsc.co.in/maths-by-amarjeet-sir/ (repo northeast-psc). Flow for changes: owner writes in Claude Code, Claude pushes, owner merges, site goes live.
-- Confirmed facts: WhatsApp 60095 26445, Pasighat 92337 89170, 1,000+ selections.
-- The CSAT platform will be built later as a separate project (prompt + this website + CSAT file).
-- Share the brochure only after the platform shows at the live link.
+## Hosting note
+- The page adds the missing "/" at the end of its own address before anything loads, so photos and Reasoning figures (`images/r/`) load even if the host drops the trailing slash. Keep that first `<script>` in the page head.
 
 ## Open items from the owner
-1. Check the live link no longer shows "being prepared" (PR 1 was merged into main).
-2. Google Form for students' name and WhatsApp number: not connected yet. It needs the form's pre-filled link.
-3. Numbers to confirm: Itanagar (81189 84013 or 92337 89183), Naharlagun (70054 79070 or 98637 86864), and 60096 07689 / 84150 96728 from the old placeholder page.
-4. Nirjuli address spelling "Chart & Chess" is still to be confirmed.
-5. Basic book cover (before print): "2000+ Questions" should be 1,700; "Questioned Oriented" should be "Question Oriented".
-6. Maths batch poster says "Offer valid today only". Replace the poster when the offer changes.
-7. Marathon start times for Ratio, Time & Work, TSD, Statistics; topic times for the Percentage–TSD class.
-8. Missing titles/links: title of Demo lecture 1, title of guidance video HJ-5xDyzhmk, link for CGL marathon Day 1 Reasoning.
-9. 8 skipped PYQs (Q58, 211, 395, 479, 481, 497, 502, 529): correct versions, if they are to be added.
-10. Optional: Google rating, student videos/feedback, Reasoning questions, Simplification PYQs, and fixing old info in YouTube descriptions (600+, org code jewus, 89749 41736).
-11. Build check reports options with the same value in PYQ 358, 445 and 496. Ask the owner before changing.
+- Google Form for students' name and WhatsApp number: not connected yet. It needs the form's pre-filled link.
+- Nirjuli address spelling "Chart & Chess" is still to be confirmed.

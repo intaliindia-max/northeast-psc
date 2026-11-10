@@ -13,7 +13,7 @@ from PIL import Image
 import sys
 
 URL = sys.argv[1] if len(sys.argv) > 1 else "https://northeastpsc.co.in/maths-by-amarjeet-sir/"
-OUT = sys.argv[2] if len(sys.argv) > 2 else "dist/APSSB Maths Practice by Amarjeet Sir - brochure.pdf"
+OUT = sys.argv[2] if len(sys.argv) > 2 else "dist/APSSB Maths & Reasoning Practice by Amarjeet Sir - brochure.pdf"
 IMG = "site_img/"
 pdfmetrics.registerFont(TTFont("Sans", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
 pdfmetrics.registerFont(TTFont("Sans-Bold", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"))
@@ -69,28 +69,28 @@ def bubble(c, x, y, r=6):
 
 def header(c):
     fit_image(c, IMG + "logo-full.png", M - 4, H - 30 - 46, 46)
-    c.setFillColor(PINK); c.setFont("Sans-Bold", 11); c.drawRightString(W - M, H - 30 - 20, "APSSB Maths Practice by Amarjeet Sir")
+    c.setFillColor(PINK); c.setFont("Sans-Bold", 11); c.drawRightString(W - M, H - 30 - 20, "APSSB Maths & Reasoning Practice by Amarjeet Sir")
     c.setFillColor(SOFT); c.setFont("Sans", 9); c.drawRightString(W - M, H - 30 - 34, "Northeast PSC, Arunachal Pradesh")
 
 c = canvas.Canvas(OUT, pagesize=A4)
-c.setTitle("APSSB Maths Practice by Amarjeet Sir"); c.setAuthor("Northeast PSC"); c.setSubject("Free APSSB Maths practice with step-by-step solutions")
+c.setTitle("APSSB Maths & Reasoning Practice by Amarjeet Sir"); c.setAuthor("Northeast PSC"); c.setSubject("Free APSSB Maths and Reasoning practice with step-by-step solutions")
 
 # ---------- Page 1 ----------
 header(c)
 top = H - 86
 cover_image(c, IMG + "hero-class.jpg", 0, top - 236, W, 236)
 y = top - 236 - 44
-c.setFillColor(INK); c.setFont("Sans-Bold", 34); c.drawString(M, y, "APSSB Maths Practice")
+c.setFillColor(INK); c.setFont("Sans-Bold", 26); c.drawString(M, y, "APSSB Maths & Reasoning Practice")
 circle_image(c, IMG + "amarjeet-sir-face.jpg", M + 21, y - 40, 42)
 c.setFillColor(PINK); c.setFont("Sans-Bold", 17); c.drawString(M + 52, y - 36, "by Amarjeet Sir")
-c.setFillColor(SOFT); c.setFont("Sans", 9.5); c.drawString(M + 52, y - 50, "Maths faculty, Northeast PSC")
-y = para(c, "<b>2,236 questions with step-by-step solutions</b>: every question of the Basic Mathematics Practice Book and 536 APSSB previous year questions, in 231 quizzes. Free to practise on your phone.",
+c.setFillColor(SOFT); c.setFont("Sans", 9.5); c.drawString(M + 52, y - 50, "Maths & Reasoning faculty, Northeast PSC")
+y = para(c, "<b>5,000 questions with step-by-step solutions</b>: every question of the Basic Mathematics Practice Book and the APSSB Reasoning Practice Book, 770 previous year questions from APSSB and other North-East exams, and new mixed practice sets. Free to practise on your phone.",
          M, y - 72, W - 2 * M, 12, INK)
 # features (left) and QR card (right)
 ftop = y - 18
 c.setFillColor(INK); c.setFont("Sans-Bold", 13.5); c.drawString(M, ftop - 4, "What you get")
-items = ["17 topics, from Number System to Statistics", "231 quizzes of 10 questions each", "1,700 book questions and 536 APSSB PYQs",
-         "Score and a step-by-step solution after every quiz", "Free PYQ classes on YouTube, topic by topic", "Works on any phone, and your progress is saved"]
+items = ["36 topics: 17 in Maths and 19 in Reasoning", "500 quizzes of 10 questions each", "770 PYQs, each marked with its exam or state",
+         "Score and a step-by-step solution after every quiz", "Maths and Reasoning mock tests, exam style", "Works on any phone, and your progress is saved"]
 fy = ftop - 30
 for it in items:
     bubble(c, M + 6, fy + 3.5)
@@ -115,7 +115,7 @@ for i, (n, l) in enumerate(stats):
     if i: c.line(x, sy, x, sy + sh)
     c.setFillColor(INK); c.setFont("Sans-Bold", 17); c.drawString(x + 12, sy + 26, n)
     c.setFillColor(PINK); c.setFont("Sans", 9); c.drawString(x + 12, sy + 11, l)
-c.setFillColor(BLUE); c.setFont("Sans-Bold", 13); c.drawString(M, 52, "Call or WhatsApp: 60095 26445")
+c.setFillColor(BLUE); c.setFont("Sans-Bold", 12.5); c.drawString(M, 52, "WhatsApp 98637 94212  ·  Call 60095 26445")
 c.setFillColor(SOFT); c.setFont("Sans", 9.5); c.drawRightString(W - M, 52, "Telegram: t.me/Northeast_PSC")
 c.showPage()
 
@@ -176,8 +176,8 @@ yb = ht - 4 * rh - 68
 c.setFillColor(INK); c.setFont("Sans-Bold", 15); c.drawString(M, yb, "Batches and books")
 ih = 98
 iy = yb - 12 - ih
-cards = [("batch-online-maths.jpg", "Online Maths Batch by Amarjeet Sir, ₹1,500 (was ₹2,500)"),
-         ("batch-apssb-online.jpg", "Complete APSSB Online Batch, ₹6,000"),
+cards = [("batch-maths-reasoning-2026.jpg", "Maths & Reasoning Batches, ₹3,000 (was ₹6,000)"),
+         ("batch-maths-online-2026.jpg", "Online Maths Batch, ₹1,500 (was ₹2,500)"),
          ("batch-appscce-csat.jpg", "APPSCCE CSAT 2026 batch, ₹5,000 (was ₹10,000)"),
          ("book-basic.jpg", "APSSB Maths Booster books, ₹299 each")]
 x = M
@@ -190,7 +190,7 @@ for f, cap in cards:
 cy0, ch = 40, 108
 c.setFillColor(WASH); c.setStrokeColor(PINK); c.setLineWidth(1.4); c.roundRect(M, cy0, W - 2 * M, ch, 10, stroke=1, fill=1)
 c.setFillColor(INK); c.setFont("Sans-Bold", 12.5); c.drawString(M + 14, cy0 + ch - 22, "Join a batch or ask anything")
-c.setFillColor(BLUE); c.setFont("Sans-Bold", 16); c.drawString(M + 14, cy0 + ch - 44, "Call or WhatsApp: 60095 26445")
+c.setFillColor(BLUE); c.setFont("Sans-Bold", 14); c.drawString(M + 14, cy0 + ch - 44, "WhatsApp 98637 94212  ·  Call 60095 26445")
 c.setFillColor(INK); c.setFont("Sans", 9)
 c.drawString(M + 14, cy0 + ch - 62, "Centres: Itanagar (above V-Mart), Naharlagun (Lagun Bridge), Nirjuli, Pasighat and online")
 c.drawString(M + 14, cy0 + ch - 76, "Telegram: t.me/Northeast_PSC    YouTube: NORTHEAST PSC")

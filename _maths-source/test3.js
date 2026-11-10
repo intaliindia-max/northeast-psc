@@ -23,7 +23,7 @@ r = run("#fractions", null); console.log("TOPIC fractions", bad(r.out), (r.out.m
 r = run("#geometry", null); console.log("TOPIC geometry (no PYQ yet)", bad(r.out), (r.out.match(/class="qcard"/g) || []).length, "cards");
 let problems = 0, screens = 0;
 for (const t of DATA.topics) {
-  const sets = [["quiz", 10, t.qs]]; if (t.pyq) sets.push(["pyq", Math.ceil(t.pyq.length / 10), t.pyq]);
+  const sets = [["quiz", Math.ceil(t.qs.length / 10), t.qs]]; if (t.pyq) sets.push(["pyq", Math.ceil(t.pyq.length / 10), t.pyq]);
   for (const [kind, n, src] of sets) for (let k = 1; k <= n; k++) {
     const id = `${t.slug}-${kind}-${k}`, qs = src.slice((k - 1) * 10, k * 10);
     const answers = qs.map((q, j) => j % 4 === 3 ? null : (j % 3 === 0 ? (q.k + 1) % 4 : q.k));
@@ -31,7 +31,7 @@ for (const t of DATA.topics) {
     if (bad(rr.out).length || (rr.out.match(/class="ritem"/g) || []).length !== qs.length) { problems++; console.log("RESULT PROBLEM", id, bad(rr.out)); }
     for (let j = 0; j < qs.length; j++) {
       const rq = run("#" + id, { progress: {}, active: { [id]: { answers: new Array(qs.length).fill(null), index: j, elapsed: 0 } } }); screens++;
-      if (bad(rq.out).length || (rq.out.match(/class="opt"/g) || []).length !== 4) { problems++; console.log("QUIZ PROBLEM", id, j, bad(rq.out)); }
+      if (bad(rq.out).length || (rq.out.match(/class="opt"/g) || []).length !== qs[j].o.length) { problems++; console.log("QUIZ PROBLEM", id, j, bad(rq.out)); }
     }
   }
 }
