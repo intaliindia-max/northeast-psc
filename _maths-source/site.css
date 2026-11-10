@@ -236,6 +236,8 @@ p.sday + .days { margin-top: 8px; }
 .fld { display: block; margin: 10px 0 4px; font-weight: 700; }
 .sendrep input { box-sizing: border-box; width: 100%; min-height: 48px; padding: 10px 12px; border: 1.5px solid var(--drop-line); border-radius: 10px; background: var(--sheet); color: var(--ink); font: inherit; font-size: 17px; }
 .sendrep input[aria-invalid="true"] { border-color: var(--bad); }
+.leadcard { margin: 16px 0; }
+.leadcard .leadnote { margin: 10px 0 0; font-size: 13px; }
 .ferr { margin: 6px 0 0; color: var(--bad); font-weight: 700; }
 .sendrep .btn { margin-top: 12px; }
 .fq { margin: 18px 0 0; padding: 0; border: 0; }

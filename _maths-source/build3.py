@@ -147,6 +147,9 @@ SITE["moreClasses"] = [{"url": "https://www.youtube.com/watch?v=d6wZAcfvqlU", "t
   "topicsText": "Percentage, Profit & Loss, Discount, Ratio & Proportion, Mixture, Time & Work, Simple & Compound Interest, Time, Speed & Distance",
   "short": "PYQ class on Percentage to Time, Speed & Distance",
   "topics": ["percentage", "profit-loss", "ratio-proportion", "time-work", "simple-interest", "compound-interest", "time-speed-distance"]}]
+# Google Form that collects students' name and WhatsApp number into the owner's Google Sheet
+SITE["form"] = {"action": "https://docs.google.com/forms/d/e/1FAIpQLSeq7QBSw76Y4jFaz5go3cYjIgOWQ3JLRLqzS4uhOkYwdQ1NnA/formResponse",
+                "name": "entry.110292301", "phone": "entry.573875926"}
 SITE["marathonLead"] = "Free full-day revision classes on YouTube covering Maths, Reasoning, GK and English. Tap a day to watch."
 SITE["marathons"] = [
  {"title": "APSSB CHSL 2026 Maha Marathon", "meta": "5 days, 30 hours, September 2026",

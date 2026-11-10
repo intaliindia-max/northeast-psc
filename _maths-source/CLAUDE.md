@@ -40,5 +40,5 @@ The site exists to make students practise, keep them coming back, and turn that 
 - The page adds the missing "/" at the end of its own address before anything loads, so photos and Reasoning figures (`images/r/`) load even if the host drops the trailing slash. Keep that first `<script>` in the page head.
 
 ## Open items from the owner
-- Google Form for students' name and WhatsApp number: not connected yet. It needs the form's pre-filled link.
+- Google Form for students' name and WhatsApp number: connected (Nov 2026). `SITE["form"]` in `build3.py` holds the form's formResponse URL and the entry IDs for Name and WhatsApp number. After a student's first finished quiz, the result screen shows a one-time card (`leadCard()` in `app3.js`) that sends the details to the form, which fills the owner's Google Sheet. It is not shown again once filled.
 - Nirjuli address spelling "Chart & Chess" is still to be confirmed.

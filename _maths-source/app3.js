@@ -31,7 +31,7 @@
     return Array.isArray(arr) && arr.length >= 1 && arr.length <= 100 && arr.every(function (x) { return x === null || (Number.isInteger(x) && x >= 0 && x < 5); });
   }
   function loadStore() {
-    const s = { progress: {}, active: {}, mockRefs: {}, mockCount: 0, mistakes: {}, revRefs: {}, revCount: 0, qotd: { days: {}, streak: 0, best: 0, last: "" }, profile: { name: "" }, milestones: {}, pending: "" };
+    const s = { progress: {}, active: {}, mockRefs: {}, mockCount: 0, mistakes: {}, revRefs: {}, revCount: 0, qotd: { days: {}, streak: 0, best: 0, last: "" }, profile: { name: "" }, milestones: {}, pending: "", lead: null };
     try {
       const raw = JSON.parse(localStorage.getItem(KEY));
       if (raw && typeof raw === "object") {
@@ -57,6 +57,7 @@
         s.mistakesReady = true;
       }
       if (raw && raw.profile && typeof raw.profile.name === "string") s.profile.name = raw.profile.name.slice(0, 60);
+      if (raw && raw.lead && typeof raw.lead.name === "string" && /^[6-9]\d{9}$/.test(raw.lead.phone || "")) s.lead = { name: raw.lead.name.slice(0, 60), phone: raw.lead.phone, at: Number(raw.lead.at) || 0 };
       if (raw && raw.milestones && typeof raw.milestones === "object") {
         Object.keys(raw.milestones).forEach(function (k) { if (/^(q5|q20|mock1|streak3)$/.test(k) && Number.isFinite(raw.milestones[k])) s.milestones[k] = raw.milestones[k]; });
       }
@@ -644,6 +645,41 @@
       '<div class="btnrow"><a class="btn primary block" ' + ext(waLink(msg)) + '>Claim this offer on WhatsApp</a></div></section>';
   }
 
+  /* ----- student details for batch and test updates (sent to the Google Form) ----- */
+  let leadThanks = false;
+  function leadCard() {
+    if (leadThanks) { leadThanks = false; return '<section class="sheet sendrep leadcard" aria-live="polite"><h2 class="setname">Thank you!</h2><p class="note">Northeast PSC will send you new quizzes, test and batch updates on WhatsApp.</p></section>'; }
+    if (store.lead) return "";
+    return '<section class="sheet sendrep leadcard" aria-labelledby="leadh"><h2 class="setname" id="leadh">Get new quizzes and batch updates on WhatsApp</h2>' +
+      '<p class="note">Leave your name and WhatsApp number once. Amarjeet Sir&#39;s team will send you new practice sets, free class links and batch offers.</p>' +
+      '<label class="fld" for="ldname">Your name</label><input id="ldname" type="text" autocomplete="name" maxlength="60" value="' + attr(store.profile.name || "") + '">' +
+      '<label class="fld" for="ldphone">WhatsApp number</label><input id="ldphone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="10 digits">' +
+      '<p id="lderr" class="ferr" role="alert" hidden></p>' +
+      '<button type="button" class="btn primary block" data-action="savelead">Send my details</button>' +
+      '<p class="note leadnote">We use your number only for Northeast PSC updates.</p></section>';
+  }
+  function saveLead() {
+    const ni = document.getElementById("ldname"), pi = document.getElementById("ldphone"), er = document.getElementById("lderr");
+    const name = (ni ? ni.value : "").trim().slice(0, 60), phone = (pi ? pi.value : "").replace(/\D/g, "").replace(/^(91|0)(?=\d{10}$)/, "");
+    [ni, pi].forEach(function (el) { if (el) el.removeAttribute("aria-invalid"); }); if (er) er.hidden = true;
+    const fail = function (el, msg) { if (er) { er.textContent = msg; er.hidden = false; } if (el) { el.setAttribute("aria-invalid", "true"); el.focus(); } };
+    if (name.length < 2) return fail(ni, "Please enter your name.");
+    if (!/^[6-9]\d{9}$/.test(phone)) return fail(pi, "Please enter a 10-digit WhatsApp number starting with 6, 7, 8 or 9.");
+    store.lead = { name: name, phone: phone, at: Date.now() };
+    if (!store.profile.name) store.profile.name = name;
+    save(); sendLead(store.lead);
+    leadThanks = true; render();
+    const c = document.querySelector(".leadcard"); if (c && c.scrollIntoView) c.scrollIntoView({ block: "center" });
+  }
+  function sendLead(lead) {
+    const f = SITE.form;
+    if (!f || !f.action || !f.name || !f.phone) return;
+    try {
+      const body = new FormData(); body.append(f.name, lead.name); body.append(f.phone, lead.phone);
+      fetch(f.action, { method: "POST", mode: "no-cors", body: body }).catch(function () {});
+    } catch (e) { /* offline: the details stay on this phone */ }
+  }
+
   /* ----- report to Sir on WhatsApp ----- */
   function reportText(name) {
     const rows = topicStats();
@@ -837,7 +873,7 @@
       '<p class="tally">' + c + ' correct, ' + w + ' wrong, ' + s + ' not attempted. Time taken: ' + duration(p.lastTime) + '. Best score: ' + p.best + '/' + qs.length + '.</p>' +
       '<div class="btnrow"><a class="btn primary block" href="' + nx.href + '">' + nx.label + '</a><button type="button" class="btn block share" data-action="share">Share my score on WhatsApp</button><button type="button" class="btn block" data-action="retake">' + (q.kind === "mock" ? "Retake this mock test" : "Retake this quiz") + '</button><a class="btn block" href="#report">See my report</a></div>' +
       (q.kind === "mock" ? mockBreakdown(q, p) : "") +
-      '<a class="backlink" href="#' + t.slug + '">Back to ' + t.name + '</a></section>' + adBlock(q) +
+      '<a class="backlink" href="#' + t.slug + '">Back to ' + t.name + '</a></section>' + leadCard() + adBlock(q) +
       '<section class="sheet review" aria-labelledby="ktitle"><h2 id="ktitle">Answer key with solutions</h2>' +
       qs.map(function (x, j) { return reviewItem(t, x, j, p.lastAnswers[j]); }).join("") + '</section>';
   }
@@ -994,7 +1030,7 @@
         openDialog("Clear your progress?", "This removes all your scores and unfinished quizzes from this phone.", "Clear progress", "Keep progress", "confirm-reset");
         break;
       case "confirm-reset":
-        closeDialog(true); store = { progress: {}, active: {}, mockRefs: {}, mockCount: 0, mistakes: {}, mistakesReady: true, revRefs: {}, revCount: 0, qotd: { days: {}, streak: 0, best: 0, last: "" }, profile: { name: store.profile.name }, milestones: {}, pending: "" }; runningId = null; save(); render();
+        closeDialog(true); store = { progress: {}, active: {}, mockRefs: {}, mockCount: 0, mistakes: {}, mistakesReady: true, revRefs: {}, revCount: 0, qotd: { days: {}, streak: 0, best: 0, last: "" }, profile: { name: store.profile.name }, milestones: {}, pending: "", lead: store.lead }; runningId = null; save(); render();
         break;
       case "cancel": closeDialog(); break;
       case "zoom": openZoom(el.getAttribute("data-key")); break;
@@ -1003,6 +1039,7 @@
       case "qotd": answerQotd(Number(el.getAttribute("data-i"))); break;
       case "shareqotd": shareQotd(); break;
       case "sendreport": sendReport(); break;
+      case "savelead": saveLead(); break;
       case "finder": fnd[el.getAttribute("data-k")] = el.getAttribute("data-v"); render(); break;
       case "finderreset": fnd = {}; render(); break;
       case "subject": subjectTab = el.getAttribute("data-s") === "reasoning" ? "reasoning" : "maths"; render(); break;
