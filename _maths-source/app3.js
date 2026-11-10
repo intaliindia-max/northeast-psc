@@ -5,6 +5,10 @@
   const BY_SLUG = {};
   TOPICS.forEach(function (t, i) { t.index = i; t.pyq = t.pyq || []; BY_SLUG[t.slug] = t; });
   const LETTERS = ["A", "B", "C", "D", "E"];
+  /* Options can be shown in a different order from the source ("d": display position -> source index).
+     Saved answers and the key "k" always use the source index, so old progress stays valid. */
+  function ordOf(x) { return Array.isArray(x.d) && x.d.length === x.o.length ? x.d : x.o.map(function (_, i) { return i; }); }
+  function letterOf(x, i) { const p = ordOf(x).indexOf(i); return LETTERS[p < 0 ? i : p]; }
   const KEY = "apssb-basic-maths-v1";
   const QPER = 10, NBOOK = 10;
   const app = document.getElementById("app");
@@ -544,11 +548,12 @@
     const key = todayKey(), r = qotdRef(key), t = TOPICS[r[0]], x = listOf(t, r[1])[r[2]];
     const ans = store.qotd.days[key], done = ans !== undefined, streak = liveStreak();
     const d = new Date();
-    const opts = x.o.map(function (o, i) {
+    const opts = ordOf(x).map(function (i, pos) {
+      const o = x.o[i];
       const cls = !done ? "" : i === x.k ? " right" : i === ans ? " wrong" : "";
-      return '<button type="button" class="qopt' + cls + '" data-action="qotd" data-i="' + i + '"' + (done ? " disabled" : "") + '><span class="ql">' + LETTERS[i] + '</span><span>' + o + '</span></button>';
+      return '<button type="button" class="qopt' + cls + '" data-action="qotd" data-i="' + i + '"' + (done ? " disabled" : "") + '><span class="ql">' + LETTERS[pos] + '</span><span>' + o + '</span></button>';
     }).join("");
-    const result = !done ? "" : '<div class="qres ' + (ans === x.k ? "ok" : "no") + '"><strong>' + (ans === x.k ? "Correct!" : "Not this time. The answer is " + LETTERS[x.k] + ".") + '</strong>' +
+    const result = !done ? "" : '<div class="qres ' + (ans === x.k ? "ok" : "no") + '"><strong>' + (ans === x.k ? "Correct!" : "Not this time. The answer is " + letterOf(x, x.k) + ".") + '</strong>' +
       '<p>' + x.s.join("</p><p>") + '</p></div>' +
       '<p class="streakline">' + (streak > 1 ? "You are on a " + streak + "-day streak." : "Your streak has started.") + ' Come back tomorrow for a new question.</p>' +
       '<div class="btnrow"><button type="button" class="btn block share" data-action="shareqotd">Share on WhatsApp</button><a class="btn primary block" href="#' + t.slug + '">Practise ' + t.name + '</a></div>' +
@@ -820,9 +825,10 @@
       const done = a.answers[j] !== null;
       cells += '<button type="button" class="cell' + (done ? " answered" : "") + (j === i ? " current" : "") + '" data-action="goto" data-i="' + j + '" aria-label="Question ' + (j + 1) + ', ' + (done ? "answered" : "not answered") + '"' + (j === i ? ' aria-current="step"' : "") + '>' + (j + 1) + '</button>';
     }
-    const opts = x.o.map(function (o, j) {
+    const opts = ordOf(x).map(function (j, pos) {
+      const o = x.o[j];
       const on = chosen === j;
-      return '<button type="button" class="opt" role="radio" aria-checked="' + on + '" data-action="pick" data-i="' + j + '" aria-label="Option ' + LETTERS[j] + ': ' + attr(strip(o)) + '"><span class="bubble' + (on && popIndex === j ? " pop" : "") + '" aria-hidden="true">' + LETTERS[j] + '</span><span class="otext" aria-hidden="true">' + o + '</span></button>';
+      return '<button type="button" class="opt" role="radio" aria-checked="' + on + '" data-action="pick" data-i="' + j + '" aria-label="Option ' + LETTERS[pos] + ': ' + attr(strip(o)) + '"><span class="bubble' + (on && popIndex === j ? " pop" : "") + '" aria-hidden="true">' + LETTERS[pos] + '</span><span class="otext" aria-hidden="true">' + o + '</span></button>';
     }).join("");
     return '<p class="crumb"><a href="#' + q.t.slug + '">' + q.t.name + '</a> <span aria-hidden="true">/</span> ' + q.label + '</p>' +
       '<nav class="palette" aria-label="Jump to a question">' + cells + '</nav>' +
@@ -832,7 +838,7 @@
       '<h2 class="qtext" id="qhead" tabindex="-1"><span class="qno">Q' + (i + 1) + '.</span> ' + x.t + '</h2>' +
       (x.img && x.ip !== "before" ? fig(x.img) : "") +
       '<div class="options" role="radiogroup" aria-labelledby="qhead">' + opts + '</div>' +
-      '<p class="hint" aria-live="polite">' + (chosen === null ? "" : "Marked " + LETTERS[chosen] + ". Tap it again to clear.") + '</p></section>' +
+      '<p class="hint" aria-live="polite">' + (chosen === null ? "" : "Marked " + letterOf(x, chosen) + ". Tap it again to clear.") + '</p></section>' +
       '<div class="bottombar"><div class="bottombar-in"><button type="button" class="btn" data-action="prev"' + (i === 0 ? " disabled" : "") + '>Previous</button>' +
       '<button type="button" class="btn primary" data-action="' + (last ? "submit" : "next") + '">' + (last ? "Submit quiz" : "Next question") + '</button></div></div>';
   }
@@ -841,13 +847,14 @@
     const skip = x === null, ok = x === q.k;
     const status = skip ? '<span class="status skip">Not attempted</span>' : ok ? '<span class="status ok">✓ Correct</span>' : '<span class="status no">✗ Wrong</span>';
     const long = q.o.some(function (o) { return strip(o).length > 22; });
-    const opts = q.o.map(function (o, m) {
+    const opts = ordOf(q).map(function (m, pos) {
+      const o = q.o[m];
       let cls = "ropt", tag = "", note = "";
       if (m === q.k) { cls += " correct"; tag = '<span class="tag" aria-hidden="true">✓</span>'; note = m === x ? " (your answer, correct)" : " (correct answer)"; }
       else if (m === x) { cls += " wrong"; tag = '<span class="tag" aria-hidden="true">✗</span>'; note = " (your answer)"; }
-      return '<div class="' + cls + '"><span class="bubble sm" aria-hidden="true">' + LETTERS[m] + '</span><span class="rtext"><span class="sr">Option ' + LETTERS[m] + ': </span>' + o + '<span class="sr">' + note + '</span></span>' + tag + '</div>';
+      return '<div class="' + cls + '"><span class="bubble sm" aria-hidden="true">' + LETTERS[pos] + '</span><span class="rtext"><span class="sr">Option ' + LETTERS[pos] + ': </span>' + o + '<span class="sr">' + note + '</span></span>' + tag + '</div>';
     }).join("");
-    const line = skip ? "You did not attempt this. Correct answer: " + LETTERS[q.k] + "." : ok ? "You marked " + LETTERS[q.k] + "." : "You marked " + LETTERS[x] + ". Correct answer: " + LETTERS[q.k] + ".";
+    const line = skip ? "You did not attempt this. Correct answer: " + letterOf(q, q.k) + "." : ok ? "You marked " + letterOf(q, q.k) + "." : "You marked " + letterOf(q, x) + ". Correct answer: " + letterOf(q, q.k) + ".";
     const sec = q.c !== null && q.c !== undefined ? (q._t || t).sections[q.c] : null;
     const src = (q._t ? q._t.name + ", " : "") + (q.b ? "Book Q. " + q.b : (q.y || q.tg || ""));
     return '<article class="ritem"><div class="rhead"><h3 class="rtopic"><span class="qno">Q' + (j + 1) + '.</span> <span class="bookq">' + src + '</span></h3>' + status + '</div>' +

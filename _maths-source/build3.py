@@ -150,6 +150,66 @@ SITE["moreClasses"] = [{"url": "https://www.youtube.com/watch?v=d6wZAcfvqlU", "t
 # Google Form that collects students' name and WhatsApp number into the owner's Google Sheet
 SITE["form"] = {"action": "https://docs.google.com/forms/d/e/1FAIpQLSeq7QBSw76Y4jFaz5go3cYjIgOWQ3JLRLqzS4uhOkYwdQ1NnA/formResponse",
                 "name": "entry.110292301", "phone": "entry.573875926"}
+
+# ---------- spread the correct answers across A, B, C and D ----------
+# Many book quizzes had the same letter correct 6 to 10 times out of 10. For those quizzes each
+# question gets a display order "d" (display position -> source option index). The source order and
+# the key "k" never change, so answers already saved on students' phones stay valid.
+import hashlib as _bh, random as _brandom
+_B_FIXED = _re.compile(r"none of|^\W*none\W*$|all of|all the above|cannot be|can\W?t be|data inadequate|not possible|no such|insufficient|any of the", _re.I)
+_B_REFOPT = _re.compile(r"\bboth\b|\beither\b|\bneither\b|\boption|\bonly\b|\balone\b|\bstatement|\bconclusion|\bfollows?\b|\btrue\b|\bfalse\b|\babove\b|\bA and B\b|\b[A-D] (?:and|or|&amp;) [A-D]\b", _re.I)
+_B_REFTXT = _re.compile(r"\(\s*[a-eA-E]\s*\)|\boptions?\s*\(?[A-Ea-e1-5]\)?(?![A-Za-z])|\balternatives?\b|answer figure|\bfigure\s*\(?[a-dA-D1-4]\)?(?![A-Za-z0-9])", _re.I)
+_B_BARE = _re.compile(r"\W*(?:fig(?:ure)?\.?\s*)?\(?[A-Ea-e1-5]\)?\W*$")
+def _b_plain(x): return _re.sub(r"<[^>]+>", "", _html.unescape(str(x)))
+def _b_slots(q):
+    """Display slots the correct option may move to; None when the question must stay as it is."""
+    o = q["o"]
+    if len(o) != 4 or not (0 <= q["k"] < 4): return None
+    plain = [_b_plain(x) for x in o]
+    if any("<img" in x or "<svg" in x for x in o): return None
+    if all(_B_BARE.match(x) for x in plain) and (q.get("img") or q.get("pi") or all(_re.match(r"\W*\(?[A-Ea-e]\)?\W*$", x) for x in plain)): return None
+    if any(_B_REFOPT.search(x) for x in plain): return None
+    if _B_REFTXT.search(_b_plain(q["t"])) or any(_B_REFTXT.search(_b_plain(x)) for x in q["s"]): return None
+    fixed = [i for i, x in enumerate(plain) if _B_FIXED.search(x)]
+    if q["k"] in fixed: return None
+    free = [i for i in range(4) if i not in fixed]
+    return free if len(free) >= 2 else None
+def _b_run(keys):
+    best = cur = 1
+    for a, b in zip(keys, keys[1:]):
+        cur = cur + 1 if a == b else 1; best = max(best, cur)
+    return best
+def _balance_answers(topics, per=10):
+    for t in topics:
+        for kind in ("qs", "pyq"):
+            lst = t.get(kind) or []
+            for q in lst: q.pop("d", None)
+            for start in range(0, len(lst), per):
+                chunk = lst[start:start + per]
+                if len(chunk) < 4: continue
+                cnt = [sum(1 for q in chunk if q["k"] == i) for i in range(4)]
+                if max(cnt) <= 3 and (len(chunk) < 8 or min(cnt) >= 1): continue      # already well spread
+                slots = [_b_slots(q) for q in chunk]
+                seed = int(_bh.md5((t["slug"] + kind + str(start) + chunk[0]["t"]).encode("utf-8")).hexdigest()[:12], 16)
+                best = None
+                for attempt in range(40):
+                    rng = _brandom.Random(seed + attempt)
+                    keys = [q["k"] for q in chunk]
+                    have = [0, 0, 0, 0]
+                    for q, sl in zip(chunk, slots):
+                        if sl is None: have[q["k"]] += 1
+                    order = [i for i, sl in enumerate(slots) if sl is not None]; rng.shuffle(order)
+                    for i in order:
+                        low = min(have[s] for s in slots[i])
+                        pick = rng.choice([s for s in slots[i] if have[s] == low])
+                        keys[i] = pick; have[pick] += 1
+                    score = (max(have) - min(have)) * 10 + _b_run(keys) * 3 + sum(1 for a, b in zip(keys, keys[1:]) if a == b)
+                    if best is None or score < best[0]: best = (score, keys)
+                for q, new in zip(chunk, best[1]):
+                    if new != q["k"]:
+                        d = [0, 1, 2, 3]; d[new], d[q["k"]] = q["k"], new     # swap the correct option with the one in its new place
+                        q["d"] = d
+
 SITE["marathonLead"] = "Free full-day revision classes on YouTube covering Maths, Reasoning, GK and English. Tap a day to watch."
 SITE["marathons"] = [
  {"title": "APSSB CHSL 2026 Maha Marathon", "meta": "5 days, 30 hours, September 2026",
@@ -242,6 +302,7 @@ def build(mode):
         _w, _h = Image.open("rimg/" + _k + ".png").size
         _src = ("data:image/png;base64," + base64.b64encode(open("rimg/" + _k + ".png", "rb").read()).decode()) if mode == "inline" else "images/r/" + _k + ".png"
         imgs[_k] = {"src": _src, "alt": _alt, "w": round(_w / 2), "h": round(_h / 2)}
+    _balance_answers(topics)
     data = json.dumps({"topics": topics, "images": imgs, "site": site}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     tpl = open("template3.html").read()
     head, rest = tpl.split("<script>\n(function () {", 1)
