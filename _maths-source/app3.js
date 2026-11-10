@@ -658,6 +658,15 @@
       '<button type="button" class="btn primary block" data-action="savelead">Send my details</button>' +
       '<p class="note leadnote">We use your number only for Northeast PSC updates.</p></section>';
   }
+  function leadGate() {
+    return '<section class="sheet sendrep leadcard leadgate" aria-labelledby="pagetitle"><h1 id="pagetitle" tabindex="-1">Before your first quiz</h1>' +
+      '<p class="note">Tell us who you are. We ask only once on this phone.</p>' +
+      '<label class="fld" for="ldname">Your name</label><input id="ldname" type="text" autocomplete="name" maxlength="60" value="' + attr(store.profile.name || "") + '">' +
+      '<label class="fld" for="ldphone">WhatsApp number</label><input id="ldphone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="10 digits">' +
+      '<p id="lderr" class="ferr" role="alert" hidden></p>' +
+      '<button type="button" class="btn primary block" data-action="savelead">Start the quiz</button>' +
+      '<p class="note leadnote">We use your number only to send Maths &amp; Reasoning batch and test updates from Northeast PSC.</p></section>';
+  }
   function saveLead() {
     const ni = document.getElementById("ldname"), pi = document.getElementById("ldphone"), er = document.getElementById("lderr");
     const name = (ni ? ni.value : "").trim().slice(0, 60), phone = (pi ? pi.value : "").replace(/\D/g, "").replace(/^(91|0)(?=\d{10}$)/, "");
@@ -668,6 +677,7 @@
     store.lead = { name: name, phone: phone, at: Date.now() };
     if (!store.profile.name) store.profile.name = name;
     save(); sendLead(store.lead);
+    if (view.screen === "quiz" && view.mode === "lead") { route(); return; }
     leadThanks = true; render();
     const c = document.querySelector(".leadcard"); if (c && c.scrollIntoView) c.scrollIntoView({ block: "center" });
   }
@@ -894,7 +904,7 @@
   function render() {
     let html;
     if (view.screen === "topic") html = topicView(view.topic);
-    else if (view.screen === "quiz") html = view.mode === "result" ? resultView(view.q) : quizView(view.q);
+    else if (view.screen === "quiz") html = view.mode === "result" ? resultView(view.q) : view.mode === "lead" ? leadGate() : quizView(view.q);
     else if (view.screen === "practice") html = practiceView();
     else if (view.screen === "mock") html = mockView();
     else if (view.screen === "report") html = reportView();
@@ -902,7 +912,7 @@
     else if (view.screen === "finder") html = finderView();
     else if (view.screen === "mistakes") html = mistakesView();
     else html = landingView();
-    document.body.setAttribute("data-screen", view.screen === "quiz" && view.mode !== "result" ? "quiz" : view.screen);
+    document.body.setAttribute("data-screen", view.screen === "quiz" && view.mode === "lead" ? "lead" : view.screen === "quiz" && view.mode !== "result" ? "quiz" : view.screen);
     app.innerHTML = html;
     updateNav();
     tick();
@@ -951,7 +961,8 @@
     if (view.screen === "quiz") {
       const q = view.q;
       fits(q.id, q.qs.length);
-      if (store.active[q.id]) { store.active[q.id].resumedAt = Date.now(); runningId = q.id; view.mode = "quiz"; save(); }
+      if (!store.lead && (store.active[q.id] || !store.progress[q.id])) view.mode = "lead";
+      else if (store.active[q.id]) { store.active[q.id].resumedAt = Date.now(); runningId = q.id; view.mode = "quiz"; save(); }
       else if (store.progress[q.id]) view.mode = "result";
       else { startAttempt(q); view.mode = "quiz"; }
     }
@@ -997,6 +1008,7 @@
     lastFocus = null;
   }
 
+  document.addEventListener("keydown", function (e) { if (e.key === "Enter" && e.target && (e.target.id === "ldname" || e.target.id === "ldphone")) { e.preventDefault(); saveLead(); } });
   document.addEventListener("click", function (e) {
     if (e.target.classList && e.target.classList.contains("overlay")) { closeDialog(); return; }
     const el = e.target.closest ? e.target.closest("[data-action]") : null;

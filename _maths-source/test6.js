@@ -1,3 +1,5 @@
+// Tests run as a student who has already filled the one-time name and WhatsApp screen.
+const withLead = function (v) { const o = v ? JSON.parse(v) : {}; if (!o.lead) o.lead = { name: "Test", phone: "9876543210", at: 1 }; return JSON.stringify(o); };
 const fs = require("fs");
 function load(p) { const h = fs.readFileSync(p, "utf8"); return { h, dataTxt: h.split('<script type="application/json" id="quiz-data">')[1].split("</script>")[0], script: h.split("<script>\n")[1].split("</script>")[0] }; }
 let saved = null;
@@ -7,7 +9,7 @@ function boot(P, hash) {
     addEventListener(t, f) { docH[t] = f; }, body: { setAttribute() {}, insertAdjacentHTML() {} }, querySelector() { return null; }, querySelectorAll() { return []; }, contains() { return false; }, activeElement: null };
   global.window = { scrollTo() {}, addEventListener(t, f) { winH[t] = f; }, open() {} };
   global.location = { hash, href: "https://example.org/maths/#" + hash, protocol: "https:" }; global.setInterval = () => 0;
-  global.localStorage = { getItem() { return saved; }, setItem(k, v) { saved = v; } };
+  global.localStorage = { getItem() { return withLead(saved); }, setItem(k, v) { saved = v; } };
   eval(P.script);
   const click = (action, attrs) => { const el = { getAttribute(a) { return a === "data-action" ? action : (attrs || {})[a] ?? null; } };
     docH.click({ target: { classList: { contains() { return false; } }, closest(s) { return s.includes("data-action") ? el : null; } }, preventDefault() {} }); };

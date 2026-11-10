@@ -1,3 +1,5 @@
+// Tests run as a student who has already filled the one-time name and WhatsApp screen.
+const withLead = function (v) { const o = v ? JSON.parse(v) : {}; if (!o.lead) o.lead = { name: "Test", phone: "9876543210", at: 1 }; return JSON.stringify(o); };
 const fs = require("fs");
 const html = fs.readFileSync("dist/apssb-basic-maths-practice.html", "utf8");
 const dataTxt = html.split('<script type="application/json" id="quiz-data">')[1].split("</script>")[0];
@@ -12,7 +14,7 @@ function run(hash, seed) {
     addEventListener() {}, body: { setAttribute(k, v) { this[k] = v; }, insertAdjacentHTML() {} }, querySelector() { return null; }, contains() { return false; }, activeElement: null };
   global.window = { scrollTo() {}, addEventListener() {} };
   global.location = { hash: hash };
-  global.localStorage = { getItem(k) { return k in store ? store[k] : null; }, setItem(k, v) { store[k] = v; } };
+  global.localStorage = { getItem(k) { return withLead(k in store ? store[k] : null); }, setItem(k, v) { store[k] = v; } };
   global.setInterval = () => 0;
   eval(script);
   return { out: app.innerHTML, timer, store, screen: global.document.body["data-screen"] };

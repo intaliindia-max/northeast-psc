@@ -4,7 +4,7 @@ This folder builds the website in `../maths-by-amarjeet-sir/`, live at https://n
 The owner is Amarjeet Sir, Maths and Reasoning faculty at Northeast PSC, Arunachal Pradesh. He writes instructions in Hindi or Hinglish. Reply to him in simple Roman Hinglish, short and phone-friendly.
 
 ## Purpose
-The site exists to make students practise, keep them coming back, and turn that into course enquiries on WhatsApp. Keep practice free and open (no forms before a student has practised), and keep course offers relevant and polite (no repeated popups).
+The site exists to make students practise, keep them coming back, and turn that into course enquiries on WhatsApp. Keep practice free (the only form is the one-time name and WhatsApp number screen before a student's first quiz, added in Nov 2026 at the request of Northeast PSC co-founder Ali Sir so that Maths & Reasoning users can be counted separately from CSAT users), and keep course offers relevant and polite (no repeated popups).
 
 ## Golden rules
 - Only change files inside `_maths-source/` and `maths-by-amarjeet-sir/`. Never touch anything else in this repository.
@@ -40,5 +40,5 @@ The site exists to make students practise, keep them coming back, and turn that 
 - The page adds the missing "/" at the end of its own address before anything loads, so photos and Reasoning figures (`images/r/`) load even if the host drops the trailing slash. Keep that first `<script>` in the page head.
 
 ## Open items from the owner
-- Google Form for students' name and WhatsApp number: connected (Nov 2026). `SITE["form"]` in `build3.py` holds the form's formResponse URL and the entry IDs for Name and WhatsApp number. After a student's first finished quiz, the result screen shows a one-time card (`leadCard()` in `app3.js`) that sends the details to the form, which fills the owner's Google Sheet. It is not shown again once filled.
+- Google Form for students' name and WhatsApp number: connected (Nov 2026). `SITE["form"]` in `build3.py` holds the form's formResponse URL and the entry IDs for Name and WhatsApp number. Before a student's first quiz or mock test, `leadGate()` in `app3.js` asks for the details once and sends them to the form, which fills the Google Sheet. This is separate from the CSAT site's form on purpose: a student who filled details on the CSAT site is asked again here. Question of the day and all other pages stay open without the form.
 - Nirjuli address spelling "Chart & Chess" is still to be confirmed.
