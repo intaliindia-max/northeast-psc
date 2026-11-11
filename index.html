@@ -141,7 +141,7 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:va
 @media (max-width:980px){.batch-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:620px){.batch-grid{grid-template-columns:1fr}}
 .batch{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg);display:flex;flex-direction:column}
-.banner{position:relative;padding:18px;background:var(--band);color:var(--on-band);min-height:118px;display:grid;align-content:end;gap:4px;overflow:hidden}
+.banner{position:relative;padding:48px 18px 18px;background:var(--band);color:var(--on-band);min-height:118px;display:grid;align-content:end;gap:4px;overflow:hidden}
 .banner::before{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;border:18px solid rgba(255,255,255,.08)}
 .banner .exam-tag{position:absolute;left:18px;top:16px;font:700 .7rem var(--mono);letter-spacing:.08em;background:var(--gold);color:#0a1f4a;padding:4px 8px;border-radius:5px}
 .banner h3{font:800 1.15rem/1.25 var(--display);position:relative}
@@ -230,6 +230,11 @@ input,select{font:400 1rem var(--body);padding:.68em .8em;border:1px solid var(-
 .x{background:var(--raise);border:1px solid var(--line);border-radius:8px;width:36px;height:36px;cursor:pointer;color:var(--ink);font-size:1.1rem;flex:none}
 .sheet ul{margin:14px 0;padding-left:1.1em;color:var(--muted)}
 .sheet .meta{margin-top:14px}
+.mposter img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);margin-top:14px}
+.mdesc{color:var(--muted);font-size:.93rem;margin:0 0 14px}
+.mdesc:empty,.sheet ul:empty{display:none}
+.meta .was{color:var(--muted);font-weight:500}
+.meta dd strong{font-weight:800}
 
 /* footer */
 footer{background:#071633;color:#c8d3ea;font-size:.92rem}
@@ -363,7 +368,7 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
           <div class="exam-top"><span class="exam-ico">FDN</span><div><h3>Foundation</h3><small>For beginners</small></div></div>
           <p>Start from the basics and build towards both APPSC and APSSB, with time to cover the full syllabus.</p>
           <div class="chips"><span class="chip">NCERT base</span><span class="chip">Polity</span><span class="chip">Economy</span><span class="chip">History</span></div>
-          <button class="btn btn-ghost btn-sm" type="button" data-exam="Foundation">View foundation batches</button>
+          <a class="btn btn-ghost btn-sm" href="#contact">Ask about foundation batches</a>
         </article>
       </div>
     </div>
@@ -371,10 +376,9 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
 
   <section class="sec batches-sec" id="batches">
     <div class="wrap">
-      <div class="sec-head"><div><span class="eyebrow">Batches</span><h2>Find your batch</h2><p>Filter by exam, centre and how you want to attend. Tap a batch for details.</p></div><span class="count" id="count" aria-live="polite"></span></div>
+      <div class="sec-head"><div><span class="eyebrow">Batches</span><h2>Find your batch</h2><p>All current Northeast PSC batches in one place. Filter by exam and how you want to attend, then tap a batch for details.</p></div><span class="count" id="count" aria-live="polite"></span></div>
       <div class="filters">
         <div class="filter-row" role="group" aria-label="Exam" id="f-exam-row"></div>
-        <div class="filter-row" role="group" aria-label="Centre" id="f-centre-row"></div>
         <div class="filter-row" role="group" aria-label="Mode" id="f-mode-row"></div>
       </div>
       <div class="batch-grid" id="grid"></div>
@@ -485,11 +489,13 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
 <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
   <div class="sheet">
     <div class="sheet-head"><div><span class="eyebrow" id="mExam"></span><h2 id="mTitle" style="font-size:1.5rem;margin-top:6px"></h2></div><button class="x" type="button" id="mClose" aria-label="Close">✕</button></div>
+    <div class="mposter" id="mPoster"></div>
     <dl class="meta" id="mMeta"></dl>
     <ul id="mList"></ul>
+    <p class="mdesc" id="mDesc"></p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
       <a class="btn btn-solid" id="mWa" href="#" target="_blank" rel="noopener">Enquire on WhatsApp</a>
-      <a class="btn btn-ghost" href="tel:+916009607689">Call 60096 07689</a>
+      <a class="btn btn-ghost" id="mCall" href="tel:+916009607689">Call 60096 07689</a>
     </div>
   </div>
 </div>
@@ -524,17 +530,301 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
     {id:"nirjuli", town:"Nirjuli", name:"Nirjuli", addr:"Nirjuli"},
     {id:"pasighat", town:"Pasighat", name:"Pasighat", addr:"Pasighat, East Siang"}
   ];
-  // Leave start/fee/timing as "" to show "Updating soon".
+  // The batch list below is written by tools/sync_batches.py from the two practice sites. Do not edit it by hand.
+  /*BATCHES:START*/
   var BATCHES=[
-    {exam:"APPSC", title:"APPSC CCE Itanagar Batch", sub:"Prelims + Mains", centre:"ita-vmart", modes:["Offline","Live","Hybrid","Recorded"], start:"", timing:"", fee:"", covers:["General Studies (Prelims)","CSAT","Mains answer writing","Arunachal Pradesh GK","PYQ practice sets"]},
-    {exam:"APPSC", title:"APPSC CCE Naharlagun Batch", sub:"Prelims + Mains", centre:"nlg-lagun", modes:["Offline","Live","Hybrid","Recorded"], start:"", timing:"", fee:"", covers:["General Studies (Prelims)","CSAT","Mains answer writing","Arunachal Pradesh GK","PYQ practice sets"]},
-    {exam:"APPSC", title:"APPSC CCE Online Batch", sub:"Prelims + Mains", centre:"online", modes:["Live","Recorded"], start:"", timing:"", fee:"", covers:["Live classes on app","All recordings","PYQ practice sets","Monthly current affairs"]},
-    {exam:"Foundation", title:"APPSC Foundation Batch", sub:"Beginner to advanced", centre:"ita-vmart", modes:["Offline","Live","Recorded"], start:"", timing:"", fee:"", covers:["Basics of every GS subject","Polity, Economy, History, Geography","Arunachal Pradesh GK","Regular practice tests"]},
-    {exam:"APSSB", title:"APSSB CSL Batch – Itanagar PHQ", sub:"Combined Secondary Level", centre:"ita-phq", modes:["Offline","Hybrid","Recorded"], start:"", timing:"", fee:"", covers:["General Knowledge","English","Reasoning & Maths","Arunachal Pradesh GK","CSL PYQ practice"]},
-    {exam:"APSSB", title:"APSSB CSL Batch – Hathimata", sub:"Combined Secondary Level", centre:"nlg-hathi", modes:["Offline","Hybrid","Recorded"], start:"", timing:"", fee:"", covers:["General Knowledge","English","Reasoning & Maths","Arunachal Pradesh GK","CSL PYQ practice"]},
-    {exam:"APSSB", title:"APSSB CSL Batch – Nirjuli", sub:"Combined Secondary Level", centre:"nirjuli", modes:["Offline","Recorded"], start:"", timing:"", fee:"", covers:["General Knowledge","English","Reasoning & Maths","Arunachal Pradesh GK","CSL PYQ practice"]},
-    {exam:"APSSB", title:"APSSB CSL Batch – Pasighat", sub:"Combined Secondary Level", centre:"pasighat", modes:["Offline","Recorded"], start:"", timing:"", fee:"", covers:["General Knowledge","English","Reasoning & Maths","Arunachal Pradesh GK","CSL PYQ practice"]}
+   {
+    "exam": "APPSC",
+    "title": "CSAT 2026 Exclusive Batch by Amarjeet Sir & Team",
+    "sub": "APPSCCE CSAT 2026",
+    "modes": [
+     "Online"
+    ],
+    "fee": "₹5,000",
+    "was": "₹10,000",
+    "note": "50% discount for the first 100 students",
+    "where": "Online",
+    "covers": [
+     "Online batch",
+     "Maths and Reasoning",
+     "Interpersonal Skill",
+     "Comprehension"
+    ],
+    "desc": "APPSCCE CSAT 2026 exclusive online batch by Amarjeet Sir and team: Maths, Reasoning, Interpersonal Skill and Comprehension. Fee ₹5,000, down from ₹10,000, with 50% discount for the first 100 students.",
+    "img": "batch-posters/poster-csat.jpg",
+    "w": 720,
+    "h": 864,
+    "wa": "916009607689",
+    "msg": "Hello Sir, I want to join the APPSCCE CSAT 2026 batch (₹5,000).",
+    "call": "9863794212",
+    "callShow": "98637 94212",
+    "from": "csat-practice-by-amarjeet-sir"
+   },
+   {
+    "exam": "APPSC",
+    "title": "APPSC CE GS Prelims Latest Recorded Batch",
+    "sub": "GS Prelims recorded batch",
+    "modes": [
+     "Recorded"
+    ],
+    "fee": "₹3,000",
+    "was": "",
+    "note": "",
+    "where": "Online",
+    "covers": [
+     "Recorded classes, Batch 2025",
+     "Polity, History, Economy and Geography",
+     "Arunachal GK, General Science and Environment"
+    ],
+    "desc": "Northeast PSC announces the APPSC CE GS Prelims latest recorded batch, Batch 2025, covering Polity, History, Economy, Geography, Arunachal GK, General Science and Environment. Batch fee ₹3,000. For admission call 6009607689.",
+    "img": "batch-posters/poster-gsrec.jpg",
+    "w": 720,
+    "h": 830,
+    "wa": "916009607689",
+    "msg": "Hello, I want to join the GS Prelims recorded batch.",
+    "call": "6009607689",
+    "callShow": "60096 07689",
+    "from": "csat-practice-by-amarjeet-sir"
+   },
+   {
+    "exam": "APPSC",
+    "title": "CSAT Latest Recorded Batch by Amarjeet Sir & Team",
+    "sub": "Latest recorded batch",
+    "modes": [
+     "Recorded"
+    ],
+    "fee": "₹3,000, or ₹2,500 for Northeast PSC old students",
+    "was": "",
+    "note": "",
+    "where": "Online",
+    "covers": [
+     "Recorded classes",
+     "Maths",
+     "Reasoning",
+     "English Comprehension",
+     "Interpersonal Skills"
+    ],
+    "desc": "Northeast PSC: Amarjeet Sir & Team announce the CSAT latest recorded batch for Maths, Reasoning, English Comprehension and Interpersonal Skills. Batch fee ₹3,000, or ₹2,500 for Northeast PSC old students. Call 6009607689 to join the course.",
+    "img": "batch-posters/poster-rec.jpg",
+    "w": 720,
+    "h": 900,
+    "wa": "916009607689",
+    "msg": "Hello Sir, I want to join the CSAT Latest Recorded Batch.",
+    "call": "6009607689",
+    "callShow": "60096 07689",
+    "from": "csat-practice-by-amarjeet-sir"
+   },
+   {
+    "exam": "APPSC",
+    "title": "APPSCCE Prelims Test Series (GS + CSAT)",
+    "sub": "APPSCCE Prelims Test Series",
+    "modes": [
+     "Test series",
+     "Offline",
+     "Online"
+    ],
+    "fee": "₹1,000",
+    "was": "₹2,000",
+    "note": "50% discount",
+    "where": "Offline and online",
+    "covers": [
+     "20 tests, GS + CSAT, with video solutions",
+     "Offline and online",
+     "Detailed written and video solutions, as per the latest exam pattern"
+    ],
+    "desc": "Northeast PSC announces the APPSCCE Prelims Test Series: GS + CSAT, 20 tests with video solutions, offline and online, exam-oriented tests with detailed written and video solutions as per the latest exam pattern. Fee ₹2,000, now ₹1,000 with a 50% discount. Call 6009607689 to join the test series.",
+    "img": "batch-posters/poster-ts2.jpg",
+    "w": 720,
+    "h": 720,
+    "wa": "916009607689",
+    "msg": "Hello, I want to join the APPSCCE Prelims Test Series.",
+    "call": "6009607689",
+    "callShow": "60096 07689",
+    "from": "csat-practice-by-amarjeet-sir"
+   },
+   {
+    "exam": "APSSB",
+    "title": "APSSB 2026 Complete Online Recorded Course",
+    "sub": "Recorded classes",
+    "modes": [
+     "Recorded"
+    ],
+    "fee": "₹1,999",
+    "was": "",
+    "note": "",
+    "where": "Online",
+    "covers": [],
+    "desc": "Northeast PSC poster: APSSB 2026 CSL and Non-Ministerial, complete online recorded course for only ₹1,999. Maths by Amarjeet Sir, GK by Intakhab Sir, English by Pawan Sir and Reasoning by Ashok Sir. Study anytime and complete your syllabus at your pace. Join the team behind 1000+ selections. Call or WhatsApp 9863794212 or 6009526445.",
+    "img": "",
+    "w": 0,
+    "h": 0,
+    "wa": "919863794212",
+    "msg": "Hello Sir, I want to join the APSSB 2026 Complete Online Recorded Course (₹1,999).",
+    "call": "6009526445",
+    "callShow": "60095 26445",
+    "from": "maths-by-amarjeet-sir"
+   },
+   {
+    "exam": "APSSB",
+    "title": "Maths & Reasoning Batches by Amarjeet Sir & Team",
+    "sub": "50% off",
+    "modes": [
+     "Online"
+    ],
+    "fee": "₹3,000",
+    "was": "₹6,000",
+    "note": "Useful for APSSB CGL, CHSL, CSL and APPSC CSAT",
+    "where": "Online",
+    "covers": [
+     "Live classes with a proper digital board",
+     "Backup recorded lectures (8 months)",
+     "Previous year questions with video solutions",
+     "20 test series with video solutions"
+    ],
+    "desc": "Maths and Reasoning batches by Amarjeet Sir and team, 50% off: live classes with a proper digital board, backup recorded lectures for 8 months, previous year questions and 20 test series with video solutions. Fee ₹3,000 instead of ₹6,000. Useful for APSSB CGL, CHSL, CSL and APPSC CSAT. 1000+ selections in APSSB and APPSC exams.",
+    "img": "maths-by-amarjeet-sir/images/batch-maths-reasoning-2026.jpg",
+    "w": 820,
+    "h": 997,
+    "wa": "919863794212",
+    "msg": "Hello Sir, I want to join the Maths & Reasoning batch (₹3,000).",
+    "call": "6009526445",
+    "callShow": "60095 26445",
+    "from": "maths-by-amarjeet-sir"
+   },
+   {
+    "exam": "APSSB",
+    "title": "Online Maths Batch",
+    "sub": "",
+    "modes": [
+     "Online"
+    ],
+    "fee": "₹1,500",
+    "was": "₹2,500",
+    "note": "",
+    "where": "Online",
+    "covers": [],
+    "desc": "APSSB Maths online batch with Amarjeet Sir and team: fee ₹1,500 instead of ₹2,500, a ₹1,000 discount for a limited period only. Join the team of 1000+ selections. Call 9863794212, 6009526445 or 9233789183.",
+    "img": "maths-by-amarjeet-sir/images/batch-maths-online-2026.jpg",
+    "w": 820,
+    "h": 1025,
+    "wa": "919863794212",
+    "msg": "Hello Sir, I want to join the Online Maths Batch (₹1,500).",
+    "call": "6009526445",
+    "callShow": "60095 26445",
+    "from": "maths-by-amarjeet-sir"
+   },
+   {
+    "exam": "APSSB",
+    "title": "Online Reasoning Batch",
+    "sub": "",
+    "modes": [
+     "Online"
+    ],
+    "fee": "₹1,500",
+    "was": "₹2,500",
+    "note": "",
+    "where": "Online",
+    "covers": [],
+    "desc": "APSSB Reasoning online batch with Amarjeet Sir and team: fee ₹1,500 instead of ₹2,500, a ₹1,000 discount for a limited period only. Join the team of 1000+ selections. Call 9863794212, 6009526445 or 9233789183.",
+    "img": "maths-by-amarjeet-sir/images/batch-reasoning-online.jpg",
+    "w": 820,
+    "h": 1025,
+    "wa": "919863794212",
+    "msg": "Hello Sir, I want to join the APSSB Reasoning Online Batch (₹1,500).",
+    "call": "6009526445",
+    "callShow": "60095 26445",
+    "from": "maths-by-amarjeet-sir"
+   },
+   {
+    "exam": "APSSB",
+    "title": "Offline Maths Batch",
+    "sub": "",
+    "modes": [
+     "Offline"
+    ],
+    "fee": "₹4,000",
+    "was": "₹5,000",
+    "note": "",
+    "where": "Itanagar, Naharlagun, Nirjuli, Pasighat",
+    "covers": [],
+    "desc": "APSSB Maths offline batch by Amarjeet Sir and team at Itanagar, Naharlagun, Nirjuli and Pasighat: fee ₹4,000 instead of ₹5,000, a ₹1,000 discount. Join the team of 1000+ selections. Call 9863794212, 6009526445 or 9233789183.",
+    "img": "maths-by-amarjeet-sir/images/batch-maths-offline.jpg",
+    "w": 820,
+    "h": 1025,
+    "wa": "919863794212",
+    "msg": "Hello Sir, I want to join the APSSB Maths Offline Batch (₹4,000).",
+    "call": "6009526445",
+    "callShow": "60095 26445",
+    "from": "maths-by-amarjeet-sir"
+   },
+   {
+    "exam": "APSSB",
+    "title": "APSSB Full Course (Offline)",
+    "sub": "",
+    "modes": [
+     "Offline"
+    ],
+    "fee": "₹14,000",
+    "was": "₹20,000",
+    "note": "",
+    "where": "Itanagar, Naharlagun, Nirjuli, Pasighat",
+    "covers": [],
+    "desc": "APSSB full course offline batch by Amarjeet Sir and team: Maths, Reasoning, GK and English at Itanagar, Naharlagun, Nirjuli and Pasighat. ₹5,000 per subject; the full course is ₹14,000 instead of ₹20,000 after discount, with 150+ APSSB tests included. Call 9863794212, 6009526445 or 9233789183.",
+    "img": "maths-by-amarjeet-sir/images/batch-full-course-offline.jpg",
+    "w": 820,
+    "h": 1025,
+    "wa": "919863794212",
+    "msg": "Hello Sir, I want to join the APSSB Full Course Offline Batch (₹14,000).",
+    "call": "6009526445",
+    "callShow": "60095 26445",
+    "from": "maths-by-amarjeet-sir"
+   },
+   {
+    "exam": "APSSB",
+    "title": "Complete APSSB Online Batch",
+    "sub": "",
+    "modes": [
+     "Online"
+    ],
+    "fee": "₹6,000",
+    "was": "",
+    "note": "",
+    "where": "Online",
+    "covers": [],
+    "desc": "Complete APSSB online batch at Northeast PSC: Maths, GK, English and Reasoning for APSSB CGL, CHSL and CSL, with live classes, recorded backup, test series and PDF notes. Fee ₹6,000.",
+    "img": "maths-by-amarjeet-sir/images/batch-apssb-online.jpg",
+    "w": 800,
+    "h": 800,
+    "wa": "919863794212",
+    "msg": "Hello, I want to join the Complete APSSB Online Batch.",
+    "call": "6009526445",
+    "callShow": "60095 26445",
+    "from": "maths-by-amarjeet-sir"
+   },
+   {
+    "exam": "APSSB",
+    "title": "APSSB Selection Force (Online)",
+    "sub": "",
+    "modes": [
+     "Online"
+    ],
+    "fee": "",
+    "was": "",
+    "note": "",
+    "where": "Online",
+    "covers": [],
+    "desc": "Join the biggest APSSB selection force of Arunachal Pradesh at Northeast PSC: 1000+ selections achieved. Online live and backup recorded batch for Maths, Reasoning, GK/GS and English, with experienced faculty and an exam-oriented strategy. Call 9863794212 or 8118984013.",
+    "img": "maths-by-amarjeet-sir/images/batch-selection-force-2026.jpg",
+    "w": 820,
+    "h": 1025,
+    "wa": "919863794212",
+    "msg": "Hello Sir, I want to join the APSSB Selection Force online batch (Maths, Reasoning, GK/GS and English).",
+    "call": "6009526445",
+    "callShow": "60095 26445",
+    "from": "maths-by-amarjeet-sir"
+   }
   ];
+  /*BATCHES:END*/
   var WA="916009607689";
   /* ===== end of editable data ===== */
 
@@ -545,48 +835,44 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
 
   // centres
   document.getElementById('centreGrid').innerHTML=CENTRES.map(function(c){
-    var n=BATCHES.filter(function(b){return b.centre===c.id}).length;
-    return '<article class="centre">'+(c.hq?'<span class="hq">Head office</span>':'')+'<span class="town">'+esc(c.town)+'</span><h3>'+esc(c.name)+'</h3><p>'+esc(c.addr)+'</p><a class="btn btn-ghost btn-sm" style="justify-self:start" href="#batches" data-centre="'+c.id+'">'+(n?n+' batch'+(n>1?'es':'')+' here':'Ask about batches')+'</a></article>';
+    return '<article class="centre">'+(c.hq?'<span class="hq">Head office</span>':'')+'<span class="town">'+esc(c.town)+'</span><h3>'+esc(c.name)+'</h3><p>'+esc(c.addr)+'</p><a class="btn btn-ghost btn-sm" style="justify-self:start" href="#batches" data-centre="'+c.id+'">See offline batches</a></article>';
   }).join('');
   document.getElementById('footCentres').innerHTML=CENTRES.map(function(c){return '<li><a href="#centres">'+esc(c.name)+'</a></li>'}).join('');
   document.getElementById('f-centre').innerHTML=CENTRES.map(function(c){return '<option>'+esc(c.name)+'</option>'}).join('')+'<option>Online</option>';
 
   // filters
-  var state={exam:"All",centre:"All",mode:"All"};
-  var opts={
-    exam:["All","APPSC","APSSB","Foundation"],
-    centre:["All"].concat(CENTRES.map(function(c){return c.id}),["online"]),
-    mode:["All","Offline","Live","Hybrid","Recorded"]
-  };
-  var labels={exam:"Exam",centre:"Centre",mode:"Mode"};
+  var state={exam:"All",mode:"All"};
+  var opts={exam:["All","APPSC","APSSB"],mode:["All","Online","Offline","Recorded","Test series"]};
+  var labels={exam:"Exam",mode:"Mode"};
   function drawFilters(){
-    ["exam","centre","mode"].forEach(function(k){
+    ["exam","mode"].forEach(function(k){
       var row=document.getElementById('f-'+k+'-row');
       row.innerHTML='<span class="lbl">'+labels[k]+'</span>'+opts[k].map(function(o){
-        var t=o==="All"?"All":(k==="centre"?cname(o):o);
-        return '<button type="button" class="pill" data-k="'+k+'" data-v="'+o+'" aria-pressed="'+(state[k]===o)+'">'+esc(t)+'</button>';
+        return '<button type="button" class="pill" data-k="'+k+'" data-v="'+o+'" aria-pressed="'+(state[k]===o)+'">'+esc(o)+'</button>';
       }).join('');
     });
   }
+  function feeHtml(b){return b.fee?(b.was?'<s class="was">'+esc(b.was)+'</s> ':'')+'<strong>'+esc(b.fee)+'</strong>':'<span class="tba">Ask on WhatsApp</span>'}
+  function bWa(b){return "https://wa.me/"+(b.wa||WA)+"?text="+encodeURIComponent(b.msg)}
   function drawGrid(){
     var list=BATCHES.filter(function(b){
-      return (state.exam==="All"||b.exam===state.exam)&&(state.centre==="All"||b.centre===state.centre)&&(state.mode==="All"||b.modes.indexOf(state.mode)>-1);
+      return (state.exam==="All"||b.exam===state.exam)&&(state.mode==="All"||b.modes.indexOf(state.mode)>-1);
     });
     document.getElementById('count').textContent=list.length+" of "+BATCHES.length+" batches";
     var g=document.getElementById('grid');
-    if(!list.length){g.innerHTML='<div class="empty" style="grid-column:1/-1">No batch matches these filters yet. Call 60096 07689 and we\'ll tell you what\'s coming.</div>';return}
+    if(!list.length){g.innerHTML='<div class="empty" style="grid-column:1/-1">No batch matches these filters right now. Call 60096 07689 and we\'ll tell you what\'s coming.</div>';return}
     g.innerHTML=list.map(function(b){
       var i=BATCHES.indexOf(b);
-      return '<article class="batch"><div class="banner"><span class="exam-tag">'+esc(b.exam)+'</span><h3>'+esc(b.title)+'</h3><span>'+esc(b.sub)+'</span></div>'+
-        '<div class="bbody"><div class="tags">'+b.modes.map(function(m){return '<span class="tag">'+m+'</span>'}).join('')+'</div>'+
-        '<dl class="meta"><div><dt>Centre</dt><dd>'+esc(cname(b.centre))+'</dd></div><div><dt>Starts</dt><dd>'+val(b.start)+'</dd></div><div><dt>Timing</dt><dd>'+val(b.timing)+'</dd></div><div><dt>Fee</dt><dd>'+val(b.fee)+'</dd></div></dl></div>'+
-        '<div class="bfoot"><button type="button" class="btn btn-ghost btn-sm" data-open="'+i+'">View details</button><a class="btn btn-solid btn-sm" target="_blank" rel="noopener" href="'+waLink("Hello Northeast PSC, I want to join: "+b.title+" ("+cname(b.centre)+").")+'">Enquire</a></div></article>';
+      return '<article class="batch"><div class="banner"><span class="exam-tag">'+esc(b.exam)+'</span><h3>'+esc(b.title)+'</h3>'+(b.sub?'<span>'+esc(b.sub)+'</span>':'')+'</div>'+
+        '<div class="bbody"><div class="tags">'+b.modes.map(function(m){return '<span class="tag">'+esc(m)+'</span>'}).join('')+'</div>'+
+        '<dl class="meta"><div><dt>Fee</dt><dd>'+feeHtml(b)+'</dd></div><div><dt>Where</dt><dd>'+esc(b.where)+'</dd></div>'+(b.note?'<div><dt>Note</dt><dd>'+esc(b.note)+'</dd></div>':'')+'</dl></div>'+
+        '<div class="bfoot"><button type="button" class="btn btn-ghost btn-sm" data-open="'+i+'">View details</button><a class="btn btn-solid btn-sm" target="_blank" rel="noopener" href="'+bWa(b)+'">Enquire</a></div></article>';
     }).join('');
   }
   function setFilter(k,v){state[k]=v;drawFilters();drawGrid()}
   document.querySelector('.filters').addEventListener('click',function(e){var p=e.target.closest('.pill');if(p)setFilter(p.dataset.k,p.dataset.v)});
-  document.querySelectorAll('[data-exam]').forEach(function(b){b.addEventListener('click',function(){state={exam:b.dataset.exam,centre:"All",mode:"All"};drawFilters();drawGrid();document.getElementById('batches').scrollIntoView()})});
-  document.getElementById('centreGrid').addEventListener('click',function(e){var a=e.target.closest('[data-centre]');if(a){state={exam:"All",centre:a.dataset.centre,mode:"All"};drawFilters();drawGrid()}});
+  document.querySelectorAll('[data-exam]').forEach(function(b){b.addEventListener('click',function(){state={exam:b.dataset.exam,mode:"All"};drawFilters();drawGrid();document.getElementById('batches').scrollIntoView()})});
+  document.getElementById('centreGrid').addEventListener('click',function(e){var a=e.target.closest('[data-centre]');if(a){state={exam:"All",mode:"Offline"};drawFilters();drawGrid()}});
   drawFilters();drawGrid();
 
   // modal
@@ -594,11 +880,14 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
   document.getElementById('grid').addEventListener('click',function(e){
     var o=e.target.closest('[data-open]');if(!o)return;
     var b=BATCHES[+o.dataset.open];lastFocus=o;
-    document.getElementById('mExam').textContent=b.exam+" · "+b.sub;
+    document.getElementById('mExam').textContent=b.exam+(b.sub?" · "+b.sub:"");
     document.getElementById('mTitle').textContent=b.title;
-    document.getElementById('mMeta').innerHTML='<div><dt>Centre</dt><dd>'+esc(cname(b.centre))+'</dd></div><div><dt>Modes</dt><dd>'+b.modes.join(", ")+'</dd></div><div><dt>Starts</dt><dd>'+val(b.start)+'</dd></div><div><dt>Timing</dt><dd>'+val(b.timing)+'</dd></div><div><dt>Fee</dt><dd>'+val(b.fee)+'</dd></div>';
+    document.getElementById('mPoster').innerHTML=b.img?'<img src="'+esc(b.img)+'" width="'+b.w+'" height="'+b.h+'" alt="'+esc(b.desc)+'" loading="lazy">':'';
+    document.getElementById('mMeta').innerHTML='<div><dt>Fee</dt><dd>'+feeHtml(b)+'</dd></div><div><dt>Mode</dt><dd>'+esc(b.modes.join(", "))+'</dd></div><div><dt>Where</dt><dd>'+esc(b.where)+'</dd></div>'+(b.note?'<div><dt>Note</dt><dd>'+esc(b.note)+'</dd></div>':'');
     document.getElementById('mList').innerHTML=b.covers.map(function(c){return '<li>'+esc(c)+'</li>'}).join('');
-    document.getElementById('mWa').href=waLink("Hello Northeast PSC, I want details of: "+b.title+" ("+cname(b.centre)+").");
+    document.getElementById('mDesc').textContent=b.img?'':b.desc;
+    document.getElementById('mWa').href=bWa(b);
+    var mc=document.getElementById('mCall');mc.href='tel:+91'+b.call;mc.textContent='Call '+b.callShow;
     modal.hidden=false;document.getElementById('mClose').focus();
   });
   function closeM(){modal.hidden=true;if(lastFocus)lastFocus.focus()}
