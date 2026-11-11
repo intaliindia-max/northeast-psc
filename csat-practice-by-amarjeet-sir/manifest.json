@@ -1,7 +1,7 @@
 {
- "name": "APPSCCE CSAT Practice by Amarjeet Sir",
- "short_name": "CSAT Practice",
- "description": "2,000 APPSCCE CSAT questions with step-by-step solutions, PYQ quizzes and mock tests.",
+ "name": "APPSCCE Prelims GS & CSAT Practice by Northeast PSC",
+ "short_name": "APPSCCE Practice",
+ "description": "2,000 GS and 2,000 CSAT questions with answers and explanations and Arunachal PSC PYQs.",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
