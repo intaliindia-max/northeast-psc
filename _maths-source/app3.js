@@ -597,31 +597,75 @@
     return '<p class="adproof"><strong>1,000+ selections</strong> in APSSB and APPSC exams' + (rp ? '. Recent toppers: ' + rp : "") + '.</p>' +
       '<p class="adlinks"><a href="#free-class">Watch a free class</a><a href="#finder">Find the right batch</a><a href="#report">Send my report to Sir</a>' + (SITE.channel ? '<a ' + ext(SITE.channel.url) + '>WhatsApp channel</a>' : "") + '</p>';
   }
+  /* ----- result-screen poster with a live date and exam countdown ----- */
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  function daysTo(iso) {
+    const p = iso.split("-").map(Number), n = new Date();
+    return Math.round((Date.UTC(p[0], p[1] - 1, p[2]) - Date.UTC(n.getFullYear(), n.getMonth(), n.getDate())) / 86400000);
+  }
+  function leftWords(n) { return n > 1 ? n + " days left" : n === 1 ? "1 day left" : n === 0 ? "exam today" : "exam over"; }
+  function countLine(c) { return c.exams.map(function (e) { return e[0] + ": " + leftWords(daysTo(e[1])); }).join(" · "); }
+  let cdCache = { key: "", url: "" };
+  function paintCountdown() {
+    const c = SITE.resultAd, el = document.querySelector("img.cdimg");
+    if (!c || !c.exams || !el) return;
+    const now = new Date(), key = now.getFullYear() + "-" + now.getMonth() + "-" + now.getDate();
+    if (cdCache.key === key && cdCache.url) { el.src = cdCache.url; return; }
+    const base = new Image();
+    base.onload = function () {
+      try {
+        const cv = document.createElement("canvas"); cv.width = base.naturalWidth; cv.height = base.naturalHeight;
+        const g = cv.getContext("2d"), k = cv.width / 1122, FONT = '"Arial Black", "Segoe UI Black", "Roboto", "Helvetica Neue", Arial, sans-serif';
+        g.drawImage(base, 0, 0); g.textBaseline = "middle";
+        const fit = function (parts, cx, cy, maxw, size) {       // parts: [text, colour, scale]
+          let sz = size * k, w = 0;
+          const measure = function () { w = 0; parts.forEach(function (p) { g.font = "900 " + sz * (p[2] || 1) + "px " + FONT; p[3] = g.measureText(p[0]).width; w += p[3]; }); };
+          measure(); if (w > maxw * k) { sz *= maxw * k / w; measure(); }
+          let x = cx * k - w / 2; g.textAlign = "left";
+          parts.forEach(function (p) { g.font = "900 " + sz * (p[2] || 1) + "px " + FONT; g.fillStyle = p[1]; g.fillText(p[0], x, cy * k); x += p[3]; });
+        };
+        fit([[now.getDate() + " " + MONTHS[now.getMonth()].toUpperCase() + " " + now.getFullYear(), "#fff"]], 838, 65, 430, 46);
+        const pill = function (e, cx, maxw) {
+          const n = daysTo(e[1]), lab = e[0].toUpperCase() + ": ";
+          fit(n > 0 ? [[lab, "#fff"], [String(n), "#ffe600", 1.25], [n === 1 ? " DAY LEFT" : " DAYS LEFT", "#fff"]] : [[lab, "#fff"], [n === 0 ? "EXAM TODAY" : "EXAM OVER", n === 0 ? "#ffe600" : "#fff"]], cx, 399, maxw, 34);
+        };
+        if (c.exams[0]) pill(c.exams[0], 344, 590);
+        if (c.exams[1]) pill(c.exams[1], 890, 370);
+        g.font = "italic 600 " + 22 * k + "px " + FONT.replace('"Arial Black", "Segoe UI Black", ', ""); g.fillStyle = "#0b1a4a"; g.textAlign = "center";
+        g.fillText("Countdown as of " + now.getDate() + " " + MONTHS[now.getMonth()].slice(0, 3) + " " + now.getFullYear() + ". Exam dates tentative.", 561 * k, 1353 * k);
+        cdCache = { key: key, url: cv.toDataURL("image/jpeg", 0.88) };
+        const cur = document.querySelector("img.cdimg"); if (cur) cur.src = cdCache.url;
+      } catch (e) { /* keep the plain poster; the countdown line under it still shows the days left */ }
+    };
+    base.src = SITE.img[c.img].src;
+  }
   function adBlock(q) {
-    const c = SITE.featured || SITE.courses[0];
+    const c = SITE.resultAd || SITE.featured || SITE.courses[0];
+    const bn = c.short || "Maths & Reasoning batch", own = c.texts || null, live = c.exams ? countLine(c) : "";
     const at = q ? attemptOf(q) : null;
     let head = "Learn every topic with Amarjeet Sir", text = "", msg = c.msg;
     if (at) {
       const sc = at.right + "/" + at.n;
       if (at.pct < 0.6) {
         head = "Need help with " + at.topic + "?";
-        text = at.topic + " is taught step by step in live classes, with doubt solving and PYQ practice, in the Maths & Reasoning batch.";
-        msg = "Hello Sir, I scored " + sc + " in " + at.where + ". I need help with " + at.plainTopic + ". Please tell me about the Maths & Reasoning batch (₹" + c.price + ").";
+        text = own ? own[0].replace("{topic}", at.topic) : at.topic + " is taught step by step in live classes, with doubt solving and PYQ practice, in the Maths & Reasoning batch.";
+        msg = "Hello Sir, I scored " + sc + " in " + at.where + ". I need help with " + at.plainTopic + ". Please tell me about the " + bn + " (₹" + c.price + ").";
       } else if (at.pct < 0.9) {
         head = "Good work. Now make it a sure score";
-        text = "Regular tests and PYQ practice in the batch turn good scores into selections.";
-        msg = "Hello Sir, I scored " + sc + " in " + at.where + ". I want to improve further. Please tell me about the Maths & Reasoning batch (₹" + c.price + ").";
+        text = own ? own[1] : "Regular tests and PYQ practice in the batch turn good scores into selections.";
+        msg = "Hello Sir, I scored " + sc + " in " + at.where + ". I want to improve further. Please tell me about the " + bn + " (₹" + c.price + ").";
       } else {
         head = "Excellent! You are exam-ready";
-        text = "Keep your rank safe with the 20-test series and PYQ video solutions in the Maths & Reasoning batch.";
-        msg = "Hello Sir, I scored " + sc + " in " + at.where + ". I want to join the Maths & Reasoning batch (₹" + c.price + ") for the test series.";
+        text = own ? own[2] : "Keep your rank safe with the 20-test series and PYQ video solutions in the Maths & Reasoning batch.";
+        msg = "Hello Sir, I scored " + sc + " in " + at.where + ". I want to join the " + bn + " (₹" + c.price + ")" + (own ? "." : " for the test series.");
       }
     }
     const alt = at ? courseByImg(at.subject === "reasoning" ? "poster-reasoning" : "poster-maths") : null;
     return '<section class="sheet adbox" aria-labelledby="adh"><h2 id="adh">' + head + '</h2>' + (text ? '<p class="adtext">' + text + '</p>' : "") +
-      '<a class="adimg" ' + ext(waLink(msg)) + '>' + pic(c.img, c.alt, "", true) + '</a>' +
-      (c.price ? '<p class="fprice">' + c.name + ': <s>₹' + c.was + '</s><strong>₹' + c.price + '</strong></p>' : "") +
-      '<div class="btnrow"><a class="btn primary block" ' + ext(waLink(msg)) + '>Join this batch on WhatsApp</a><a class="btn block" href="tel:+91' + SITE.phone + '">Call ' + SITE.phoneShow + '</a></div>' +
+      '<a class="adimg" ' + ext(waLink(msg)) + '>' + pic(c.img, c.alt + (live ? " " + live + "." : ""), c.exams ? "cdimg" : "", !c.exams) + '</a>' +
+      (live ? '<p class="adcount">' + live + '</p>' : "") +
+      (c.price ? '<p class="fprice">' + c.name + ': ' + (c.was ? '<s>₹' + c.was + '</s>' : "") + '<strong>₹' + c.price + '</strong></p>' : "") +
+      '<div class="btnrow"><a class="btn primary block" ' + ext(waLink(msg)) + '>' + (c.cta || "Join this batch on WhatsApp") + '</a><a class="btn block" href="tel:+91' + SITE.phone + '">Call ' + SITE.phoneShow + '</a></div>' +
       (alt ? '<p class="adalt">Only ' + subjName(at.subject) + '? <a ' + ext(waLink(alt.msg)) + '>' + alt.name + '</a></p>' : "") +
       proofLine() + '</section>';
   }
@@ -921,6 +965,7 @@
     else html = landingView();
     document.body.setAttribute("data-screen", view.screen === "quiz" && view.mode === "lead" ? "lead" : view.screen === "quiz" && view.mode !== "result" ? "quiz" : view.screen);
     app.innerHTML = html;
+    paintCountdown();
     updateNav();
     tick();
   }

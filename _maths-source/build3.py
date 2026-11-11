@@ -273,7 +273,20 @@ SITE["teamCaption"] = "Amarjeet Sir with the Northeast PSC team."
 IMG.update({k: k + ".jpg" for k in ["g-tsd", "g-column", "g-fullhall", "g-discount", "g-squares", "g-simplify", "g-exponents", "g-lcm", "g-writing", "g-sqrt", "g-average", "g-packed"]})
 IMG.update({"rank-jumram": "rank-jumram.jpg", "rank-jumyir": "rank-jumyir.jpg", "rank-bujum": "rank-bujum.jpg"})
 IMG.update({"poster-offline-maths": "batch-maths-offline.jpg", "poster-fullcourse": "batch-full-course-offline.jpg", "book-reasoning-booster": "book-reasoning-booster.jpg", "book-reasoning-notes": "book-reasoning-notes.jpg", "book-notes": "book-notes.jpg", "poster-reasoning": "batch-reasoning-online.jpg", "poster-mr": "batch-maths-reasoning-2026.jpg", "poster-maths": "batch-maths-online-2026.jpg", "poster-csat": "batch-appscce-csat.jpg"})
-USED_IMG = ["poster-offline-maths", "poster-fullcourse", "book-reasoning-booster", "book-reasoning-notes", "book-notes", "poster-reasoning", "poster-mr", "poster-maths", "poster-csat", "rank-bujum", "rank-jumram", "rank-jumyir", "g-tsd", "g-column", "g-fullhall", "g-discount", "g-squares", "g-simplify", "g-exponents", "g-lcm", "g-writing", "g-sqrt", "g-average", "g-packed", "face", "team", "hero", "portrait", "avatar", "practice", "poster2", "poster3", "sel-banner", "res-cgl24", "res-hc24",
+IMG["poster-apssb-rec"] = "batch-apssb-recorded-2026.jpg"
+# Main poster on the result screen after every quiz. The image in site_img has its date ribbon, the two
+# "days left" pills and the footnote cleared; app3.js writes today's date and the days left on it, so the
+# poster stays correct every day without a new image. The poster as supplied is kept in poster_src/.
+# Exam dates come from the poster of 11 Nov 2026 (Non-Ministerial 18 days left, CSL 39 days left) and are tentative.
+SITE["resultAd"] = {"name": "APSSB 2026 Complete Online Recorded Course", "short": "APSSB 2026 recorded course", "img": "poster-apssb-rec", "price": "1,999",
+ "cta": "Join this course on WhatsApp",
+ "msg": "Hello Sir, I want to join the APSSB 2026 Complete Online Recorded Course (₹1,999).",
+ "texts": ["{topic} is taught step by step in the recorded classes. Watch them anytime and complete your syllabus before the exam.",
+           "Revise every topic with recorded classes of Maths, GK, English and Reasoning, at your own pace.",
+           "Keep this level in all four subjects: Maths, GK, English and Reasoning in one recorded course."],
+ "exams": [["Non-Ministerial", "2026-11-29"], ["CSL", "2026-12-20"]],
+ "alt": "Northeast PSC poster: APSSB 2026 CSL and Non-Ministerial, complete online recorded course for only ₹1,999. Maths by Amarjeet Sir, GK by Intakhab Sir, English by Pawan Sir and Reasoning by Ashok Sir. Study anytime and complete your syllabus at your pace. Join the team behind 1000+ selections. Call or WhatsApp 9863794212 or 6009526445."}
+USED_IMG = ["poster-apssb-rec", "poster-offline-maths", "poster-fullcourse", "book-reasoning-booster", "book-reasoning-notes", "book-notes", "poster-reasoning", "poster-mr", "poster-maths", "poster-csat", "rank-bujum", "rank-jumram", "rank-jumyir", "g-tsd", "g-column", "g-fullhall", "g-discount", "g-squares", "g-simplify", "g-exponents", "g-lcm", "g-writing", "g-sqrt", "g-average", "g-packed", "face", "team", "hero", "portrait", "avatar", "practice", "poster2", "poster3", "sel-banner", "res-cgl24", "res-hc24",
             "res-steno24", "res-csl23", "res-chsl23", "book-basic", "book-advanced", "logo", "logo-icon"]
 _unused = [k for k in IMG if k not in USED_IMG]
 for k in _unused: del IMG[k]
