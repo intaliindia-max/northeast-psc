@@ -48,7 +48,7 @@ def entry(folder, default_exam, key, o, site):
     where = ", ".join(towns) if towns else ("Offline and online" if set(modes) >= {"Offline", "Online"} else ("Offline" if "Offline" in modes else "Online"))
     if towns and "Online" in modes: where += " and online"
     img = site.get("img", {}).get(o.get("img"), {})
-    src = img.get("src", "") if not o.get("exams") else ""       # a poster whose date and countdown are written live is not reused here
+    src = img.get("src", "")
     if src.startswith("data:"):
         m = re.match(r"data:image/(\w+);base64,(.*)", src, re.S); ext = "jpg" if m.group(1) in ("jpeg", "jpg") else m.group(1)
         os.makedirs(os.path.join(ROOT, "batch-posters"), exist_ok=True); rel = "batch-posters/%s.%s" % (re.sub(r"[^a-z0-9]+", "-", (o.get("img") or key).lower()), ext)
@@ -61,7 +61,8 @@ def entry(folder, default_exam, key, o, site):
     show = o.get("callShow") or (calls[0][0] if calls else site.get("phoneShow", call))
     return {"exam": exam, "title": title, "sub": tag or plain(o.get("note")) or ("Recorded classes" if modes == ["Recorded"] else ""), "modes": modes, "fee": fee, "was": was,
             "note": plain(o.get("note")) if tag else "", "where": where, "covers": pts, "desc": alt, "img": src, "w": img.get("w", 0) if src else 0, "h": img.get("h", 0) if src else 0,
-            "wa": site.get("wa", ""), "msg": plain(o.get("msg")) or "Hello, I want to join: " + title + ".", "call": call, "callShow": show, "from": folder}
+            "wa": site.get("wa", ""), "msg": plain(o.get("msg")) or "Hello, I want to join: " + title + ".", "call": call, "callShow": show, "from": folder,
+            "exams": o.get("exams") or []}      # poster with blank date and days-left areas: the home page writes them each day, as the practice site does
 
 def collect():
     out, seen = [], set()
