@@ -159,7 +159,10 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:va
 .grevs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .grev{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:12px;margin:0}
 .grev blockquote{margin:0;color:var(--ink);font-size:.97rem;line-height:1.65}
-.grev figcaption{margin-top:auto;color:var(--muted);font:700 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.grev figcaption{margin-top:auto;display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;padding-top:12px;border-top:1px solid var(--line)}
+.grev figcaption b{font-weight:700;color:var(--ink)}
+.grev-stars.sm{font-size:.95rem;letter-spacing:1px}
+.grev figcaption small{margin-left:auto;color:var(--muted);font-size:.8rem}
 @media (max-width:760px){.grevs{grid-template-columns:1fr}.grev-score strong{font-size:2.4rem}}
 
 .bposter{display:block;width:100%;padding:0;border:0;border-bottom:1px solid var(--line);background:#eef2fa;cursor:pointer;aspect-ratio:4/5;overflow:hidden}
@@ -473,10 +476,10 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
         </div>
       </div>
       <div class="grevs">
-        <figure class="grev"><blockquote>&ldquo;One of the best coaching institute for APSSB Candidate. I would like to convey my sincere gratitude to all the faculties for their guidance and support. My fear for maths subject is no more&hellip;&rdquo;</blockquote><figcaption>Student review on Google</figcaption></figure>
-        <figure class="grev"><blockquote>&ldquo;Words are not enough to express my gratitude to Team North East PSC for the incredible 6-day Maha Marathon for the APSSB exam. Teaching for 12 hours every day is not just hard work&mdash;it is a true reflection of your dedication, passion, and commitment towards the success of your students.&rdquo;</blockquote><figcaption>Student review on Google</figcaption></figure>
-        <figure class="grev"><blockquote>&ldquo;Your institution is very helpful, and all the teachers are very good. I personally really appreciate how hardworking you all are for us and for our good future.&rdquo;</blockquote><figcaption>Student review on Google</figcaption></figure>
-        <figure class="grev"><blockquote>&ldquo;I am highly satisfied with the facilities and services provided by Northeast PSC (Arunachal Pradesh). &hellip; The accommodation is comfortable and well-maintained, and the faculty members are knowledgeable, supportive, and dedicated to guiding students effectively.&rdquo;</blockquote><figcaption>Student review on Google</figcaption></figure>
+        <figure class="grev"><blockquote>&ldquo;One of the best coaching institute for APSSB Candidate. I would like to convey my sincere gratitude to all the faculties for their guidance and support. My fear for maths subject is no more&hellip;&rdquo;</blockquote><figcaption><b>Muisam Suayang</b><span class="grev-stars sm" role="img" aria-label="5 out of 5 stars"><i style="width:100%"></i></span><small>Review on Google</small></figcaption></figure>
+        <figure class="grev"><blockquote>&ldquo;Words are not enough to express my gratitude to Team North East PSC for the incredible 6-day Maha Marathon for the APSSB exam. Teaching for 12 hours every day is not just hard work&mdash;it is a true reflection of your dedication, passion, and commitment towards the success of your students.&rdquo;</blockquote><figcaption><b>Jumter Kamdak</b><span class="grev-stars sm" role="img" aria-label="5 out of 5 stars"><i style="width:100%"></i></span><small>Review on Google</small></figcaption></figure>
+        <figure class="grev"><blockquote>&ldquo;Your institution is very helpful, and all the teachers are very good. I personally really appreciate how hardworking you all are for us and for our good future.&rdquo;</blockquote><figcaption><b>Takam Jessie</b><span class="grev-stars sm" role="img" aria-label="5 out of 5 stars"><i style="width:100%"></i></span><small>Review on Google</small></figcaption></figure>
+        <figure class="grev"><blockquote>&ldquo;I am highly satisfied with the facilities and services provided by Northeast PSC (Arunachal Pradesh). &hellip; The accommodation is comfortable and well-maintained, and the faculty members are knowledgeable, supportive, and dedicated to guiding students effectively.&rdquo;</blockquote><figcaption><b>Thomas Libang</b><span class="grev-stars sm" role="img" aria-label="5 out of 5 stars"><i style="width:100%"></i></span><small>Review on Google</small></figcaption></figure>
       </div>
     </div>
   </section>
