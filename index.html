@@ -332,6 +332,58 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
 .dd-menu a:hover{background:var(--raise);color:var(--green)}
 .mobile-nav .sub{padding-left:18px;font-weight:600;color:var(--muted)}
 .mobile-nav .grp{padding:12px 4px 4px;font-weight:700;color:var(--ink);border-bottom:0}
+
+/* ---- colour layer: navy stays the brand colour, six accents add variety ---- */
+:root{--c1:#1d5fd1;--c2:#0b7d70;--c3:#b45f06;--c4:#c7354a;--c5:#5b3fc4;--c6:#1b7f4b;--sun:#f6a609}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--c1:#7fb0ff;--c2:#4fd1c0;--c3:#f7b955;--c4:#ff8f9f;--c5:#b39dff;--c6:#6fd39b}}
+:root[data-theme="dark"]{--c1:#7fb0ff;--c2:#4fd1c0;--c3:#f7b955;--c4:#ff8f9f;--c5:#b39dff;--c6:#6fd39b}
+.topstrip{background:linear-gradient(90deg,#0b2d6b,#15428f 55%,#3a2f9b)}
+.topstrip b{color:#ffd166}
+.eyebrow{display:inline-flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:22px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--sun),var(--c4))}
+.band .eyebrow::before{background:linear-gradient(90deg,#ffd166,#ff8f9f)}
+.hero{background:
+  radial-gradient(700px 320px at 8% 0%,color-mix(in srgb,var(--c1) 13%,transparent),transparent 70%),
+  radial-gradient(600px 320px at 100% 15%,color-mix(in srgb,var(--c5) 11%,transparent),transparent 70%),
+  radial-gradient(500px 260px at 55% 100%,color-mix(in srgb,var(--sun) 10%,transparent),transparent 70%),
+  linear-gradient(180deg,var(--surface),var(--bg))}
+.hero h1 em{background:linear-gradient(90deg,var(--c1),var(--c5));-webkit-background-clip:text;background-clip:text;color:transparent}
+.trust div:nth-child(1) strong{color:var(--c3)}
+.trust div:nth-child(2) strong{color:var(--c2)}
+.trust div:nth-child(3) strong{color:var(--c5)}
+.omr{border-top:4px solid var(--sun)}
+.feat:nth-child(1){--c:var(--c1)}.feat:nth-child(2){--c:var(--c6)}.feat:nth-child(3){--c:var(--c3)}.feat:nth-child(4){--c:var(--c4)}
+.feat svg{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c)}
+.feat{border-bottom:3px solid var(--c)}
+.exam:nth-child(1){--c:var(--c1)}.exam:nth-child(2){--c:var(--c2)}.exam:nth-child(3){--c:var(--c3)}
+.exam{border-top:4px solid var(--c);transition:transform .15s,box-shadow .15s}
+.exam:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.exam-ico{background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c)}
+.exam .chip{background:color-mix(in srgb,var(--c) 8%,var(--surface));border-color:color-mix(in srgb,var(--c) 25%,var(--line));color:var(--ink)}
+.mode:nth-child(1){--c:var(--c6)}.mode:nth-child(2){--c:var(--c4)}.mode:nth-child(3){--c:var(--c5)}.mode:nth-child(4){--c:var(--c3)}
+.mode{border-top:4px solid var(--c);background:linear-gradient(180deg,color-mix(in srgb,var(--c) 7%,var(--surface)),var(--surface) 60%)}
+.mode .k{background:var(--c);color:var(--surface)}
+.centre:nth-child(6n+1){--c:var(--c1)}.centre:nth-child(6n+2){--c:var(--c2)}.centre:nth-child(6n+3){--c:var(--c5)}.centre:nth-child(6n+4){--c:var(--c4)}.centre:nth-child(6n+5){--c:var(--c6)}.centre:nth-child(6n+6){--c:var(--c3)}
+.centre{border-left:4px solid var(--c)}
+.centre .town{color:var(--c)}
+.centre .hq{background:var(--sun);color:#3a2300}
+.mats>:nth-child(1){--c:#1d5fd1}.mats>:nth-child(2){--c:#0b7d70}.mats>:nth-child(3){--c:#c7354a}.mats>:nth-child(4){--c:#5b3fc4}
+.mat .book,.mat .book.g{background:linear-gradient(160deg,var(--c),color-mix(in srgb,var(--c) 70%,#000));color:#fff}
+.mat .go{color:var(--c1)}
+a.mat:hover{border-color:var(--c)}
+.bhead .exam-tag{background:var(--c1);color:var(--surface)}
+.batch:has(.bposter){transition:transform .15s,box-shadow .15s}
+.batch:has(.bposter):hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.band{background:linear-gradient(120deg,#0b2d6b,#15428f 50%,#3a2f9b)}
+.stat{background:rgba(255,255,255,.06)}
+.stat:nth-child(1) strong{color:#ffd166}.stat:nth-child(2) strong{color:#7ee0d2}.stat:nth-child(3) strong{color:#ffa3b1}.stat:nth-child(4) strong{color:#c9b8ff}
+.grev-top{border-left:5px solid var(--sun)}
+.grev:nth-child(1){--c:var(--c1)}.grev:nth-child(2){--c:var(--c2)}.grev:nth-child(3){--c:var(--c5)}.grev:nth-child(4){--c:var(--c4)}
+.grev{border-top:4px solid var(--c)}
+.grev figcaption b{color:var(--c)}
+details[open]{border-color:var(--c1);box-shadow:inset 4px 0 0 var(--c1)}
+.addr{background:color-mix(in srgb,var(--sun) 14%,var(--surface))!important;border-left:4px solid var(--sun)}
+footer{border-top:4px solid transparent;border-image:linear-gradient(90deg,#1d5fd1,#0b9d8a,#f6a609,#e5484d,#6d4bd8) 1}
 </style>
 </head>
 <body>
