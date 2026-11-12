@@ -146,6 +146,22 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:va
 .banner .exam-tag{position:absolute;left:18px;top:16px;font:700 .7rem var(--mono);letter-spacing:.08em;background:var(--gold);color:#0a1f4a;padding:4px 8px;border-radius:5px}
 .banner h3{font:800 1.15rem/1.25 var(--display);position:relative}
 .banner span{font-size:.85rem;opacity:.9;position:relative}
+/* Google reviews */
+.grev-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-bottom:18px}
+.grev-score{display:flex;align-items:center;gap:16px}
+.grev-score strong{font:800 3rem/1 var(--display);color:var(--ink)}
+.grev-stars{position:relative;display:inline-block;font-size:1.5rem;line-height:1;letter-spacing:2px;color:var(--line)}
+.grev-stars::before{content:"\2605\2605\2605\2605\2605"}
+.grev-stars i{position:absolute;inset:0;overflow:hidden;white-space:nowrap;color:#f5a400;font-style:normal}
+.grev-stars i::before{content:"\2605\2605\2605\2605\2605"}
+.grev-score p{color:var(--muted);font-size:.92rem;margin-top:4px}
+.grev-btns{display:flex;flex-wrap:wrap;gap:10px}
+.grevs{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.grev{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px 22px;display:flex;flex-direction:column;gap:12px;margin:0}
+.grev blockquote{margin:0;color:var(--ink);font-size:.97rem;line-height:1.65}
+.grev figcaption{margin-top:auto;color:var(--muted);font:700 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase}
+@media (max-width:760px){.grevs{grid-template-columns:1fr}.grev-score strong{font-size:2.4rem}}
+
 .bposter{display:block;width:100%;padding:0;border:0;border-bottom:1px solid var(--line);background:#eef2fa;cursor:pointer;aspect-ratio:4/5;overflow:hidden}
 .bposter img{display:block;width:100%;height:100%;object-fit:contain}
 .bposter:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
@@ -439,6 +455,28 @@ footer .bottom{border-top:1px solid #1c2f57;padding-block:16px;display:flex;flex
         <div class="stat"><strong>6</strong><span>centres across 4 towns</span></div>
         <div class="stat"><strong>4</strong><span>class modes, offline to recorded</span></div>
         <div class="stat"><strong>100%</strong><span>of classes recorded on our app</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec batches-sec" id="reviews">
+    <div class="wrap">
+      <div class="sec-head"><div><span class="eyebrow">Google reviews</span><h2>What our students say</h2><p>Reviews written by students on our Google page, Northeast PSC (Arunachal Pradesh), Itanagar.</p></div></div>
+      <div class="grev-top">
+        <div class="grev-score">
+          <strong>4.8</strong>
+          <div><span class="grev-stars" role="img" aria-label="4.8 out of 5 stars"><i style="width:96%"></i></span><p>Rated 4.8 out of 5 from 1,900+ reviews on Google</p></div>
+        </div>
+        <div class="grev-btns">
+          <a class="btn btn-solid" href="https://www.google.com/maps/place/?q=place_id:ChIJJfzGCswHRDcRYw23fkbiy5Y" target="_blank" rel="noopener">Read all reviews on Google</a>
+          <a class="btn btn-ghost" href="https://search.google.com/local/writereview?placeid=ChIJJfzGCswHRDcRYw23fkbiy5Y" target="_blank" rel="noopener">Write a review</a>
+        </div>
+      </div>
+      <div class="grevs">
+        <figure class="grev"><blockquote>&ldquo;One of the best coaching institute for APSSB Candidate. I would like to convey my sincere gratitude to all the faculties for their guidance and support. My fear for maths subject is no more&hellip;&rdquo;</blockquote><figcaption>Student review on Google</figcaption></figure>
+        <figure class="grev"><blockquote>&ldquo;Words are not enough to express my gratitude to Team North East PSC for the incredible 6-day Maha Marathon for the APSSB exam. Teaching for 12 hours every day is not just hard work&mdash;it is a true reflection of your dedication, passion, and commitment towards the success of your students.&rdquo;</blockquote><figcaption>Student review on Google</figcaption></figure>
+        <figure class="grev"><blockquote>&ldquo;Your institution is very helpful, and all the teachers are very good. I personally really appreciate how hardworking you all are for us and for our good future.&rdquo;</blockquote><figcaption>Student review on Google</figcaption></figure>
+        <figure class="grev"><blockquote>&ldquo;I am highly satisfied with the facilities and services provided by Northeast PSC (Arunachal Pradesh). &hellip; The accommodation is comfortable and well-maintained, and the faculty members are knowledgeable, supportive, and dedicated to guiding students effectively.&rdquo;</blockquote><figcaption>Student review on Google</figcaption></figure>
       </div>
     </div>
   </section>
