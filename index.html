@@ -219,7 +219,8 @@ header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:va
 .centre .hq{justify-self:start;font-size:.74rem;font-weight:700;background:var(--gold);color:#0a1f4a;padding:3px 8px;border-radius:5px}
 
 /* material */
-.mats{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.mats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:1000px){.mats{grid-template-columns:1fr}}
 @media (max-width:860px){.mats{grid-template-columns:1fr}}
 .mat{display:grid;grid-template-columns:72px 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
 .book{aspect-ratio:3/4;max-width:100%;border-radius:4px 8px 8px 4px;background:var(--band);color:var(--on-band);display:grid;place-items:center;font:800 .8rem var(--mono);box-shadow:inset 6px 0 0 rgba(0,0,0,.18)}
@@ -447,14 +448,14 @@ footer{border-top-width:6px}
   <div class="wrap nav">
     <a class="brand" href="#top"><span class="mark">NE</span><span><b>Northeast PSC</b><small>Itanagar · Arunachal Pradesh</small></span></a>
     <nav class="links" aria-label="Main">
-      <a href="#exams">Exams</a><a href="#batches">Batches</a><a href="#centres">Centres</a><div class="dd" id="ddStudy"><button class="dd-btn" type="button" aria-expanded="false" aria-controls="ddStudyMenu">Free Study Material <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></button><div class="dd-menu" id="ddStudyMenu"><a href="maths-by-amarjeet-sir/">Maths &amp; Reasoning by Amarjeet Sir<small>Maths &amp; Reasoning for APPSC &amp; APSSB</small></a><a href="csat-practice-by-amarjeet-sir/">APPSCCE Prelims Practice<small>GS &amp; CSAT, 4,000 questions</small></a><a href="monthly-current-affairs/">Monthly Current Affairs<small>National, state &amp; Arunachal news</small></a><a href="#material">Books<small>Indian economy and more</small></a></div></div><a href="#about">About</a><a href="#faq">FAQ</a>
+      <a href="#exams">Exams</a><a href="#batches">Batches</a><a href="#centres">Centres</a><div class="dd" id="ddStudy"><button class="dd-btn" type="button" aria-expanded="false" aria-controls="ddStudyMenu">Free Study Material <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></button><div class="dd-menu" id="ddStudyMenu"><a href="maths-by-amarjeet-sir/">Maths &amp; Reasoning by Amarjeet Sir<small>Maths &amp; Reasoning for APPSC &amp; APSSB</small></a><a href="csat-practice-by-amarjeet-sir/">APPSCCE Prelims Practice<small>GS &amp; CSAT, 4,000 questions</small></a><a href="monthly-current-affairs/">Monthly Current Affairs<small>National, state &amp; Arunachal news</small></a></div></div><a href="#about">About</a><a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-solid btn-sm" href="#contact">Talk to a counsellor</a>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu">☰</button>
   </div>
   <div class="mobile-nav" id="mnav" hidden>
     <div class="wrap">
-      <a href="#exams">Exams</a><a href="#batches">Batches</a><a href="#centres">Centres</a><span class="grp">Free Study Material</span><a class="sub" href="maths-by-amarjeet-sir/">Maths &amp; Reasoning by Amarjeet Sir</a><a class="sub" href="csat-practice-by-amarjeet-sir/">APPSCCE Prelims Practice</a><a class="sub" href="monthly-current-affairs/">Monthly Current Affairs</a><a class="sub" href="#material">Books</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Talk to a counsellor</a>
+      <a href="#exams">Exams</a><a href="#batches">Batches</a><a href="#centres">Centres</a><span class="grp">Free Study Material</span><a class="sub" href="maths-by-amarjeet-sir/">Maths &amp; Reasoning by Amarjeet Sir</a><a class="sub" href="csat-practice-by-amarjeet-sir/">APPSCCE Prelims Practice</a><a class="sub" href="monthly-current-affairs/">Monthly Current Affairs</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Talk to a counsellor</a>
     </div>
   </div>
 </header>
@@ -577,12 +578,11 @@ footer{border-top-width:6px}
 
   <section class="sec" id="material">
     <div class="wrap">
-      <div class="sec-head"><div><span class="eyebrow">Free Study Material</span><h2>Free practice and books</h2><p>Practise online for free, and study from books written by our in-house team for Arunachal's exams.</p></div></div>
+      <div class="sec-head"><div><span class="eyebrow">Free Study Material</span><h2>Free practice and magazines</h2><p>Practise online for free and read our monthly current affairs magazine, all made by our in-house team for Arunachal's exams.</p></div></div>
       <div class="mats">
         <a class="mat" href="maths-by-amarjeet-sir/"><div class="book">M&amp;R</div><div><h3>Maths &amp; Reasoning by Amarjeet Sir</h3><p>Free topic-wise quizzes, mock tests and previous-year questions for APSSB and APPSC.</p><span class="go">Start practising &rarr;</span></div></a>
         <a class="mat" href="csat-practice-by-amarjeet-sir/"><div class="book g">GS</div><div><h3>APPSCCE Prelims Practice</h3><p>4,000 free GS and CSAT questions in short quizzes for APPSCCE Prelims.</p><span class="go">Start practising &rarr;</span></div></a>
-        <a class="mat" href="monthly-current-affairs/"><div class="book">CA</div><div><h3>Monthly Current Affairs</h3><p>Free monthly magazine for APPSC and APSSB. January to August 2026 issues, read online or download.</p><span class="go">Open <p>National, state and Arunachal news in one book each month, arranged for revision.</p><span class="go">Open &rarr;</span>rarr;</span></div></a>
-        <div class="mat"><div class="book g">ECO</div><div><h3>Indian Economy</h3><p>A complete economy book written for APPSC and APSSB syllabi.</p></div></div>
+        <a class="mat" href="monthly-current-affairs/"><div class="book">CA</div><div><h3>Monthly Current Affairs</h3><p>Free monthly magazine for APPSC and APSSB. January to August 2026 issues, read online or download.</p><span class="go">Read the magazines &rarr;</span></div></a>
       </div>
     </div>
   </section>
@@ -593,7 +593,7 @@ footer{border-top-width:6px}
         <span class="eyebrow">About Northeast PSC</span>
         <h2>Arunachal's own coaching for state exams</h2>
         <p>Northeast PSC prepares aspirants for APPSC and APSSB exams. Every batch runs on a planned syllabus with a coordinator who tracks classes and coverage, and every class is recorded so no student falls behind.</p>
-        <p>Our practice sets come from previous-year papers, and our books cover current affairs and Indian economy with Arunachal-specific content that national coaching brands leave out.</p>
+        <p>Our practice sets come from previous-year papers, and our monthly magazine covers current affairs with Arunachal-specific content that national coaching brands leave out.</p>
       </div>
       <div class="stats">
         <div class="stat"><strong>1000+</strong><span>selections in APPSC &amp; APSSB exams</span></div>
